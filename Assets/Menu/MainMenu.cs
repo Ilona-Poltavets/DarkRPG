@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -14,7 +15,7 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
-        Debug.Log("NewGame");
+        SceneManager.LoadScene("Level1");
     }
     public void Continue()
     {
