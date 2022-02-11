@@ -1,16 +1,29 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 public class MenuPause : MonoBehaviour
 {
+    [SerializeField] private InputAction action = new InputAction();
     public GameObject pauseMenuUI;
     public GameObject inventoryUI;
     public static bool GameIsPaused = false;
     public static bool inventoryShow = false;
     // Update is called once per frame
+
+    private void OnEnable()
+    {
+        action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        action.Disable();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current[Key.Escape].wasPressedThisFrame)
         {
             if (GameIsPaused)
             {
@@ -21,7 +34,7 @@ public class MenuPause : MonoBehaviour
                 Pause();
             }
         }
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Keyboard.current[Key.I].wasPressedThisFrame)
         {
             if (inventoryShow)
             {
