@@ -16,7 +16,6 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         slider.fillRect.GetComponent<Image>().color = color;
-        maxValue = PlayerController.health;
         slider.maxValue = maxValue;
         slider.minValue = 0;
         current = maxValue;

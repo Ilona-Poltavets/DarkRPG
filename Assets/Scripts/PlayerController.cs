@@ -54,7 +54,6 @@ namespace MyProject
 
         private void PlayerMove(Vector3 location)
         {
-
             agent.SetDestination(location);
         }
     }
