@@ -74,9 +74,18 @@ public class MainMenu : MonoBehaviour
         else
             musicMixer.SetFloat("musicVolume", 0f);
     }
-    public void ChangeVolumeMusic(float sliderVolume)
+    void OnEnable()
     {
-        musicMixer.SetFloat("musicVolume", sliderVolume);
+        musicVolume.onValueChanged.AddListener(delegate { changeVolume(musicVolume.value); });
+    }
+    void changeVolume(float sliderValue)
+    {
+        musicMixer.SetFloat("musicVolume", sliderValue);
+    }
+
+    void OnDisable()
+    {
+        musicVolume.onValueChanged.RemoveAllListeners();
     }
     public void Exit()
     {
