@@ -8,7 +8,7 @@ public class UI_inventory : MonoBehaviour
     private InventoryManager inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
-    public void Start()
+    public void Awake()
     {
         itemSlotContainer = transform.Find("Inventory");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");

@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     {
 		inventory = new InventoryManager();
 		uiInventory.SetInventory(inventory);
+		uiInventory.gameObject.SetActive(false);
 	}
 	void Start()
 	{
