@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Item : MonoBehaviour
+[Serializable]
+public class Item
 {
     public enum ItemType
     {
@@ -29,6 +30,20 @@ public class Item : MonoBehaviour
                 return ItemAssets.Instance.medkitSprite;
             case ItemType.Shield:
                 return ItemAssets.Instance.shildSprite;
+        }
+    }
+    public bool IsStackable()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.ManaPotion:
+            case ItemType.Medkit:
+            case ItemType.HealthPotion:
+                return true;
+            case ItemType.Sword:
+            case ItemType.Shield:
+                return false;
         }
     }
 }

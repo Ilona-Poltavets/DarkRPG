@@ -40,6 +40,15 @@ public class UI_inventory : MonoBehaviour
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image=itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
+            Text uiText = itemSlotRectTransform.Find("amountText").GetComponent<Text>();
+            if (item.amount > 1)
+            {
+                uiText.text = item.amount.ToString();
+            }
+            else
+            {
+                uiText.text = "";
+            }
             x++;
             if (x > 7)
             {

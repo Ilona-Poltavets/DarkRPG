@@ -21,9 +21,6 @@ public class Player : MonoBehaviour
 		uiInventory.SetInventory(inventory);
 		uiInventory.gameObject.SetActive(false);
 
-		ItemWorld.SpawnItemWorld(new Vector3(5, 0.4f, 3), new Item { itemType = Item.ItemType.Sword, amount = 1 });
-		ItemWorld.SpawnItemWorld(new Vector3(0, 0.4f, 0), new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
-		ItemWorld.SpawnItemWorld(new Vector3(7, 0.4f, 5), new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
 	}
 	void Update()
 	{
