@@ -13,11 +13,9 @@ namespace MyProject
         [SerializeField] private LayerMask layerMask = new LayerMask();
         private NavMeshAgent agent = null;
         private Camera cam = null;
-        public int health;
 
         private void Start()
         {
-            health = 100;
             animator = GetComponent<Animator>();
             cam = Camera.main;
             agent = GetComponent<NavMeshAgent>();

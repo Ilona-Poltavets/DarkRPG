@@ -7,9 +7,19 @@ public class Player : MonoBehaviour
 	public int currentHealth;
 
 	public HealthBar healthBar;
+	public Rigidbody rb;
 
+	private InventoryManager inventory;
+	[SerializeField] private UI_inventory uiInventory;
+
+	void Awake()
+    {
+		inventory = new InventoryManager();
+		uiInventory.SetInventory(inventory);
+	}
 	void Start()
 	{
+		rb = GetComponent<Rigidbody>();
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
 	}
