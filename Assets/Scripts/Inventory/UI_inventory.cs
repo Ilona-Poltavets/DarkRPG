@@ -12,16 +12,24 @@ public class UI_inventory : MonoBehaviour
     {
         itemSlotContainer = transform.Find("Inventory");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
-        Debug.Log(itemSlotTemplate);
-        Debug.Log(itemSlotContainer);
     }
     public void SetInventory(InventoryManager inventory)
     {
         this.inventory = inventory;
+        inventory.OnItemListChanged += Inventory_OnItemListChanged;
+        RefreshInventroyItems();
+    }
+    private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
+    {
         RefreshInventroyItems();
     }
     private void RefreshInventroyItems()
     {
+        foreach(Transform child in itemSlotContainer)
+        {
+            if (child == itemSlotTemplate) continue;
+            Destroy(child.gameObject);
+        }
         int x = 0;
         int y = 0;
         float itemSlotCellSize = 85f;

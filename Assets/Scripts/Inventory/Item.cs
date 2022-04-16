@@ -10,7 +10,7 @@ public class Item : MonoBehaviour
         HealthPotion,
         ManaPotion,
         Medkit,
-        Shild,
+        Shield,
     }
     public ItemType itemType;
     public int amount;
@@ -27,7 +27,7 @@ public class Item : MonoBehaviour
                 return ItemAssets.Instance.manaPotionSprite;
             case ItemType.Medkit:
                 return ItemAssets.Instance.medkitSprite;
-            case ItemType.Shild:
+            case ItemType.Shield:
                 return ItemAssets.Instance.shildSprite;
         }
     }
