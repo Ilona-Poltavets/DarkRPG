@@ -53,7 +53,7 @@ public class UI_inventory : MonoBehaviour
                 ItemWorld.DropItem(player.transform.position, duplicateItem);
             };
 
-            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
             Image image=itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
             Text uiText = itemSlotRectTransform.Find("amountText").GetComponent<Text>();

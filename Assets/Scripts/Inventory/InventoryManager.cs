@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryManager
 {
     public event EventHandler OnItemListChanged;
-    private List<Item> itemList;
+    public List<Item> itemList;
     private Action<Item> useItemAction;
     public InventoryManager(Action<Item> useItemAction)
     {
@@ -48,6 +48,7 @@ public class InventoryManager
             {
                 if (inventoryItem.itemType == item.itemType)
                 {
+                    //inventoryItem.itemType -= item.amount;//bug for infinity drop
                     inventoryItem.amount -= item.amount;
                     itemInInventory = inventoryItem;
                 }

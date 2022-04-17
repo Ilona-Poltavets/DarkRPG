@@ -60,8 +60,11 @@ public class Player : MonoBehaviour
 		ItemWorld itemWorld = other.GetComponent<ItemWorld>();
         if (itemWorld != null)
         {
-			inventory.AddItem(itemWorld.GetItem());
-			itemWorld.DestroySelf();
+			if (inventory.itemList.Count < 56)
+			{
+				inventory.AddItem(itemWorld.GetItem());
+				itemWorld.DestroySelf();
+			}
         }
     }
 }
