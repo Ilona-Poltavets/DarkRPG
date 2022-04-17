@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Utils;
 
 public class Player : MonoBehaviour
 {
@@ -17,21 +18,32 @@ public class Player : MonoBehaviour
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
 
-		inventory = new InventoryManager();
+		inventory = new InventoryManager(UseItem);
+		uiInventory.SetPlayer(this);
 		uiInventory.SetInventory(inventory);
 		uiInventory.gameObject.SetActive(false);
 
 	}
+	private void UseItem(Item item)
+    {
+        switch (item.itemType)
+        {
+			case Item.ItemType.HealthPotion:
+				Healer(10);
+				inventory.RemoveItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
+				break;
+			case Item.ItemType.ManaPotion:
+				inventory.RemoveItem(new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
+				break;
+
+        }
+    }
 	void Update()
 	{
 		if (Keyboard.current[Key.Space].wasPressedThisFrame)
 		{
 			TakeDamage(20);
 		}
-        if (Keyboard.current[Key.H].wasPressedThisFrame)
-        {
-			Healer(10);
-        }
 	}
 	void TakeDamage(int damage)
 	{
