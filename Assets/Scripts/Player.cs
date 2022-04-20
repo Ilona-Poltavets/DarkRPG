@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
 		uiInventory.SetPlayer(this);
 		uiInventory.SetInventory(inventory);
 		uiInventory.gameObject.SetActive(false);
-
 	}
 	private void UseItem(Item item)
     {
@@ -35,7 +34,13 @@ public class Player : MonoBehaviour
 			case Item.ItemType.ManaPotion:
 				inventory.RemoveItem(new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
 				break;
-
+			case Item.ItemType.Medkit:
+				Healer(30);
+				inventory.RemoveItem(new Item { itemType = Item.ItemType.Medkit, amount = 1 });
+				break;
+            default:
+				uiInventory.SetEquipment(item);
+				break;
         }
     }
 	void Update()

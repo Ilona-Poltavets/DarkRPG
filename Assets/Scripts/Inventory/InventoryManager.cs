@@ -7,10 +7,13 @@ public class InventoryManager
     public event EventHandler OnItemListChanged;
     public List<Item> itemList;
     private Action<Item> useItemAction;
+
+    private Dictionary<string, Item> equipment;
     public InventoryManager(Action<Item> useItemAction)
     {
         this.useItemAction = useItemAction;
         itemList = new List<Item>();
+        equipment = new Dictionary<string, Item>();
         AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount=1 });
         AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1 });
         AddItem(new Item { itemType = Item.ItemType.Shield, amount = 1 });
@@ -71,5 +74,25 @@ public class InventoryManager
     public List<Item> GetItemList()
     {
         return itemList;
+    }
+    public void AddEquipment(Item item)
+    {
+        if (equipment.ContainsKey(item.slot))
+        {
+            AddItem(equipment[item.slot]);
+            equipment[item.slot] = item;
+        }
+        else
+        {
+            equipment.Add(item.slot, item);
+        }
+    }
+    public void RemoveEquipment(Item item)
+    {
+        equipment.Remove(item.slot);
+    }
+    public Dictionary<string,Item> GetEquipment()
+    {
+        return equipment;
     }
 }

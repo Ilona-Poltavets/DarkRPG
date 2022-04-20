@@ -8,10 +8,16 @@ public class UI_inventory : MonoBehaviour
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
     private Player player;
+
+    private Transform EquipmantContainer;
+    private Transform EquipmantSlot;
+
     public void Awake()
     {
         itemSlotContainer = transform.Find("Inventory");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
+
+        EquipmantContainer= transform.Find("Equipment");
     }
     public void SetPlayer(Player player)
     {
@@ -26,6 +32,61 @@ public class UI_inventory : MonoBehaviour
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {
         RefreshInventroyItems();
+    }
+    public void SetEquipment(Item item)
+    {
+        EquipmantContainer = transform.Find("Equipment");
+        RectTransform itemSlotRectTransform;
+        Image image;
+        switch (item.itemType)
+        {
+            case Item.ItemType.Ring:
+                item.slot = "Ring";
+                EquipmantSlot = EquipmantContainer.Find("Ring");
+                inventory.AddEquipment(item);
+                inventory.RemoveItem(item);
+                break;
+            case Item.ItemType.Bib:
+                item.slot = "Bib";
+                EquipmantSlot = EquipmantContainer.Find("Bib");
+                inventory.AddEquipment(item);
+                inventory.RemoveItem(item);
+                break;
+            case Item.ItemType.Helmet:
+                item.slot = "Helmet";
+                EquipmantSlot = EquipmantContainer.Find("Helmet");
+                inventory.AddEquipment(item);
+                inventory.RemoveItem(item);
+                break;
+            case Item.ItemType.Sword:
+                item.slot = "Sword";
+                EquipmantSlot = EquipmantContainer.Find("Sword");
+                inventory.AddEquipment(item);
+                inventory.RemoveItem(item);
+                break;
+            case Item.ItemType.Necklace:
+                item.slot = "Necklace";
+                EquipmantSlot = EquipmantContainer.Find("Necklace");
+                inventory.AddEquipment(item);
+                inventory.RemoveItem(item);
+                break;
+            case Item.ItemType.Shield:
+                item.slot = "Shield";
+                EquipmantSlot = EquipmantContainer.Find("Shield");
+                inventory.AddEquipment(item);
+                inventory.RemoveItem(item);
+                break;
+            case Item.ItemType.Boots:
+                item.slot = "Boots";
+                EquipmantSlot = EquipmantContainer.Find("Boots");
+                inventory.AddEquipment(item);
+                inventory.RemoveItem(item);
+                break;
+
+        }
+        itemSlotRectTransform = Instantiate(EquipmantSlot, EquipmantContainer).GetComponent<RectTransform>();
+        image = itemSlotRectTransform.GetComponent<Image>();
+        image.sprite = item.GetSprite();
     }
     private void RefreshInventroyItems()
     {

@@ -4,6 +4,9 @@ using UnityEngine;
 using Utils;
 public class ItemWorld : MonoBehaviour
 {
+    public Transform cam;
+    //private Transform parentT;
+    private Transform tr;
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
     {
         Transform transform = Instantiate(ItemAssets.Instance.ItemWorld, position, Quaternion.identity);
@@ -16,6 +19,15 @@ public class ItemWorld : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    private void Start()
+    {
+        //parentT = transform.parent;
+        tr = transform;
+    }
+    private void Update()
+    {
+        tr.rotation = Quaternion.LookRotation(cam.position - tr.position);
     }
     public void SetItem(Item item)
     {
@@ -30,7 +42,6 @@ public class ItemWorld : MonoBehaviour
     {
         Vector3 randomDir = UtilsClass.GetRandomDir();
         ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 2f, item);
-        //itemWorld.GetComponent<Rigidbody>().AddForce(randomDir * 2f, ForceMode.Impulse);
         return itemWorld;
     }
     public void DestroySelf()
