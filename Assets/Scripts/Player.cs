@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class Player : MonoBehaviour
 	public int exp;
 	public int defense;
 	public int damage;
+
+	//public Text hp;
+	//public Text damagePoints;
+	//public Text defencePoints;
 
 	private InventoryManager inventory;
 	[SerializeField] private UI_inventory uiInventory;
@@ -40,6 +45,10 @@ public class Player : MonoBehaviour
 		uiInventory.SetPlayer(this);
 		uiInventory.SetInventory(inventory);
 		uiInventory.gameObject.SetActive(false);
+
+		//hp.text = currentHealth.ToString();
+		//defencePoints.text = defense.ToString();
+		//damagePoints.text = damage.ToString();
 	}
 	private void UseItem(Item item)
     {

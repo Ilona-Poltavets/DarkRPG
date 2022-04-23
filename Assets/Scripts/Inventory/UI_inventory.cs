@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
+using System.Collections;
+using System.Collections.Generic;
 /// <summary>
 /// Class that describes the behavior of the inventory interface
 /// </summary>
@@ -49,7 +51,6 @@ public class UI_inventory : MonoBehaviour
     public void SetEquipment(Item item)
     {
         EquipmantContainer = transform.Find("Equipment");
-        RectTransform itemSlotRectTransform;
         Image image;
         switch (item.itemType)
         {
@@ -97,8 +98,9 @@ public class UI_inventory : MonoBehaviour
                 break;
 
         }
-        itemSlotRectTransform = Instantiate(EquipmantSlot, EquipmantContainer).GetComponent<RectTransform>();
-        image = itemSlotRectTransform.GetComponent<Image>();
+        //itemSlotRectTransform = Instantiate(EquipmantSlot, EquipmantContainer).GetComponent<RectTransform>();
+        //image = itemSlotRectTransform.GetComponent<Image>();
+        image = EquipmantSlot.GetComponent<Image>();
         image.sprite = item.GetSprite();
     }
     /// <summary>
@@ -150,5 +152,25 @@ public class UI_inventory : MonoBehaviour
                 y++;
             }
         }
+    }
+    public void ToInventory(string name)
+    {
+        EquipmantSlot = EquipmantContainer.Find(name);
+        Image image = EquipmantSlot.GetComponent<Image>();
+        image.sprite = null;
+        Dictionary<string, Item> equipment = inventory.GetEquipment();
+        Item item = equipment[name];
+        inventory.RemoveEquipment(item);
+        inventory.AddItem(item);
+    }
+    public void RemoveEquipmentItem(string name)
+    {
+        EquipmantSlot = EquipmantContainer.Find(name);
+        Image image = EquipmantSlot.GetComponent<Image>();
+        image.sprite = null;
+        Dictionary<string, Item> equipment = inventory.GetEquipment();
+        Item item = equipment[name];
+        inventory.RemoveEquipment(item);
+        ItemWorld.DropItem(player.transform.position, item);
     }
 }
