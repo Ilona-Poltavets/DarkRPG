@@ -10,13 +10,13 @@ public class Item
     {
         Sword,
         HealthPotion,
-        ManaPotion,
+        //ManaPotion,
         Medkit,
         Shield,
         Ring,
         Necklace,
         Bib,
-        Bow,
+        //Bow,
         Helmet,
         Boots,
     }
@@ -32,8 +32,8 @@ public class Item
                 return ItemAssets.Instance.swordSprite;
             case ItemType.HealthPotion:
                 return ItemAssets.Instance.healthPotionSprite;
-            case ItemType.ManaPotion:
-                return ItemAssets.Instance.manaPotionSprite;
+            //case ItemType.ManaPotion:
+            //    return ItemAssets.Instance.manaPotionSprite;
             case ItemType.Medkit:
                 return ItemAssets.Instance.medkitSprite;
             case ItemType.Shield:
@@ -44,8 +44,8 @@ public class Item
                 return ItemAssets.Instance.necklaceSprite;
             case ItemType.Bib:
                 return ItemAssets.Instance.bibSprite;
-            case ItemType.Bow:
-                return ItemAssets.Instance.bowSprite;
+            //case ItemType.Bow:
+            //    return ItemAssets.Instance.bowSprite;
             case ItemType.Helmet:
                 return ItemAssets.Instance.helmetSprite;
             case ItemType.Boots:
@@ -57,7 +57,7 @@ public class Item
         switch (itemType)
         {
             default:
-            case ItemType.ManaPotion:
+            //case ItemType.ManaPotion:
             case ItemType.Medkit:
             case ItemType.HealthPotion:
                 return true;
@@ -66,7 +66,7 @@ public class Item
             case ItemType.Ring:
             case ItemType.Necklace:
             case ItemType.Bib:
-            case ItemType.Bow:
+            //case ItemType.Bow:
             case ItemType.Helmet:
             case ItemType.Boots:
                 return false;

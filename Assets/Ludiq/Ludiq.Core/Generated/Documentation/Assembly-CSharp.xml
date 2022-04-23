@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Assembly-CSharp</name>
+    </assembly>
+    <members>
+        <member name="T:ItemAssets">
+            <summary>
+            Class for assigning sprites
+            </summary>
+        </member>
+        <member name="T:ItemWorldSpawner">
+            <summary>
+            Class for descriptions behavior the appearance of loot in the game world
+            </summary>
+        </member>
+        <member name="M:ItemWorldSpawner.Start">
+            <summary>
+            Loot generation at scene start
+            </summary>
+        </member>
+        <member name="T:UI_inventory">
+            <summary>
+            Class that describes the behavior of the inventory interface
+            </summary>
+        </member>
+        <member name="M:UI_inventory.RefreshInventroyItems">
+            <summary>
+            Method for updating elements in UI when they change
+            </summary>
+            
+        </member>
+    </members>
+</doc>

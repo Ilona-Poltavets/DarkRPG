@@ -1,9 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
-
+/// <summary>
+/// Class that describes the behavior of the inventory interface
+/// </summary>
 public class UI_inventory : MonoBehaviour
 {
+    //Characteristics
+    public Text hp;
+    public Text damagePoints;
+    public Text defencePoints;
+
     private InventoryManager inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
@@ -18,6 +25,12 @@ public class UI_inventory : MonoBehaviour
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
 
         EquipmantContainer= transform.Find("Equipment");
+    }
+    private void LateUpdate()
+    {
+        hp.text = player.currentHealth.ToString();
+        defencePoints.text = player.defense.ToString();
+        damagePoints.text = player.damage.ToString();
     }
     public void SetPlayer(Player player)
     {
@@ -88,6 +101,10 @@ public class UI_inventory : MonoBehaviour
         image = itemSlotRectTransform.GetComponent<Image>();
         image.sprite = item.GetSprite();
     }
+    /// <summary>
+    /// Method for updating elements in UI when they change
+    /// </summary>
+    /// 
     private void RefreshInventroyItems()
     {
         foreach(Transform child in itemSlotContainer)
