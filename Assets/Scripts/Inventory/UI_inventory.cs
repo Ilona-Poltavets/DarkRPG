@@ -126,7 +126,10 @@ public class UI_inventory : MonoBehaviour
 
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
-                inventory.UseItem(item);
+                if (Player.onShop)
+                    SellItem(item);
+                else
+                    inventory.UseItem(item);
             };
             itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>
             {
@@ -219,5 +222,40 @@ public class UI_inventory : MonoBehaviour
         }
         if (item != null)
             inventory.AddItem(item);
+    }
+    public void SellItem(Item item)
+    {
+        inventory.RemoveItem(item);
+        player.gold += 20;
+        //switch (item.itemType)
+        //{
+        //    case Item.ItemType.HealthPotion:
+
+        //        break;
+        //    case Item.ItemType.Helmet:
+
+        //        break;
+        //    case Item.ItemType.Bib:
+
+        //        break;
+        //    case Item.ItemType.Boots:
+
+        //        break;
+        //    case Item.ItemType.Necklace:
+
+        //        break;
+        //    case Item.ItemType.Sword:
+
+        //        break;
+        //    case Item.ItemType.Shield:
+
+        //        break;
+        //    case Item.ItemType.Medkit:
+
+        //        break;
+        //    case Item.ItemType.Ring:
+
+        //        break;
+        //}
     }
 }

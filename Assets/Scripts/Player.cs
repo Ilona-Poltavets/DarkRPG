@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 	private InventoryManager inventory;
 	[SerializeField] private UI_inventory uiInventory;
 	[SerializeField] private GameObject uiStore;
-	private static bool onShop = false;
+	public static bool onShop = false;
     private void Awake()
     {
 		maxHealth = 100;
@@ -157,5 +157,9 @@ public class Player : MonoBehaviour
 		uiStore.SetActive(true);
 		Time.timeScale = 0f;
 		onShop = true;
+	}
+	public void OpenInventoryForSell()
+	{
+		uiInventory.gameObject.SetActive(true);
 	}
 }

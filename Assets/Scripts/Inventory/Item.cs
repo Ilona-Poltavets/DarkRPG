@@ -22,6 +22,7 @@ public class Item
     public ItemType itemType;
     public int amount;
     public string slot = "";
+    public int cost = 0;
     public Sprite GetSprite()
     {
         switch (itemType)
