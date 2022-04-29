@@ -10,15 +10,14 @@ public class Item
     {
         Sword,
         HealthPotion,
-        //ManaPotion,
         Medkit,
         Shield,
         Ring,
         Necklace,
         Bib,
-        //Bow,
         Helmet,
         Boots,
+        Gold,
     }
     public ItemType itemType;
     public int amount;
@@ -32,8 +31,6 @@ public class Item
                 return ItemAssets.Instance.swordSprite;
             case ItemType.HealthPotion:
                 return ItemAssets.Instance.healthPotionSprite;
-            //case ItemType.ManaPotion:
-            //    return ItemAssets.Instance.manaPotionSprite;
             case ItemType.Medkit:
                 return ItemAssets.Instance.medkitSprite;
             case ItemType.Shield:
@@ -44,12 +41,12 @@ public class Item
                 return ItemAssets.Instance.necklaceSprite;
             case ItemType.Bib:
                 return ItemAssets.Instance.bibSprite;
-            //case ItemType.Bow:
-            //    return ItemAssets.Instance.bowSprite;
             case ItemType.Helmet:
                 return ItemAssets.Instance.helmetSprite;
             case ItemType.Boots:
                 return ItemAssets.Instance.bootsSprite;
+            case ItemType.Gold:
+                return ItemAssets.Instance.goldSprite;
         }
     }
     public bool IsStackable()
@@ -57,7 +54,6 @@ public class Item
         switch (itemType)
         {
             default:
-            //case ItemType.ManaPotion:
             case ItemType.Medkit:
             case ItemType.HealthPotion:
                 return true;
@@ -66,7 +62,6 @@ public class Item
             case ItemType.Ring:
             case ItemType.Necklace:
             case ItemType.Bib:
-            //case ItemType.Bow:
             case ItemType.Helmet:
             case ItemType.Boots:
                 return false;

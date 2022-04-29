@@ -41,6 +41,7 @@ public class ItemWorld : MonoBehaviour
     public static ItemWorld DropItem(Vector3 dropPosition,Item item)
     {
         Vector3 randomDir = UtilsClass.GetRandomDir();
+        randomDir.y = 0.4f;
         ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 2f, item);
         return itemWorld;
     }

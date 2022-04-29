@@ -48,30 +48,30 @@ public class MenuPause : MonoBehaviour
             }
         }
     }
-    public void CloseInventory()
+    private void CloseInventory()
     {
         inventoryUI.SetActive(false);
         Time.timeScale = 1f;
     }
 
-    public void ShowInventory()
+    private void ShowInventory()
     {
         inventoryUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    public void goMainMenu()
+    private void goMainMenu()
     {
         pauseMenuUI.SetActive(false);
         SceneManager.LoadScene("MainMenu");
     }
-    public void Resume()
+    private void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
-    void Pause()
+    private void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;

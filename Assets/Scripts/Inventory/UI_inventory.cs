@@ -12,6 +12,7 @@ public class UI_inventory : MonoBehaviour
     public Text hp;
     public Text damagePoints;
     public Text defencePoints;
+    public Text goldCount;
 
     private InventoryManager inventory;
     private Transform itemSlotContainer;
@@ -33,6 +34,7 @@ public class UI_inventory : MonoBehaviour
         hp.text = player.currentHealth.ToString();
         defencePoints.text = player.defense.ToString();
         damagePoints.text = player.damage.ToString();
+        goldCount.text = player.gold.ToString();
     }
     public void SetPlayer(Player player)
     {
@@ -172,5 +174,50 @@ public class UI_inventory : MonoBehaviour
         Item item = equipment[name];
         inventory.RemoveEquipment(item);
         ItemWorld.DropItem(player.transform.position, item);
+    }
+    public void BuyItem(string name, int cost)
+    {
+        Item item = null;
+        switch (name)
+        {
+            case "HealthPotion":
+                item = new Item { itemType = Item.ItemType.HealthPotion, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+            case "Helmet":
+                item = new Item { itemType = Item.ItemType.Helmet, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+            case "Bib":
+                item = new Item { itemType = Item.ItemType.Bib, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+            case "Boots":
+                item = new Item { itemType = Item.ItemType.Boots, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+            case "Necklace":
+                item = new Item { itemType = Item.ItemType.Necklace, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+            case "Sword":
+                item = new Item { itemType = Item.ItemType.Sword, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+            case "Shield":
+                item = new Item { itemType = Item.ItemType.Shield, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+            case "Medkit":
+                item = new Item { itemType = Item.ItemType.Medkit, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+            case "Ring":
+                item = new Item { itemType = Item.ItemType.Ring, amount = 1, slot = "" };
+                player.gold -= cost;
+                break;
+        }
+        if (item != null)
+            inventory.AddItem(item);
     }
 }

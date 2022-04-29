@@ -1,24 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using Utils;
+using UnityEngine.UI;
 
-public class EquipmentItem : MonoBehaviour
+public class StoreItem : MonoBehaviour
 {
-    //public Image image;
     [SerializeField] private UI_inventory uiInventory;
+    //private Text costText;
     public void Update()
     {
         gameObject.GetComponent<Button_UI>().ClickFunc = () =>
         {
-            uiInventory.ToInventory(gameObject.name);
+            int cost = System.Int32.Parse(gameObject.GetComponentInChildren<Text>().text);
+            uiInventory.BuyItem(gameObject.name,cost);
         };
         gameObject.GetComponent<Button_UI>().MouseRightClickFunc = () =>
         {
-           uiInventory.RemoveEquipmentItem(gameObject.name);
+            //uiInventory.RemoveEquipmentItem(gameObject.name);
         };
     }
 }
-
