@@ -7,6 +7,7 @@ public class InventoryManager
     public event EventHandler OnItemListChanged;
     public List<Item> itemList;
     private Action<Item> useItemAction;
+    private Player player;
 
     private Dictionary<string, Item> equipment;
     public InventoryManager(Action<Item> useItemAction)
@@ -17,6 +18,10 @@ public class InventoryManager
         AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount=1 });
         AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1,damage=50 });
         AddItem(new Item { itemType = Item.ItemType.Shield, amount = 1,defense=30 });
+    }
+    public void SetPlayer(Player player)
+    {
+        this.player = player;
     }
     public void AddItem(Item item)
     {
@@ -81,6 +86,9 @@ public class InventoryManager
     {
         if (equipment.ContainsKey(item.slot))
         {
+            Item oldItem = equipment[item.slot];
+            player.damage -= oldItem.damage;
+            player.defense -= oldItem.defense;
             AddItem(equipment[item.slot]);
             equipment[item.slot] = item;
         }
@@ -88,9 +96,13 @@ public class InventoryManager
         {
             equipment.Add(item.slot, item);
         }
+        player.damage += item.damage;
+        player.defense += item.defense;
     }
     public void RemoveEquipment(Item item)
     {
+        player.damage -= item.damage;
+        player.defense -= item.defense;
         equipment.Remove(item.slot);
     }
     public Dictionary<string,Item> GetEquipment()

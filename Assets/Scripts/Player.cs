@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
 		expBar.SetExp(exp);
 
 		inventory = new InventoryManager(UseItem);
+		inventory.SetPlayer(this);
 		uiInventory.SetPlayer(this);
 		uiInventory.SetInventory(inventory);
 		uiInventory.gameObject.SetActive(false);
@@ -70,6 +71,7 @@ public class Player : MonoBehaviour
 				break;
             default:
 				uiInventory.SetEquipment(item);
+				uiStore.RefreshInventroyItems();
 				break;
         }
     }
