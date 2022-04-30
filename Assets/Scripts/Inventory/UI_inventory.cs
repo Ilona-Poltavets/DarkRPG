@@ -137,6 +137,8 @@ public class UI_inventory : MonoBehaviour
                 inventory.RemoveItem(item);
                 ItemWorld.DropItem(player.transform.position, duplicateItem);
             };
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseOverOnceFunc = () => Tooltip.ShowTooltip_Static(item.ToString());
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseOutOnceFunc = () => Tooltip.HideTooltip_Static();
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
             Image image=itemSlotRectTransform.Find("Image").GetComponent<Image>();
@@ -178,84 +180,9 @@ public class UI_inventory : MonoBehaviour
         inventory.RemoveEquipment(item);
         ItemWorld.DropItem(player.transform.position, item);
     }
-    public void BuyItem(string name, int cost)
-    {
-        Item item = null;
-        switch (name)
-        {
-            case "HealthPotion":
-                item = new Item { itemType = Item.ItemType.HealthPotion, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-            case "Helmet":
-                item = new Item { itemType = Item.ItemType.Helmet, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-            case "Bib":
-                item = new Item { itemType = Item.ItemType.Bib, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-            case "Boots":
-                item = new Item { itemType = Item.ItemType.Boots, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-            case "Necklace":
-                item = new Item { itemType = Item.ItemType.Necklace, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-            case "Sword":
-                item = new Item { itemType = Item.ItemType.Sword, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-            case "Shield":
-                item = new Item { itemType = Item.ItemType.Shield, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-            case "Medkit":
-                item = new Item { itemType = Item.ItemType.Medkit, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-            case "Ring":
-                item = new Item { itemType = Item.ItemType.Ring, amount = 1, slot = "" };
-                player.gold -= cost;
-                break;
-        }
-        if (item != null)
-            inventory.AddItem(item);
-    }
     public void SellItem(Item item)
     {
         inventory.RemoveItem(item);
-        player.gold += 20;
-        //switch (item.itemType)
-        //{
-        //    case Item.ItemType.HealthPotion:
-
-        //        break;
-        //    case Item.ItemType.Helmet:
-
-        //        break;
-        //    case Item.ItemType.Bib:
-
-        //        break;
-        //    case Item.ItemType.Boots:
-
-        //        break;
-        //    case Item.ItemType.Necklace:
-
-        //        break;
-        //    case Item.ItemType.Sword:
-
-        //        break;
-        //    case Item.ItemType.Shield:
-
-        //        break;
-        //    case Item.ItemType.Medkit:
-
-        //        break;
-        //    case Item.ItemType.Ring:
-
-        //        break;
-        //}
+        player.gold += item.cost / 2;
     }
 }

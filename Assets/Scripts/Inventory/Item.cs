@@ -23,6 +23,8 @@ public class Item
     public int amount;
     public string slot = "";
     public int cost = 0;
+    public int damage=0;
+    public int defense = 0;
     public Sprite GetSprite()
     {
         switch (itemType)
@@ -67,5 +69,9 @@ public class Item
             case ItemType.Boots:
                 return false;
         }
+    }
+    public override string ToString()
+    {
+        return $"***** {this.itemType} *****\nDamage: {this.damage}\nDefence: {this.defense}\nCost: {this.cost}";
     }
 }

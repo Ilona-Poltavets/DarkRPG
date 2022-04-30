@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
 	private InventoryManager inventory;
 	[SerializeField] private UI_inventory uiInventory;
-	[SerializeField] private GameObject uiStore;
+	[SerializeField] private StoreItem uiStore;
 	public static bool onShop = false;
     private void Awake()
     {
@@ -44,6 +44,9 @@ public class Player : MonoBehaviour
 		uiInventory.SetPlayer(this);
 		uiInventory.SetInventory(inventory);
 		uiInventory.gameObject.SetActive(false);
+		uiStore.SetPlayer(this);
+		uiStore.SetInventory(inventory);
+		uiStore.gameObject.SetActive(false);
 	}
 	private void UseItem(Item item)
     {
@@ -148,13 +151,13 @@ public class Player : MonoBehaviour
 	}
 	public void Resume()
 	{
-		uiStore.SetActive(false);
+		uiStore.gameObject.SetActive(false);
 		Time.timeScale = 1f;
 		onShop = false;
 	}
 	void Pause()
 	{
-		uiStore.SetActive(true);
+		uiStore.gameObject.SetActive(true);
 		Time.timeScale = 0f;
 		onShop = true;
 	}

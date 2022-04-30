@@ -15,11 +15,13 @@ public class InventoryManager
         itemList = new List<Item>();
         equipment = new Dictionary<string, Item>();
         AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount=1 });
-        AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1 });
-        AddItem(new Item { itemType = Item.ItemType.Shield, amount = 1 });
+        AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1,damage=50 });
+        AddItem(new Item { itemType = Item.ItemType.Shield, amount = 1,defense=30 });
     }
     public void AddItem(Item item)
     {
+        int cost = (item.damage + item.defense) * 2 + 10;
+        item.cost = cost;
         if (item.IsStackable())
         {
             bool itemAlreadyInInventory = false;
