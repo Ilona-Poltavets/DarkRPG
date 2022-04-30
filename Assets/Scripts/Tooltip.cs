@@ -11,7 +11,7 @@ public class Tooltip : MonoBehaviour
     private Text tooltipText;
     private RectTransform bgRectTransform;
     [SerializeField]
-    private Camera camera;
+    //private Camera camera;
     private void Awake()
     {
         instance = this;
@@ -21,11 +21,11 @@ public class Tooltip : MonoBehaviour
     }
     private void Update()
     {
-        Vector2 localPoint;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Mouse.current.position.ReadValue(), camera, out localPoint);
-        transform.localPosition = localPoint;
+        //Vector2 localPoint;
+        //RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Mouse.current.position.ReadValue(), camera, out localPoint);
+        //transform.localPosition = localPoint;
     }
-    private void ShowTooltip(string tooltipString)
+    public void ShowTooltip(string tooltipString)
     {
         gameObject.SetActive(true);
         tooltipText.text = tooltipString;
@@ -33,16 +33,16 @@ public class Tooltip : MonoBehaviour
         Vector2 bgSize = new Vector2(tooltipText.preferredWidth + textPaddingSize * 2f, tooltipText.preferredHeight + textPaddingSize * 2);
         bgRectTransform.sizeDelta = bgSize;
     }
-    private void HideTooltip()
+    public void HideTooltip()
     {
         gameObject.SetActive(false);
     }
-    public static void ShowTooltip_Static(string tooltipString)
-    {
-        instance.ShowTooltip(tooltipString);
-    }
-    public static void HideTooltip_Static()
-    {
-        instance.HideTooltip();
-    }
+    //public static void ShowTooltip_Static(string tooltipString)
+    //{
+    //    instance.ShowTooltip(tooltipString);
+    //}
+    //public static void HideTooltip_Static()
+    //{
+    //    instance.HideTooltip();
+    //}
 }

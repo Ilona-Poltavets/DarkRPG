@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b708f698cc86cf840be8bd1d11700353
+guid: ed5b71723094c064a8110c5c984dd36a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Artifact
+  - v_DeathRattle BB
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

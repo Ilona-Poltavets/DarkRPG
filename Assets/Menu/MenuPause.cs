@@ -53,8 +53,7 @@ public class MenuPause : MonoBehaviour
         inventoryUI.SetActive(false);
         Time.timeScale = 1f;
     }
-
-    private void ShowInventory()
+    public void ShowInventory()
     {
         inventoryUI.SetActive(true);
         Time.timeScale = 0f;

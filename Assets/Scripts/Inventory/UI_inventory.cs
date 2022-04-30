@@ -15,9 +15,12 @@ public class UI_inventory : MonoBehaviour
     public Text goldCount;
 
     private InventoryManager inventory;
+    [SerializeField] private Tooltip tooltip;
+
+    private Player player;
+
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
-    private Player player;
 
     private Transform EquipmantContainer;
     private Transform EquipmantSlot;
@@ -137,8 +140,8 @@ public class UI_inventory : MonoBehaviour
                 inventory.RemoveItem(item);
                 ItemWorld.DropItem(player.transform.position, duplicateItem);
             };
-            itemSlotRectTransform.GetComponent<Button_UI>().MouseOverOnceFunc = () => Tooltip.ShowTooltip_Static(item.ToString());
-            itemSlotRectTransform.GetComponent<Button_UI>().MouseOutOnceFunc = () => Tooltip.HideTooltip_Static();
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseOverOnceFunc = () => tooltip.ShowTooltip(item.ToString());
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseOutOnceFunc = () => tooltip.HideTooltip();
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
             Image image=itemSlotRectTransform.Find("Image").GetComponent<Image>();
