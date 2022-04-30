@@ -16,21 +16,20 @@ public class Player : MonoBehaviour
 	public int exp;
 	public int defense;
 	public int damage;
-
-	//public Text hp;
-	//public Text damagePoints;
-	//public Text defencePoints;
+	public int gold;
 
 	private InventoryManager inventory;
 	[SerializeField] private UI_inventory uiInventory;
+	[SerializeField] private StoreItem uiStore;
+	public static bool onShop = false;
     private void Awake()
     {
 		maxHealth = 100;
 		exp = 10;
 		lvl = 1;
-		defense = 20;
+		defense = 10;
 		damage = 10;
-
+		gold = 1000;
 	}
     void Start()
 	{
@@ -45,10 +44,9 @@ public class Player : MonoBehaviour
 		uiInventory.SetPlayer(this);
 		uiInventory.SetInventory(inventory);
 		uiInventory.gameObject.SetActive(false);
-
-		//hp.text = currentHealth.ToString();
-		//defencePoints.text = defense.ToString();
-		//damagePoints.text = damage.ToString();
+		uiStore.SetPlayer(this);
+		uiStore.SetInventory(inventory);
+		uiStore.gameObject.SetActive(false);
 	}
 	private void UseItem(Item item)
     {
@@ -58,9 +56,6 @@ public class Player : MonoBehaviour
 				Healer(10);
 				inventory.RemoveItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
 				break;
-			//case Item.ItemType.ManaPotion:
-			//	inventory.RemoveItem(new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
-			//	break;
 			case Item.ItemType.Medkit:
 				Healer(30);
 				inventory.RemoveItem(new Item { itemType = Item.ItemType.Medkit, amount = 1 });
@@ -70,7 +65,7 @@ public class Player : MonoBehaviour
 				break;
         }
     }
-	void Update()
+	void FixedUpdate()
 	{
 		if (Keyboard.current[Key.Space].wasPressedThisFrame)
 		{
@@ -84,7 +79,18 @@ public class Player : MonoBehaviour
         {
 			LevelUp();
         }
-	}
+        if (Keyboard.current[Key.G].wasPressedThisFrame)
+        {
+			ItemWorld.DropItem(rb.position, ItemWorldSpawner.GenerateGold());
+        }
+        if (Keyboard.current[Key.E].wasPressedThisFrame)
+        {
+            if (onShop)
+            {
+                Resume();
+            }
+        }
+    }
 	void TakeDamage(int damage)
 	{
 		currentHealth -= (damage-defense);
@@ -104,9 +110,11 @@ public class Player : MonoBehaviour
     {
 		lvl += 1;
 		exp -= 1000;
-		float k = maxHealth * 0.45f;
-		maxHealth += 100 + Mathf.RoundToInt(k);
+		float k1 = maxHealth * 0.45f;
+		maxHealth += 100 + Mathf.RoundToInt(k1);
 		currentHealth = maxHealth;
+		defense += 10;
+		damage += 12;
 		healthBar.SetMaxHealth(maxHealth);
 		expBar.SetExp(exp);
 		expBar.SetLevel(lvl);
@@ -116,11 +124,45 @@ public class Player : MonoBehaviour
 		ItemWorld itemWorld = other.GetComponent<ItemWorld>();
         if (itemWorld != null)
         {
-			if (inventory.itemList.Count < 56)
+            if (itemWorld.GetItem().itemType == Item.ItemType.Gold)
+            {
+				gold += itemWorld.GetItem().amount;
+				itemWorld.DestroySelf();
+			}
+			if (inventory.itemList.Count < 56 && itemWorld.GetItem().itemType != Item.ItemType.Gold)
 			{
 				inventory.AddItem(itemWorld.GetItem());
 				itemWorld.DestroySelf();
 			}
         }
     }
+	private void OnTriggerStay(Collider other)
+	{
+		if (other.tag == "Shop")
+		{
+			if (Keyboard.current[Key.E].wasPressedThisFrame)
+			{
+				if (!onShop)
+                {
+					Pause();
+                }
+			}
+		}
+	}
+	public void Resume()
+	{
+		uiStore.gameObject.SetActive(false);
+		Time.timeScale = 1f;
+		onShop = false;
+	}
+	void Pause()
+	{
+		uiStore.gameObject.SetActive(true);
+		Time.timeScale = 0f;
+		onShop = true;
+	}
+	public void OpenInventoryForSell()
+	{
+		uiInventory.gameObject.SetActive(true);
+	}
 }

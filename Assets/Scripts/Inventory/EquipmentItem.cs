@@ -9,10 +9,6 @@ public class EquipmentItem : MonoBehaviour
 {
     //public Image image;
     [SerializeField] private UI_inventory uiInventory;
-    private void Awake()
-    {
-        
-    }
     public void Update()
     {
         gameObject.GetComponent<Button_UI>().ClickFunc = () =>
@@ -25,3 +21,4 @@ public class EquipmentItem : MonoBehaviour
         };
     }
 }
+

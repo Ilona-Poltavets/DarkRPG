@@ -12,6 +12,7 @@ public class UI_inventory : MonoBehaviour
     public Text hp;
     public Text damagePoints;
     public Text defencePoints;
+    public Text goldCount;
 
     private InventoryManager inventory;
     private Transform itemSlotContainer;
@@ -33,6 +34,7 @@ public class UI_inventory : MonoBehaviour
         hp.text = player.currentHealth.ToString();
         defencePoints.text = player.defense.ToString();
         damagePoints.text = player.damage.ToString();
+        goldCount.text = player.gold.ToString();
     }
     public void SetPlayer(Player player)
     {
@@ -124,7 +126,10 @@ public class UI_inventory : MonoBehaviour
 
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
-                inventory.UseItem(item);
+                if (Player.onShop)
+                    SellItem(item);
+                else
+                    inventory.UseItem(item);
             };
             itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>
             {
@@ -132,6 +137,8 @@ public class UI_inventory : MonoBehaviour
                 inventory.RemoveItem(item);
                 ItemWorld.DropItem(player.transform.position, duplicateItem);
             };
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseOverOnceFunc = () => Tooltip.ShowTooltip_Static(item.ToString());
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseOutOnceFunc = () => Tooltip.HideTooltip_Static();
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
             Image image=itemSlotRectTransform.Find("Image").GetComponent<Image>();
@@ -172,5 +179,10 @@ public class UI_inventory : MonoBehaviour
         Item item = equipment[name];
         inventory.RemoveEquipment(item);
         ItemWorld.DropItem(player.transform.position, item);
+    }
+    public void SellItem(Item item)
+    {
+        inventory.RemoveItem(item);
+        player.gold += item.cost / 2;
     }
 }
