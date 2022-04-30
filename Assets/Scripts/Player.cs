@@ -1,13 +1,18 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils;
 using UnityEngine.UI;
+using System.Timers;
+using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	public HealthBar healthBar;
-	public ExpBar expBar;
-	public Rigidbody rb;
+	private static Timer aTimer;
+
+	[SerializeField] private HealthBar healthBar;
+	[SerializeField] private ExpBar expBar;
+	private Rigidbody rb;
+	private Animator animator;
 
 	//Characteristics
 	public int maxHealth;
@@ -21,6 +26,8 @@ public class Player : MonoBehaviour
 	private InventoryManager inventory;
 	[SerializeField] private UI_inventory uiInventory;
 	[SerializeField] private StoreItem uiStore;
+	[SerializeField] private Text textLvlUp;
+	[SerializeField] private GameObject dieText;
 	public static bool onShop = false;
     private void Awake()
     {
@@ -34,6 +41,7 @@ public class Player : MonoBehaviour
     void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		animator = GetComponent<Animator>();
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
 
@@ -78,6 +86,10 @@ public class Player : MonoBehaviour
         if (exp > 1000)
         {
 			LevelUp();
+		}
+        if (currentHealth <= 0)
+        {
+			StartCoroutine(DeathCoroutine());
         }
         if (Keyboard.current[Key.G].wasPressedThisFrame)
         {
@@ -106,8 +118,40 @@ public class Player : MonoBehaviour
 		exp += points;
 		expBar.SetExp(exp);
     }
+	IEnumerator TextCoroutine(string text)
+	{
+		textLvlUp.text = "";
+		foreach (char c in text)
+		{
+			textLvlUp.text += c;
+			yield return new WaitForSecondsRealtime(0.1f);
+		}
+		textLvlUp.text = "";
+	}
+	IEnumerator DeathCoroutine()
+	{
+		animator.SetTrigger("death");
+		dieText.SetActive(true);
+		yield return new WaitForSecondsRealtime(3f);
+        Application.LoadLevel(Application.loadedLevel);
+	}
 	private void LevelUp()
     {
+		StartCoroutine(TextCoroutine("★★★ LEVEL UP ★★★"));
+		float rand = Random.RandomRange(0f, 5f);
+        if (animator)
+        {
+			if (rand <= 1)
+				animator.SetTrigger("levelUp1");
+			else if(rand <= 2)
+				animator.SetTrigger("levelUp2");
+			else if(rand <= 3)
+				animator.SetTrigger("levelUp3");
+			else if (rand <= 4)
+				animator.SetTrigger("levelUp4");
+			else if (rand <= 5)
+				animator.SetTrigger("levelUp5");
+		}
 		lvl += 1;
 		exp -= 1000;
 		float k1 = maxHealth * 0.45f;
@@ -118,7 +162,7 @@ public class Player : MonoBehaviour
 		healthBar.SetMaxHealth(maxHealth);
 		expBar.SetExp(exp);
 		expBar.SetLevel(lvl);
-    }
+	}
     private void OnTriggerEnter(Collider other)
     {
 		ItemWorld itemWorld = other.GetComponent<ItemWorld>();

@@ -11,7 +11,7 @@ public class Tooltip : MonoBehaviour
     private Text tooltipText;
     private RectTransform bgRectTransform;
     [SerializeField]
-    private Camera camera;
+    //private Camera camera;
     private void Awake()
     {
         instance = this;
@@ -21,9 +21,9 @@ public class Tooltip : MonoBehaviour
     }
     private void Update()
     {
-        Vector2 localPoint;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Mouse.current.position.ReadValue(), camera, out localPoint);
-        transform.localPosition = localPoint;
+        //Vector2 localPoint;
+        //RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Mouse.current.position.ReadValue(), camera, out localPoint);
+        //transform.localPosition = localPoint;
     }
     private void ShowTooltip(string tooltipString)
     {
