@@ -8,9 +8,9 @@ public class CameraController : MonoBehaviour
     [Header("Target")]
     public Transform target;
     [Header("Distances")]
-    [Range(1f,7f)] public float distance = 5f;
-    public float minDistance = 1f;
-    public float maxDistance = 7f;
+    [Range(1f,7f)] public float distance = 10f;
+    public float minDistance = 5f;
+    public float maxDistance = 20f;
     public Vector3 offset;
     [Header("Zoom speed")]
     public float smoothSpeed = 5f;
