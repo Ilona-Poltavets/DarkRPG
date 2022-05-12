@@ -47,6 +47,7 @@ namespace MyProject
 
         private void Update()
         {
+            animator.SetFloat("speed", agent.velocity.magnitude);
             HandleInput();
         }
 

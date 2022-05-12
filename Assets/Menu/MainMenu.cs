@@ -60,11 +60,11 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("TestLevel");
     }
     public void Continue()
     {
-        Debug.Log("Continue");
+        SceneManager.LoadScene("Shop");
     }
     public void OnOffMusic()
     {

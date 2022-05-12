@@ -8,9 +8,9 @@ public class CameraController : MonoBehaviour
     [Header("Target")]
     public Transform target;
     [Header("Distances")]
-    [Range(1f,7f)] public float distance = 10f;
-    public float minDistance = 5f;
-    public float maxDistance = 20f;
+    [Range(1f,7f)] public float distance = 20f;
+    public float minDistance = 10f;
+    public float maxDistance = 100f;
     public Vector3 offset;
     [Header("Zoom speed")]
     public float smoothSpeed = 5f;
@@ -58,7 +58,7 @@ public class CameraController : MonoBehaviour
 
         if (pressRightButton.ReadValue<float>() == 1)
         {
-            transform.eulerAngles += speed * new Vector3(0, Mouse.current.delta.x.ReadValue(), 0);
+            transform.eulerAngles += speed * new Vector3(-1*Mouse.current.delta.y.ReadValue(), Mouse.current.delta.x.ReadValue(), 0);
         }
     }
 }
