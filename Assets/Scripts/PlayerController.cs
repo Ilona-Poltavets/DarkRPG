@@ -13,7 +13,6 @@ namespace MyProject
         [SerializeField] private LayerMask layerMask = new LayerMask();
         private NavMeshAgent agent = null;
         private Camera cam = null;
-
         private void Start()
         {
             animator = GetComponent<Animator>();
@@ -55,5 +54,16 @@ namespace MyProject
         {
             agent.SetDestination(location);
         }
+        //private void OnTriggerEnter(Collider other)
+        //{
+        //    if (other.tag == "Enemy")
+        //    {
+        //        EnemyAI.hunt = true;
+        //    }
+        //}
+        //private void OnTriggerExit(Collider other)
+        //{
+        //    EnemyAI.hunt = false;
+        //}
     }
 }
