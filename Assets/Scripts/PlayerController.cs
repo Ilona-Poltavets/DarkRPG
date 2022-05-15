@@ -22,6 +22,8 @@ namespace MyProject
         public Texture2D cursorInfo;
         private Vector2 offset;
         public int size = 30;
+
+        private float timeAttack = 0f;
         private void Start()
         {
             animator = GetComponent<Animator>();
@@ -46,6 +48,13 @@ namespace MyProject
             }
             animator.SetFloat("speed", agent.velocity.magnitude);
             HandleInput();
+        }
+        private void FixedUpdate()
+        {
+            if (timeAttack != 0f)
+            {
+                timeAttack -= 1f;
+            }
         }
         void MainCursor(string tags)
         {
@@ -100,10 +109,11 @@ namespace MyProject
         }
         private void OnTriggerStay(Collider other)
         {
-            if (Mouse.current.leftButton.isPressed && other.CompareTag("Enemy"))
+            if (Mouse.current.leftButton.isPressed && other.CompareTag("Enemy") && timeAttack==0f)
             {
                 animator.SetTrigger("attack");
-                EnemyAI.TakeDamage(this.GetComponent<Player>().GetDamage());
+                other.GetComponent<EnemyAI>().TakeDamage(GetComponent<Player>().GetDamage());
+                timeAttack = 3f;
             }
         }
     }

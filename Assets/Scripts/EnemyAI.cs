@@ -13,10 +13,11 @@ public class EnemyAI : MonoBehaviour
 	private Transform target;
     private Rigidbody rb;
     private Animator anim;
+	private static Animator animStatic;
     private NavMeshAgent agent;
 	[SerializeField] private Player player;
 
-	static int health;
+	int health;
     void Start()
     {
 		health = player.lvl * 100;
@@ -24,6 +25,7 @@ public class EnemyAI : MonoBehaviour
 		anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
+		animStatic = anim;
     }
 	void FixedUpdate()
 	{
@@ -40,9 +42,10 @@ public class EnemyAI : MonoBehaviour
 	IEnumerator DeathCoroutine()
 	{
 		anim.SetTrigger("death");
-		Debug.Log(Time.deltaTime);
-		yield return new WaitForSecondsRealtime(3f);
-		Debug.Log(Time.deltaTime);
+		yield return new WaitForSecondsRealtime(2f);
+		GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().AddExp(Mathf.RoundToInt(Random.Range(GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().lvl * 100, GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().lvl * 200)));
+		int count = Mathf.RoundToInt(Random.Range(GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().lvl * 5, GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().lvl * 10));
+		ItemWorld.DropItem(transform.position, new Item { itemType = Item.ItemType.Gold, amount = count });
 		Destroy(this.gameObject);
 	}
 	private void OnTriggerEnter(Collider other)
@@ -61,13 +64,15 @@ public class EnemyAI : MonoBehaviour
 			timeLeft -= Time.deltaTime;
 			if (timeLeft < 0)
 			{
+				Debug.Log("Attack");
 				anim.SetTrigger("attack");
 				player.TakeDamage(30);
 			}
 		}
     }
-	public static void TakeDamage(int points)
+	public void TakeDamage(int points)
     {
+		animStatic.SetTrigger("damage");
 		health -= points;
     }
     bool GetRaycast(Vector3 dir)

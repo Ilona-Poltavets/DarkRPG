@@ -111,10 +111,11 @@ public class Player : MonoBehaviour
 		currentHealth += points;
 		healthBar.SetHealth(currentHealth);
     }
-	void AddExp(int points)
+	public void AddExp(int points)
     {
 		exp += points;
 		expBar.SetExp(exp);
+		//Debug.Log(points);
     }
 	IEnumerator TextCoroutine(string text)
 	{

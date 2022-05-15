@@ -59,12 +59,12 @@ public class MenuPause : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    private void goMainMenu()
+    public void goMainMenu()
     {
         pauseMenuUI.SetActive(false);
         SceneManager.LoadScene("MainMenu");
     }
-    private void Resume()
+    public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;

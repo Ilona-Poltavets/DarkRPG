@@ -147,14 +147,7 @@ public class UI_inventory : MonoBehaviour
             Image image=itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
             Text uiText = itemSlotRectTransform.Find("amountText").GetComponent<Text>();
-            if (item.amount > 1)
-            {
-                uiText.text = item.amount.ToString();
-            }
-            else
-            {
-                uiText.text = "";
-            }
+            uiText.text = item.amount.ToString();
             x++;
             if (x > 7)
             {

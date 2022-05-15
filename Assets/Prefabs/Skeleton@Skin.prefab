@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 3640482572962822856}
   - component: {fileID: 3640482572962822861}
   - component: {fileID: 3640482572962822862}
+  - component: {fileID: 8002536645508549212}
   m_Layer: 0
   m_Name: Skeleton@Skin
   m_TagString: Enemy
@@ -385,7 +386,7 @@ Transform:
   m_GameObject: {fileID: 3640482573496480799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 7.47}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 3640482573496772721}
   - {fileID: 3640482573496772667}
@@ -442,9 +443,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Player
   rays: 360
-  distance: 5
+  distance: 15
   angle: 360
   offset: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
 --- !u!195 &3640482572962822862
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -455,7 +457,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.04
-  m_Speed: 30
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -467,6 +469,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &8002536645508549212
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3640482573496480799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.13
+  m_Center: {x: 0, y: 0.08, z: 0.03}
 --- !u!1 &3640482573496480801
 GameObject:
   m_ObjectHideFlags: 0

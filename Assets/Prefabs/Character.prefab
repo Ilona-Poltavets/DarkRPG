@@ -1231,7 +1231,7 @@ Transform:
   m_GameObject: {fileID: 7590304756915692608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.099, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 300, y: 300, z: 300}
   m_Children:
   - {fileID: 5430430668041340821}
   - {fileID: 3336515958630309486}
@@ -1306,9 +1306,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   mode: 0
-  cursorNormal: {fileID: 0}
-  cursorEnemy: {fileID: 0}
-  cursorInfo: {fileID: 0}
+  cursorNormal: {fileID: 2800000, guid: 5575b0d65ebfa974f924824581f222ec, type: 3}
+  cursorEnemy: {fileID: 2800000, guid: 6d62820a490132847b4b15fefe60eb96, type: 3}
+  cursorInfo: {fileID: 2800000, guid: 46a8fca314655204486ee4d47d8b3df1, type: 3}
   size: 30
 --- !u!195 &7590304756915692610
 NavMeshAgent:
@@ -1320,7 +1320,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.003
-  m_Speed: 3
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 200

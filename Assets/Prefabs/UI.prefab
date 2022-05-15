@@ -106,7 +106,7 @@ RectTransform:
   m_GameObject: {fileID: 439656920652766148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3402, y: 1.2514, z: 1}
   m_Children: []
   m_Father: {fileID: 7282149018741316478}
   m_RootOrder: 2
@@ -145,19 +145,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b708f698cc86cf840be8bd1d11700353, type: 3}
-    m_FontSize: 24
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: d67804ec169db544db6b3f1ee9b3b074, type: 3}
+    m_FontSize: 27
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
+    m_Alignment: 4
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 1
 --- !u!1 &440272455251279619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,7 +2594,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6114811915780460842}
         m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
         m_MethodName: goMainMenu
         m_Mode: 1
@@ -4381,7 +4381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6114811915780460842}
         m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
