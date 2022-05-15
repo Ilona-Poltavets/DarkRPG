@@ -1214,7 +1214,7 @@ GameObject:
   - component: {fileID: 7590304756915692613}
   - component: {fileID: 7590304756915692610}
   - component: {fileID: 7590304756915692611}
-  - component: {fileID: 7590304756915692615}
+  - component: {fileID: 8269893529924526212}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -1305,6 +1305,11 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
+  mode: 0
+  cursorNormal: {fileID: 0}
+  cursorEnemy: {fileID: 0}
+  cursorInfo: {fileID: 0}
+  size: 30
 --- !u!195 &7590304756915692610
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1352,8 +1357,8 @@ MonoBehaviour:
   uiStore: {fileID: 0}
   textLvlUp: {fileID: 0}
   dieText: {fileID: 0}
---- !u!64 &7590304756915692615
-MeshCollider:
+--- !u!136 &8269893529924526212
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1362,10 +1367,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2026847062979097881, guid: 1ac99d1820c6480489b1552579d5755f, type: 3}
+  m_Radius: 0.003
+  m_Height: 0.003
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.005, z: 0}
 --- !u!1 &7679275885786760987
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,8 +29,10 @@ public class Player : MonoBehaviour
 	[SerializeField] private Text textLvlUp;
 	[SerializeField] private GameObject dieText;
 	public static bool onShop = false;
-    private void Awake()
+
+	private void Awake()
     {
+		Cursor.visible = false;
 		maxHealth = 100;
 		exp = 10;
 		lvl = 1;
@@ -57,7 +59,8 @@ public class Player : MonoBehaviour
 		uiStore.SetInventory(inventory);
 		uiStore.gameObject.SetActive(false);
 	}
-	private void UseItem(Item item)
+	
+		private void UseItem(Item item)
     {
         switch (item.itemType)
         {
@@ -75,16 +78,9 @@ public class Player : MonoBehaviour
 				break;
         }
     }
+
 	void FixedUpdate()
 	{
-		if (Keyboard.current[Key.Space].wasPressedThisFrame)
-		{
-			AddExp(500);
-		}
-        if (Keyboard.current[Key.D].wasPressedThisFrame)
-        {
-			TakeDamage(50);
-        }
         if (exp > 1000)
         {
 			LevelUp();
@@ -93,10 +89,6 @@ public class Player : MonoBehaviour
         {
 			StartCoroutine(DeathCoroutine());
         }
-        if (Keyboard.current[Key.G].wasPressedThisFrame)
-        {
-			ItemWorld.DropItem(rb.position, ItemWorldSpawner.GenerateGold());
-        }
         if (Keyboard.current[Key.E].wasPressedThisFrame)
         {
             if (onShop)
@@ -104,8 +96,12 @@ public class Player : MonoBehaviour
                 Resume();
             }
         }
+		if (Keyboard.current[Key.Q].wasPressedThisFrame && (inventory.FindHealthPotion() != 0))
+		{
+			Healer(inventory.FindHealthPotion());
+		}
     }
-	void TakeDamage(int damage)
+	public void TakeDamage(int damage)
 	{
 		currentHealth -= (damage-defense);
 		healthBar.SetHealth(currentHealth);
@@ -211,4 +207,8 @@ public class Player : MonoBehaviour
 	{
 		uiInventory.gameObject.SetActive(true);
 	}
+	public int GetDamage()
+    {
+		return damage;
+    }
 }

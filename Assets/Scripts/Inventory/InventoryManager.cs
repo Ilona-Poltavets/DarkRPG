@@ -105,6 +105,23 @@ public class InventoryManager
         player.defense -= item.defense;
         equipment.Remove(item.slot);
     }
+    public int FindHealthPotion()
+    {
+        foreach(Item item in itemList)
+        {
+            if(item.itemType == Item.ItemType.HealthPotion)
+            {
+                RemoveItem(item);
+                return (player.maxHealth*25)/100;
+            }
+            else if (item.itemType == Item.ItemType.Medkit)
+            {
+                RemoveItem(item);
+                return (player.maxHealth * 50) / 100;
+            }
+        }
+        return 0;
+    }
     public Dictionary<string,Item> GetEquipment()
     {
         return equipment;
