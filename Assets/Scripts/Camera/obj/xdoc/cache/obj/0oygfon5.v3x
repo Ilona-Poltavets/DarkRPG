@@ -1,0 +1,403 @@
+id: cs.temp.dll
+language: CSharp
+name:
+  Default: cs.temp.dll
+qualifiedName:
+  Default: cs.temp.dll
+type: Assembly
+modifiers: {}
+items:
+- id: MyProject
+  commentId: N:MyProject
+  language: CSharp
+  name:
+    CSharp: MyProject
+    VB: MyProject
+  nameWithType:
+    CSharp: MyProject
+    VB: MyProject
+  qualifiedName:
+    CSharp: MyProject
+    VB: MyProject
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+  modifiers: {}
+  items:
+  - id: MyProject.PlayerController
+    commentId: T:MyProject.PlayerController
+    language: CSharp
+    name:
+      CSharp: PlayerController
+      VB: PlayerController
+    nameWithType:
+      CSharp: PlayerController
+      VB: PlayerController
+    qualifiedName:
+      CSharp: MyProject.PlayerController
+      VB: MyProject.PlayerController
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: PlayerController
+      path: ''
+      startLine: 395
+    syntax:
+      content:
+        CSharp: 'public class PlayerController : MonoBehaviour'
+        VB: >-
+          Public Class PlayerController
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.PlayerController.mode
+      commentId: F:MyProject.PlayerController.mode
+      language: CSharp
+      name:
+        CSharp: mode
+        VB: mode
+      nameWithType:
+        CSharp: PlayerController.mode
+        VB: PlayerController.mode
+      qualifiedName:
+        CSharp: MyProject.PlayerController.mode
+        VB: MyProject.PlayerController.mode
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: mode
+        path: ''
+        startLine: 405
+      syntax:
+        content:
+          CSharp: public PlayerController.ProjectMode mode
+          VB: Public mode As PlayerController.ProjectMode
+        return:
+          type: MyProject.PlayerController.ProjectMode
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.PlayerController.cursorNormal
+      commentId: F:MyProject.PlayerController.cursorNormal
+      language: CSharp
+      name:
+        CSharp: cursorNormal
+        VB: cursorNormal
+      nameWithType:
+        CSharp: PlayerController.cursorNormal
+        VB: PlayerController.cursorNormal
+      qualifiedName:
+        CSharp: MyProject.PlayerController.cursorNormal
+        VB: MyProject.PlayerController.cursorNormal
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: cursorNormal
+        path: ''
+        startLine: 407
+      syntax:
+        content:
+          CSharp: public Texture2D cursorNormal
+          VB: Public cursorNormal As Texture2D
+        return:
+          type: Texture2D
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.PlayerController.cursorEnemy
+      commentId: F:MyProject.PlayerController.cursorEnemy
+      language: CSharp
+      name:
+        CSharp: cursorEnemy
+        VB: cursorEnemy
+      nameWithType:
+        CSharp: PlayerController.cursorEnemy
+        VB: PlayerController.cursorEnemy
+      qualifiedName:
+        CSharp: MyProject.PlayerController.cursorEnemy
+        VB: MyProject.PlayerController.cursorEnemy
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: cursorEnemy
+        path: ''
+        startLine: 408
+      syntax:
+        content:
+          CSharp: public Texture2D cursorEnemy
+          VB: Public cursorEnemy As Texture2D
+        return:
+          type: Texture2D
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.PlayerController.cursorInfo
+      commentId: F:MyProject.PlayerController.cursorInfo
+      language: CSharp
+      name:
+        CSharp: cursorInfo
+        VB: cursorInfo
+      nameWithType:
+        CSharp: PlayerController.cursorInfo
+        VB: PlayerController.cursorInfo
+      qualifiedName:
+        CSharp: MyProject.PlayerController.cursorInfo
+        VB: MyProject.PlayerController.cursorInfo
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: cursorInfo
+        path: ''
+        startLine: 409
+      syntax:
+        content:
+          CSharp: public Texture2D cursorInfo
+          VB: Public cursorInfo As Texture2D
+        return:
+          type: Texture2D
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.PlayerController.size
+      commentId: F:MyProject.PlayerController.size
+      language: CSharp
+      name:
+        CSharp: size
+        VB: size
+      nameWithType:
+        CSharp: PlayerController.size
+        VB: PlayerController.size
+      qualifiedName:
+        CSharp: MyProject.PlayerController.size
+        VB: MyProject.PlayerController.size
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: size
+        path: ''
+        startLine: 411
+      syntax:
+        content:
+          CSharp: public int size
+          VB: Public size As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.PlayerController.ProjectMode
+    commentId: T:MyProject.PlayerController.ProjectMode
+    language: CSharp
+    name:
+      CSharp: PlayerController.ProjectMode
+      VB: PlayerController.ProjectMode
+    nameWithType:
+      CSharp: PlayerController.ProjectMode
+      VB: PlayerController.ProjectMode
+    qualifiedName:
+      CSharp: MyProject.PlayerController.ProjectMode
+      VB: MyProject.PlayerController.ProjectMode
+    type: Enum
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: ProjectMode
+      path: ''
+      startLine: 404
+    syntax:
+      content:
+        CSharp: public enum ProjectMode
+        VB: Public Enum ProjectMode
+    modifiers:
+      CSharp:
+      - public
+      - enum
+      VB:
+      - Public
+      - Enum
+    items:
+    - id: MyProject.PlayerController.ProjectMode.Project3D
+      commentId: F:MyProject.PlayerController.ProjectMode.Project3D
+      language: CSharp
+      name:
+        CSharp: Project3D
+        VB: Project3D
+      nameWithType:
+        CSharp: PlayerController.ProjectMode.Project3D
+        VB: PlayerController.ProjectMode.Project3D
+      qualifiedName:
+        CSharp: MyProject.PlayerController.ProjectMode.Project3D
+        VB: MyProject.PlayerController.ProjectMode.Project3D
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Project3D
+        path: ''
+        startLine: 404
+      syntax:
+        content:
+          CSharp: Project3D = 0
+          VB: Project3D = 0
+        return:
+          type: MyProject.PlayerController.ProjectMode
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.PlayerController.ProjectMode.Project2D
+      commentId: F:MyProject.PlayerController.ProjectMode.Project2D
+      language: CSharp
+      name:
+        CSharp: Project2D
+        VB: Project2D
+      nameWithType:
+        CSharp: PlayerController.ProjectMode.Project2D
+        VB: PlayerController.ProjectMode.Project2D
+      qualifiedName:
+        CSharp: MyProject.PlayerController.ProjectMode.Project2D
+        VB: MyProject.PlayerController.ProjectMode.Project2D
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Project2D
+        path: ''
+        startLine: 404
+      syntax:
+        content:
+          CSharp: Project2D = 1
+          VB: Project2D = 1
+        return:
+          type: MyProject.PlayerController.ProjectMode
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+references:
+  MyProject:
+    name:
+      CSharp:
+      - name: MyProject
+        nameWithType: MyProject
+        qualifiedName: MyProject
+      VB:
+      - name: MyProject
+        nameWithType: MyProject
+        qualifiedName: MyProject
+    isDefinition: true
+    commentId: N:MyProject
+  MyProject.PlayerController.ProjectMode:
+    name:
+      CSharp:
+      - id: MyProject.PlayerController.ProjectMode
+        name: PlayerController.ProjectMode
+        nameWithType: PlayerController.ProjectMode
+        qualifiedName: MyProject.PlayerController.ProjectMode
+      VB:
+      - id: MyProject.PlayerController.ProjectMode
+        name: PlayerController.ProjectMode
+        nameWithType: PlayerController.ProjectMode
+        qualifiedName: MyProject.PlayerController.ProjectMode
+    isDefinition: true
+    parent: MyProject
+    commentId: T:MyProject.PlayerController.ProjectMode
+  Texture2D:
+    name:
+      CSharp:
+      - id: Texture2D
+        name: Texture2D
+        nameWithType: Texture2D
+        qualifiedName: Texture2D
+        isExternal: true
+      VB:
+      - id: Texture2D
+        name: Texture2D
+        nameWithType: Texture2D
+        qualifiedName: Texture2D
+        isExternal: true
+    isDefinition: true
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.Int32:
+    name:
+      CSharp:
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      VB:
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Int32
+  MyProject.PlayerController:
+    name:
+      CSharp:
+      - id: MyProject.PlayerController
+        name: PlayerController
+        nameWithType: PlayerController
+        qualifiedName: MyProject.PlayerController
+      VB:
+      - id: MyProject.PlayerController
+        name: PlayerController
+        nameWithType: PlayerController
+        qualifiedName: MyProject.PlayerController
+    isDefinition: true
+    commentId: T:MyProject.PlayerController

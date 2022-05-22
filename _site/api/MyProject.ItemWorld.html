@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ItemWorld
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ItemWorld
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MyProject.ItemWorld">
+  
+  
+  <h1 id="MyProject_ItemWorld" data-uid="MyProject.ItemWorld" class="text-break">Class ItemWorld
+  </h1>
+  <div class="markdown level0 summary"><p>Item behavior class on the map</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ItemWorld</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MyProject.html">MyProject</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="MyProject_ItemWorld_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ItemWorld : MonoBehaviour</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MyProject_ItemWorld_cam" data-uid="MyProject.ItemWorld.cam">cam</h4>
+  <div class="markdown level1 summary"><p>Camera position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform cam</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MyProject_ItemWorld_DestroySelf_" data-uid="MyProject.ItemWorld.DestroySelf*"></a>
+  <h4 id="MyProject_ItemWorld_DestroySelf" data-uid="MyProject.ItemWorld.DestroySelf">DestroySelf()</h4>
+  <div class="markdown level1 summary"><p>Removing an item from the map</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DestroySelf()</code></pre>
+  </div>
+  
+  
+  <a id="MyProject_ItemWorld_DropItem_" data-uid="MyProject.ItemWorld.DropItem*"></a>
+  <h4 id="MyProject_ItemWorld_DropItem_Vector3_MyProject_Item_" data-uid="MyProject.ItemWorld.DropItem(Vector3,MyProject.Item)">DropItem(Vector3, Item)</h4>
+  <div class="markdown level1 summary"><p>Item generation on the map</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ItemWorld DropItem(Vector3 dropPosition, Item item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">dropPosition</span></td>
+        <td><p>The position where the item will be generated</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MyProject.Item.html">Item</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>Item to be generated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyProject.ItemWorld.html">ItemWorld</a></td>
+        <td><p>Item in position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_ItemWorld_GetItem_" data-uid="MyProject.ItemWorld.GetItem*"></a>
+  <h4 id="MyProject_ItemWorld_GetItem" data-uid="MyProject.ItemWorld.GetItem">GetItem()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Item GetItem()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyProject.Item.html">Item</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_ItemWorld_SetItem_" data-uid="MyProject.ItemWorld.SetItem*"></a>
+  <h4 id="MyProject_ItemWorld_SetItem_MyProject_Item_" data-uid="MyProject.ItemWorld.SetItem(MyProject.Item)">SetItem(Item)</h4>
+  <div class="markdown level1 summary"><p>Setting the image of the subject</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetItem(Item item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyProject.Item.html">Item</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>Item to be set image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_ItemWorld_SpawnItemWorld_" data-uid="MyProject.ItemWorld.SpawnItemWorld*"></a>
+  <h4 id="MyProject_ItemWorld_SpawnItemWorld_Vector3_MyProject_Item_" data-uid="MyProject.ItemWorld.SpawnItemWorld(Vector3,MyProject.Item)">SpawnItemWorld(Vector3, Item)</h4>
+  <div class="markdown level1 summary"><p>Item generation at spawn point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ItemWorld SpawnItemWorld(Vector3 position, Item item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Spawner position</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MyProject.Item.html">Item</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>Item to generate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyProject.ItemWorld.html">ItemWorld</a></td>
+        <td><p>Item in the game world with its position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

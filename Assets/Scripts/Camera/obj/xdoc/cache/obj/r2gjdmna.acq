@@ -1,0 +1,5943 @@
+id: cs.temp.dll
+language: CSharp
+name:
+  Default: cs.temp.dll
+qualifiedName:
+  Default: cs.temp.dll
+type: Assembly
+modifiers: {}
+items:
+- id: MyProject
+  commentId: N:MyProject
+  language: CSharp
+  name:
+    CSharp: MyProject
+    VB: MyProject
+  nameWithType:
+    CSharp: MyProject
+    VB: MyProject
+  qualifiedName:
+    CSharp: MyProject
+    VB: MyProject
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+  modifiers: {}
+  items:
+  - id: MyProject.EnemyAI
+    commentId: T:MyProject.EnemyAI
+    language: CSharp
+    name:
+      CSharp: EnemyAI
+      VB: EnemyAI
+    nameWithType:
+      CSharp: EnemyAI
+      VB: EnemyAI
+    qualifiedName:
+      CSharp: MyProject.EnemyAI
+      VB: MyProject.EnemyAI
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: EnemyAI
+      path: ''
+      startLine: 6
+    syntax:
+      content:
+        CSharp: 'public class EnemyAI : MonoBehaviour'
+        VB: >-
+          Public Class EnemyAI
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.EnemyAI.targetTag
+      commentId: F:MyProject.EnemyAI.targetTag
+      language: CSharp
+      name:
+        CSharp: targetTag
+        VB: targetTag
+      nameWithType:
+        CSharp: EnemyAI.targetTag
+        VB: EnemyAI.targetTag
+      qualifiedName:
+        CSharp: MyProject.EnemyAI.targetTag
+        VB: MyProject.EnemyAI.targetTag
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: targetTag
+        path: ''
+        startLine: 8
+      syntax:
+        content:
+          CSharp: public string targetTag
+          VB: Public targetTag As String
+        return:
+          type: System.String
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.EnemyAI.rays
+      commentId: F:MyProject.EnemyAI.rays
+      language: CSharp
+      name:
+        CSharp: rays
+        VB: rays
+      nameWithType:
+        CSharp: EnemyAI.rays
+        VB: EnemyAI.rays
+      qualifiedName:
+        CSharp: MyProject.EnemyAI.rays
+        VB: MyProject.EnemyAI.rays
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: rays
+        path: ''
+        startLine: 9
+      syntax:
+        content:
+          CSharp: public int rays
+          VB: Public rays As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.EnemyAI.distance
+      commentId: F:MyProject.EnemyAI.distance
+      language: CSharp
+      name:
+        CSharp: distance
+        VB: distance
+      nameWithType:
+        CSharp: EnemyAI.distance
+        VB: EnemyAI.distance
+      qualifiedName:
+        CSharp: MyProject.EnemyAI.distance
+        VB: MyProject.EnemyAI.distance
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: distance
+        path: ''
+        startLine: 10
+      syntax:
+        content:
+          CSharp: public int distance
+          VB: Public distance As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.EnemyAI.angle
+      commentId: F:MyProject.EnemyAI.angle
+      language: CSharp
+      name:
+        CSharp: angle
+        VB: angle
+      nameWithType:
+        CSharp: EnemyAI.angle
+        VB: EnemyAI.angle
+      qualifiedName:
+        CSharp: MyProject.EnemyAI.angle
+        VB: MyProject.EnemyAI.angle
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: angle
+        path: ''
+        startLine: 11
+      syntax:
+        content:
+          CSharp: public float angle
+          VB: Public angle As Single
+        return:
+          type: System.Single
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.EnemyAI.offset
+      commentId: F:MyProject.EnemyAI.offset
+      language: CSharp
+      name:
+        CSharp: offset
+        VB: offset
+      nameWithType:
+        CSharp: EnemyAI.offset
+        VB: EnemyAI.offset
+      qualifiedName:
+        CSharp: MyProject.EnemyAI.offset
+        VB: MyProject.EnemyAI.offset
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: offset
+        path: ''
+        startLine: 12
+      syntax:
+        content:
+          CSharp: public Vector3 offset
+          VB: Public offset As Vector3
+        return:
+          type: Vector3
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.EnemyAI.TakeDamage(System.Int32)
+      commentId: M:MyProject.EnemyAI.TakeDamage(System.Int32)
+      language: CSharp
+      name:
+        CSharp: TakeDamage(Int32)
+        VB: TakeDamage(Int32)
+      nameWithType:
+        CSharp: EnemyAI.TakeDamage(Int32)
+        VB: EnemyAI.TakeDamage(Int32)
+      qualifiedName:
+        CSharp: MyProject.EnemyAI.TakeDamage(System.Int32)
+        VB: MyProject.EnemyAI.TakeDamage(System.Int32)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: TakeDamage
+        path: ''
+        startLine: 73
+      syntax:
+        content:
+          CSharp: public void TakeDamage(int points)
+          VB: Public Sub TakeDamage(points As Integer)
+        parameters:
+        - id: points
+          type: System.Int32
+      overload: MyProject.EnemyAI.TakeDamage*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.ExpBar
+    commentId: T:MyProject.ExpBar
+    language: CSharp
+    name:
+      CSharp: ExpBar
+      VB: ExpBar
+    nameWithType:
+      CSharp: ExpBar
+      VB: ExpBar
+    qualifiedName:
+      CSharp: MyProject.ExpBar
+      VB: MyProject.ExpBar
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: ExpBar
+      path: ''
+      startLine: 135
+    syntax:
+      content:
+        CSharp: 'public class ExpBar : MonoBehaviour'
+        VB: >-
+          Public Class ExpBar
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.ExpBar.slider
+      commentId: F:MyProject.ExpBar.slider
+      language: CSharp
+      name:
+        CSharp: slider
+        VB: slider
+      nameWithType:
+        CSharp: ExpBar.slider
+        VB: ExpBar.slider
+      qualifiedName:
+        CSharp: MyProject.ExpBar.slider
+        VB: MyProject.ExpBar.slider
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: slider
+        path: ''
+        startLine: 137
+      syntax:
+        content:
+          CSharp: public Slider slider
+          VB: Public slider As Slider
+        return:
+          type: Slider
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ExpBar.text
+      commentId: F:MyProject.ExpBar.text
+      language: CSharp
+      name:
+        CSharp: text
+        VB: text
+      nameWithType:
+        CSharp: ExpBar.text
+        VB: ExpBar.text
+      qualifiedName:
+        CSharp: MyProject.ExpBar.text
+        VB: MyProject.ExpBar.text
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: text
+        path: ''
+        startLine: 138
+      syntax:
+        content:
+          CSharp: public Text text
+          VB: Public text As Text
+        return:
+          type: Text
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ExpBar.SetExp(System.Int32)
+      commentId: M:MyProject.ExpBar.SetExp(System.Int32)
+      language: CSharp
+      name:
+        CSharp: SetExp(Int32)
+        VB: SetExp(Int32)
+      nameWithType:
+        CSharp: ExpBar.SetExp(Int32)
+        VB: ExpBar.SetExp(Int32)
+      qualifiedName:
+        CSharp: MyProject.ExpBar.SetExp(System.Int32)
+        VB: MyProject.ExpBar.SetExp(System.Int32)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetExp
+        path: ''
+        startLine: 140
+      syntax:
+        content:
+          CSharp: public void SetExp(int exp)
+          VB: Public Sub SetExp(exp As Integer)
+        parameters:
+        - id: exp
+          type: System.Int32
+      overload: MyProject.ExpBar.SetExp*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ExpBar.SetLevel(System.Int32)
+      commentId: M:MyProject.ExpBar.SetLevel(System.Int32)
+      language: CSharp
+      name:
+        CSharp: SetLevel(Int32)
+        VB: SetLevel(Int32)
+      nameWithType:
+        CSharp: ExpBar.SetLevel(Int32)
+        VB: ExpBar.SetLevel(Int32)
+      qualifiedName:
+        CSharp: MyProject.ExpBar.SetLevel(System.Int32)
+        VB: MyProject.ExpBar.SetLevel(System.Int32)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetLevel
+        path: ''
+        startLine: 144
+      syntax:
+        content:
+          CSharp: public void SetLevel(int level)
+          VB: Public Sub SetLevel(level As Integer)
+        parameters:
+        - id: level
+          type: System.Int32
+      overload: MyProject.ExpBar.SetLevel*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.HealthBar
+    commentId: T:MyProject.HealthBar
+    language: CSharp
+    name:
+      CSharp: HealthBar
+      VB: HealthBar
+    nameWithType:
+      CSharp: HealthBar
+      VB: HealthBar
+    qualifiedName:
+      CSharp: MyProject.HealthBar
+      VB: MyProject.HealthBar
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: HealthBar
+      path: ''
+      startLine: 155
+    syntax:
+      content:
+        CSharp: 'public class HealthBar : MonoBehaviour'
+        VB: >-
+          Public Class HealthBar
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.HealthBar.slider
+      commentId: F:MyProject.HealthBar.slider
+      language: CSharp
+      name:
+        CSharp: slider
+        VB: slider
+      nameWithType:
+        CSharp: HealthBar.slider
+        VB: HealthBar.slider
+      qualifiedName:
+        CSharp: MyProject.HealthBar.slider
+        VB: MyProject.HealthBar.slider
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: slider
+        path: ''
+        startLine: 158
+      syntax:
+        content:
+          CSharp: public Slider slider
+          VB: Public slider As Slider
+        return:
+          type: Slider
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.HealthBar.gradient
+      commentId: F:MyProject.HealthBar.gradient
+      language: CSharp
+      name:
+        CSharp: gradient
+        VB: gradient
+      nameWithType:
+        CSharp: HealthBar.gradient
+        VB: HealthBar.gradient
+      qualifiedName:
+        CSharp: MyProject.HealthBar.gradient
+        VB: MyProject.HealthBar.gradient
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: gradient
+        path: ''
+        startLine: 159
+      syntax:
+        content:
+          CSharp: public Gradient gradient
+          VB: Public gradient As Gradient
+        return:
+          type: Gradient
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.HealthBar.fill
+      commentId: F:MyProject.HealthBar.fill
+      language: CSharp
+      name:
+        CSharp: fill
+        VB: fill
+      nameWithType:
+        CSharp: HealthBar.fill
+        VB: HealthBar.fill
+      qualifiedName:
+        CSharp: MyProject.HealthBar.fill
+        VB: MyProject.HealthBar.fill
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: fill
+        path: ''
+        startLine: 160
+      syntax:
+        content:
+          CSharp: public Image fill
+          VB: Public fill As Image
+        return:
+          type: Image
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.HealthBar.SetMaxHealth(System.Int32)
+      commentId: M:MyProject.HealthBar.SetMaxHealth(System.Int32)
+      language: CSharp
+      name:
+        CSharp: SetMaxHealth(Int32)
+        VB: SetMaxHealth(Int32)
+      nameWithType:
+        CSharp: HealthBar.SetMaxHealth(Int32)
+        VB: HealthBar.SetMaxHealth(Int32)
+      qualifiedName:
+        CSharp: MyProject.HealthBar.SetMaxHealth(System.Int32)
+        VB: MyProject.HealthBar.SetMaxHealth(System.Int32)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetMaxHealth
+        path: ''
+        startLine: 161
+      syntax:
+        content:
+          CSharp: public void SetMaxHealth(int health)
+          VB: Public Sub SetMaxHealth(health As Integer)
+        parameters:
+        - id: health
+          type: System.Int32
+      overload: MyProject.HealthBar.SetMaxHealth*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.HealthBar.SetHealth(System.Int32)
+      commentId: M:MyProject.HealthBar.SetHealth(System.Int32)
+      language: CSharp
+      name:
+        CSharp: SetHealth(Int32)
+        VB: SetHealth(Int32)
+      nameWithType:
+        CSharp: HealthBar.SetHealth(Int32)
+        VB: HealthBar.SetHealth(Int32)
+      qualifiedName:
+        CSharp: MyProject.HealthBar.SetHealth(System.Int32)
+        VB: MyProject.HealthBar.SetHealth(System.Int32)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetHealth
+        path: ''
+        startLine: 169
+      syntax:
+        content:
+          CSharp: public void SetHealth(int health)
+          VB: Public Sub SetHealth(health As Integer)
+        parameters:
+        - id: health
+          type: System.Int32
+      overload: MyProject.HealthBar.SetHealth*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.Player
+    commentId: T:MyProject.Player
+    language: CSharp
+    name:
+      CSharp: Player
+      VB: Player
+    nameWithType:
+      CSharp: Player
+      VB: Player
+    qualifiedName:
+      CSharp: MyProject.Player
+      VB: MyProject.Player
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: Player
+      path: ''
+      startLine: 184
+    syntax:
+      content:
+        CSharp: 'public class Player : MonoBehaviour'
+        VB: >-
+          Public Class Player
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.Player.maxHealth
+      commentId: F:MyProject.Player.maxHealth
+      language: CSharp
+      name:
+        CSharp: maxHealth
+        VB: maxHealth
+      nameWithType:
+        CSharp: Player.maxHealth
+        VB: Player.maxHealth
+      qualifiedName:
+        CSharp: MyProject.Player.maxHealth
+        VB: MyProject.Player.maxHealth
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: maxHealth
+        path: ''
+        startLine: 194
+      syntax:
+        content:
+          CSharp: public int maxHealth
+          VB: Public maxHealth As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.currentHealth
+      commentId: F:MyProject.Player.currentHealth
+      language: CSharp
+      name:
+        CSharp: currentHealth
+        VB: currentHealth
+      nameWithType:
+        CSharp: Player.currentHealth
+        VB: Player.currentHealth
+      qualifiedName:
+        CSharp: MyProject.Player.currentHealth
+        VB: MyProject.Player.currentHealth
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: currentHealth
+        path: ''
+        startLine: 195
+      syntax:
+        content:
+          CSharp: public int currentHealth
+          VB: Public currentHealth As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.lvl
+      commentId: F:MyProject.Player.lvl
+      language: CSharp
+      name:
+        CSharp: lvl
+        VB: lvl
+      nameWithType:
+        CSharp: Player.lvl
+        VB: Player.lvl
+      qualifiedName:
+        CSharp: MyProject.Player.lvl
+        VB: MyProject.Player.lvl
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: lvl
+        path: ''
+        startLine: 196
+      syntax:
+        content:
+          CSharp: public int lvl
+          VB: Public lvl As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.exp
+      commentId: F:MyProject.Player.exp
+      language: CSharp
+      name:
+        CSharp: exp
+        VB: exp
+      nameWithType:
+        CSharp: Player.exp
+        VB: Player.exp
+      qualifiedName:
+        CSharp: MyProject.Player.exp
+        VB: MyProject.Player.exp
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: exp
+        path: ''
+        startLine: 197
+      syntax:
+        content:
+          CSharp: public int exp
+          VB: Public exp As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.defense
+      commentId: F:MyProject.Player.defense
+      language: CSharp
+      name:
+        CSharp: defense
+        VB: defense
+      nameWithType:
+        CSharp: Player.defense
+        VB: Player.defense
+      qualifiedName:
+        CSharp: MyProject.Player.defense
+        VB: MyProject.Player.defense
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: defense
+        path: ''
+        startLine: 198
+      syntax:
+        content:
+          CSharp: public int defense
+          VB: Public defense As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.damage
+      commentId: F:MyProject.Player.damage
+      language: CSharp
+      name:
+        CSharp: damage
+        VB: damage
+      nameWithType:
+        CSharp: Player.damage
+        VB: Player.damage
+      qualifiedName:
+        CSharp: MyProject.Player.damage
+        VB: MyProject.Player.damage
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: damage
+        path: ''
+        startLine: 199
+      syntax:
+        content:
+          CSharp: public int damage
+          VB: Public damage As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.gold
+      commentId: F:MyProject.Player.gold
+      language: CSharp
+      name:
+        CSharp: gold
+        VB: gold
+      nameWithType:
+        CSharp: Player.gold
+        VB: Player.gold
+      qualifiedName:
+        CSharp: MyProject.Player.gold
+        VB: MyProject.Player.gold
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: gold
+        path: ''
+        startLine: 200
+      syntax:
+        content:
+          CSharp: public int gold
+          VB: Public gold As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.onShop
+      commentId: F:MyProject.Player.onShop
+      language: CSharp
+      name:
+        CSharp: onShop
+        VB: onShop
+      nameWithType:
+        CSharp: Player.onShop
+        VB: Player.onShop
+      qualifiedName:
+        CSharp: MyProject.Player.onShop
+        VB: MyProject.Player.onShop
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: onShop
+        path: ''
+        startLine: 207
+      syntax:
+        content:
+          CSharp: public static bool onShop
+          VB: Public Shared onShop As Boolean
+        return:
+          type: System.Boolean
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+    - id: MyProject.Player.TakeDamage(System.Int32)
+      commentId: M:MyProject.Player.TakeDamage(System.Int32)
+      language: CSharp
+      name:
+        CSharp: TakeDamage(Int32)
+        VB: TakeDamage(Int32)
+      nameWithType:
+        CSharp: Player.TakeDamage(Int32)
+        VB: Player.TakeDamage(Int32)
+      qualifiedName:
+        CSharp: MyProject.Player.TakeDamage(System.Int32)
+        VB: MyProject.Player.TakeDamage(System.Int32)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: TakeDamage
+        path: ''
+        startLine: 280
+      syntax:
+        content:
+          CSharp: public void TakeDamage(int damage)
+          VB: Public Sub TakeDamage(damage As Integer)
+        parameters:
+        - id: damage
+          type: System.Int32
+      overload: MyProject.Player.TakeDamage*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.AddExp(System.Int32)
+      commentId: M:MyProject.Player.AddExp(System.Int32)
+      language: CSharp
+      name:
+        CSharp: AddExp(Int32)
+        VB: AddExp(Int32)
+      nameWithType:
+        CSharp: Player.AddExp(Int32)
+        VB: Player.AddExp(Int32)
+      qualifiedName:
+        CSharp: MyProject.Player.AddExp(System.Int32)
+        VB: MyProject.Player.AddExp(System.Int32)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: AddExp
+        path: ''
+        startLine: 290
+      syntax:
+        content:
+          CSharp: public void AddExp(int points)
+          VB: Public Sub AddExp(points As Integer)
+        parameters:
+        - id: points
+          type: System.Int32
+      overload: MyProject.Player.AddExp*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.Resume
+      commentId: M:MyProject.Player.Resume
+      language: CSharp
+      name:
+        CSharp: Resume()
+        VB: Resume()
+      nameWithType:
+        CSharp: Player.Resume()
+        VB: Player.Resume()
+      qualifiedName:
+        CSharp: MyProject.Player.Resume()
+        VB: MyProject.Player.Resume()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Resume
+        path: ''
+        startLine: 371
+      syntax:
+        content:
+          CSharp: public void Resume()
+          VB: Public Sub Resume
+      overload: MyProject.Player.Resume*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.OpenInventoryForSell
+      commentId: M:MyProject.Player.OpenInventoryForSell
+      language: CSharp
+      name:
+        CSharp: OpenInventoryForSell()
+        VB: OpenInventoryForSell()
+      nameWithType:
+        CSharp: Player.OpenInventoryForSell()
+        VB: Player.OpenInventoryForSell()
+      qualifiedName:
+        CSharp: MyProject.Player.OpenInventoryForSell()
+        VB: MyProject.Player.OpenInventoryForSell()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: OpenInventoryForSell
+        path: ''
+        startLine: 383
+      syntax:
+        content:
+          CSharp: public void OpenInventoryForSell()
+          VB: Public Sub OpenInventoryForSell
+      overload: MyProject.Player.OpenInventoryForSell*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Player.GetDamage
+      commentId: M:MyProject.Player.GetDamage
+      language: CSharp
+      name:
+        CSharp: GetDamage()
+        VB: GetDamage()
+      nameWithType:
+        CSharp: Player.GetDamage()
+        VB: Player.GetDamage()
+      qualifiedName:
+        CSharp: MyProject.Player.GetDamage()
+        VB: MyProject.Player.GetDamage()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: GetDamage
+        path: ''
+        startLine: 387
+      syntax:
+        content:
+          CSharp: public int GetDamage()
+          VB: Public Function GetDamage As Integer
+        return:
+          type: System.Int32
+      overload: MyProject.Player.GetDamage*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.StoreItem
+    commentId: T:MyProject.StoreItem
+    language: CSharp
+    name:
+      CSharp: StoreItem
+      VB: StoreItem
+    nameWithType:
+      CSharp: StoreItem
+      VB: StoreItem
+    qualifiedName:
+      CSharp: MyProject.StoreItem
+      VB: MyProject.StoreItem
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: StoreItem
+      path: ''
+      startLine: 523
+    syntax:
+      content:
+        CSharp: 'public class StoreItem : MonoBehaviour'
+        VB: >-
+          Public Class StoreItem
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.StoreItem.SetInventory(MyProject.InventoryManager)
+      commentId: M:MyProject.StoreItem.SetInventory(MyProject.InventoryManager)
+      language: CSharp
+      name:
+        CSharp: SetInventory(InventoryManager)
+        VB: SetInventory(InventoryManager)
+      nameWithType:
+        CSharp: StoreItem.SetInventory(InventoryManager)
+        VB: StoreItem.SetInventory(InventoryManager)
+      qualifiedName:
+        CSharp: MyProject.StoreItem.SetInventory(MyProject.InventoryManager)
+        VB: MyProject.StoreItem.SetInventory(MyProject.InventoryManager)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetInventory
+        path: ''
+        startLine: 543
+      syntax:
+        content:
+          CSharp: public void SetInventory(InventoryManager inventory)
+          VB: Public Sub SetInventory(inventory As InventoryManager)
+        parameters:
+        - id: inventory
+          type: MyProject.InventoryManager
+      overload: MyProject.StoreItem.SetInventory*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.StoreItem.RefreshInventroyItems
+      commentId: M:MyProject.StoreItem.RefreshInventroyItems
+      language: CSharp
+      name:
+        CSharp: RefreshInventroyItems()
+        VB: RefreshInventroyItems()
+      nameWithType:
+        CSharp: StoreItem.RefreshInventroyItems()
+        VB: StoreItem.RefreshInventroyItems()
+      qualifiedName:
+        CSharp: MyProject.StoreItem.RefreshInventroyItems()
+        VB: MyProject.StoreItem.RefreshInventroyItems()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: RefreshInventroyItems
+        path: ''
+        startLine: 549
+      syntax:
+        content:
+          CSharp: public void RefreshInventroyItems()
+          VB: Public Sub RefreshInventroyItems
+      overload: MyProject.StoreItem.RefreshInventroyItems*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.StoreItem.Update
+      commentId: M:MyProject.StoreItem.Update
+      language: CSharp
+      name:
+        CSharp: Update()
+        VB: Update()
+      nameWithType:
+        CSharp: StoreItem.Update()
+        VB: StoreItem.Update()
+      qualifiedName:
+        CSharp: MyProject.StoreItem.Update()
+        VB: MyProject.StoreItem.Update()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Update
+        path: ''
+        startLine: 586
+      syntax:
+        content:
+          CSharp: public void Update()
+          VB: Public Sub Update
+      overload: MyProject.StoreItem.Update*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.StoreItem.SetPlayer(MyProject.Player)
+      commentId: M:MyProject.StoreItem.SetPlayer(MyProject.Player)
+      language: CSharp
+      name:
+        CSharp: SetPlayer(Player)
+        VB: SetPlayer(Player)
+      nameWithType:
+        CSharp: StoreItem.SetPlayer(Player)
+        VB: StoreItem.SetPlayer(Player)
+      qualifiedName:
+        CSharp: MyProject.StoreItem.SetPlayer(MyProject.Player)
+        VB: MyProject.StoreItem.SetPlayer(MyProject.Player)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetPlayer
+        path: ''
+        startLine: 590
+      syntax:
+        content:
+          CSharp: public void SetPlayer(Player player)
+          VB: Public Sub SetPlayer(player As Player)
+        parameters:
+        - id: player
+          type: MyProject.Player
+      overload: MyProject.StoreItem.SetPlayer*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.StoreItem.BuyItem(MyProject.Item,System.Int32)
+      commentId: M:MyProject.StoreItem.BuyItem(MyProject.Item,System.Int32)
+      language: CSharp
+      name:
+        CSharp: BuyItem(Item, Int32)
+        VB: BuyItem(Item, Int32)
+      nameWithType:
+        CSharp: StoreItem.BuyItem(Item, Int32)
+        VB: StoreItem.BuyItem(Item, Int32)
+      qualifiedName:
+        CSharp: MyProject.StoreItem.BuyItem(MyProject.Item, System.Int32)
+        VB: MyProject.StoreItem.BuyItem(MyProject.Item, System.Int32)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: BuyItem
+        path: ''
+        startLine: 635
+      syntax:
+        content:
+          CSharp: public void BuyItem(Item item, int cost)
+          VB: Public Sub BuyItem(item As Item, cost As Integer)
+        parameters:
+        - id: item
+          type: MyProject.Item
+        - id: cost
+          type: System.Int32
+      overload: MyProject.StoreItem.BuyItem*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.Tooltip
+    commentId: T:MyProject.Tooltip
+    language: CSharp
+    name:
+      CSharp: Tooltip
+      VB: Tooltip
+    nameWithType:
+      CSharp: Tooltip
+      VB: Tooltip
+    qualifiedName:
+      CSharp: MyProject.Tooltip
+      VB: MyProject.Tooltip
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: Tooltip
+      path: ''
+      startLine: 654
+    syntax:
+      content:
+        CSharp: 'public class Tooltip : MonoBehaviour'
+        VB: >-
+          Public Class Tooltip
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.Tooltip.ShowTooltip(System.String)
+      commentId: M:MyProject.Tooltip.ShowTooltip(System.String)
+      language: CSharp
+      name:
+        CSharp: ShowTooltip(String)
+        VB: ShowTooltip(String)
+      nameWithType:
+        CSharp: Tooltip.ShowTooltip(String)
+        VB: Tooltip.ShowTooltip(String)
+      qualifiedName:
+        CSharp: MyProject.Tooltip.ShowTooltip(System.String)
+        VB: MyProject.Tooltip.ShowTooltip(System.String)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: ShowTooltip
+        path: ''
+        startLine: 674
+      syntax:
+        content:
+          CSharp: public void ShowTooltip(string tooltipString)
+          VB: Public Sub ShowTooltip(tooltipString As String)
+        parameters:
+        - id: tooltipString
+          type: System.String
+      overload: MyProject.Tooltip.ShowTooltip*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Tooltip.HideTooltip
+      commentId: M:MyProject.Tooltip.HideTooltip
+      language: CSharp
+      name:
+        CSharp: HideTooltip()
+        VB: HideTooltip()
+      nameWithType:
+        CSharp: Tooltip.HideTooltip()
+        VB: Tooltip.HideTooltip()
+      qualifiedName:
+        CSharp: MyProject.Tooltip.HideTooltip()
+        VB: MyProject.Tooltip.HideTooltip()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: HideTooltip
+        path: ''
+        startLine: 682
+      syntax:
+        content:
+          CSharp: public void HideTooltip()
+          VB: Public Sub HideTooltip
+      overload: MyProject.Tooltip.HideTooltip*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.CameraController
+    commentId: T:MyProject.CameraController
+    language: CSharp
+    name:
+      CSharp: CameraController
+      VB: CameraController
+    nameWithType:
+      CSharp: CameraController
+      VB: CameraController
+    qualifiedName:
+      CSharp: MyProject.CameraController
+      VB: MyProject.CameraController
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: CameraController
+      path: ''
+      startLine: 700
+    syntax:
+      content:
+        CSharp: 'public class CameraController : MonoBehaviour'
+        VB: >-
+          Public Class CameraController
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.CameraController.target
+      commentId: F:MyProject.CameraController.target
+      language: CSharp
+      name:
+        CSharp: target
+        VB: target
+      nameWithType:
+        CSharp: CameraController.target
+        VB: CameraController.target
+      qualifiedName:
+        CSharp: MyProject.CameraController.target
+        VB: MyProject.CameraController.target
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: target
+        path: ''
+        startLine: 705
+      syntax:
+        content:
+          CSharp: public Transform target
+          VB: Public target As Transform
+        return:
+          type: Transform
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.CameraController.distance
+      commentId: F:MyProject.CameraController.distance
+      language: CSharp
+      name:
+        CSharp: distance
+        VB: distance
+      nameWithType:
+        CSharp: CameraController.distance
+        VB: CameraController.distance
+      qualifiedName:
+        CSharp: MyProject.CameraController.distance
+        VB: MyProject.CameraController.distance
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: distance
+        path: ''
+        startLine: 707
+      syntax:
+        content:
+          CSharp: public float distance
+          VB: Public distance As Single
+        return:
+          type: System.Single
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.CameraController.minDistance
+      commentId: F:MyProject.CameraController.minDistance
+      language: CSharp
+      name:
+        CSharp: minDistance
+        VB: minDistance
+      nameWithType:
+        CSharp: CameraController.minDistance
+        VB: CameraController.minDistance
+      qualifiedName:
+        CSharp: MyProject.CameraController.minDistance
+        VB: MyProject.CameraController.minDistance
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: minDistance
+        path: ''
+        startLine: 708
+      syntax:
+        content:
+          CSharp: public float minDistance
+          VB: Public minDistance As Single
+        return:
+          type: System.Single
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.CameraController.maxDistance
+      commentId: F:MyProject.CameraController.maxDistance
+      language: CSharp
+      name:
+        CSharp: maxDistance
+        VB: maxDistance
+      nameWithType:
+        CSharp: CameraController.maxDistance
+        VB: CameraController.maxDistance
+      qualifiedName:
+        CSharp: MyProject.CameraController.maxDistance
+        VB: MyProject.CameraController.maxDistance
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: maxDistance
+        path: ''
+        startLine: 709
+      syntax:
+        content:
+          CSharp: public float maxDistance
+          VB: Public maxDistance As Single
+        return:
+          type: System.Single
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.CameraController.offset
+      commentId: F:MyProject.CameraController.offset
+      language: CSharp
+      name:
+        CSharp: offset
+        VB: offset
+      nameWithType:
+        CSharp: CameraController.offset
+        VB: CameraController.offset
+      qualifiedName:
+        CSharp: MyProject.CameraController.offset
+        VB: MyProject.CameraController.offset
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: offset
+        path: ''
+        startLine: 710
+      syntax:
+        content:
+          CSharp: public Vector3 offset
+          VB: Public offset As Vector3
+        return:
+          type: Vector3
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.CameraController.smoothSpeed
+      commentId: F:MyProject.CameraController.smoothSpeed
+      language: CSharp
+      name:
+        CSharp: smoothSpeed
+        VB: smoothSpeed
+      nameWithType:
+        CSharp: CameraController.smoothSpeed
+        VB: CameraController.smoothSpeed
+      qualifiedName:
+        CSharp: MyProject.CameraController.smoothSpeed
+        VB: MyProject.CameraController.smoothSpeed
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: smoothSpeed
+        path: ''
+        startLine: 712
+      syntax:
+        content:
+          CSharp: public float smoothSpeed
+          VB: Public smoothSpeed As Single
+        return:
+          type: System.Single
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.CameraController.scrollSensitivity
+      commentId: F:MyProject.CameraController.scrollSensitivity
+      language: CSharp
+      name:
+        CSharp: scrollSensitivity
+        VB: scrollSensitivity
+      nameWithType:
+        CSharp: CameraController.scrollSensitivity
+        VB: CameraController.scrollSensitivity
+      qualifiedName:
+        CSharp: MyProject.CameraController.scrollSensitivity
+        VB: MyProject.CameraController.scrollSensitivity
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: scrollSensitivity
+        path: ''
+        startLine: 713
+      syntax:
+        content:
+          CSharp: public float scrollSensitivity
+          VB: Public scrollSensitivity As Single
+        return:
+          type: System.Single
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.CameraController.speed
+      commentId: F:MyProject.CameraController.speed
+      language: CSharp
+      name:
+        CSharp: speed
+        VB: speed
+      nameWithType:
+        CSharp: CameraController.speed
+        VB: CameraController.speed
+      qualifiedName:
+        CSharp: MyProject.CameraController.speed
+        VB: MyProject.CameraController.speed
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: speed
+        path: ''
+        startLine: 716
+      syntax:
+        content:
+          CSharp: public float speed
+          VB: Public speed As Single
+        return:
+          type: System.Single
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.EquipmentItem
+    commentId: T:MyProject.EquipmentItem
+    language: CSharp
+    name:
+      CSharp: EquipmentItem
+      VB: EquipmentItem
+    nameWithType:
+      CSharp: EquipmentItem
+      VB: EquipmentItem
+    qualifiedName:
+      CSharp: MyProject.EquipmentItem
+      VB: MyProject.EquipmentItem
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: EquipmentItem
+      path: ''
+      startLine: 770
+    syntax:
+      content:
+        CSharp: 'public class EquipmentItem : MonoBehaviour'
+        VB: >-
+          Public Class EquipmentItem
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.EquipmentItem.Update
+      commentId: M:MyProject.EquipmentItem.Update
+      language: CSharp
+      name:
+        CSharp: Update()
+        VB: Update()
+      nameWithType:
+        CSharp: EquipmentItem.Update()
+        VB: EquipmentItem.Update()
+      qualifiedName:
+        CSharp: MyProject.EquipmentItem.Update()
+        VB: MyProject.EquipmentItem.Update()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Update
+        path: ''
+        startLine: 774
+      syntax:
+        content:
+          CSharp: public void Update()
+          VB: Public Sub Update
+      overload: MyProject.EquipmentItem.Update*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.InventoryManager
+    commentId: T:MyProject.InventoryManager
+    language: CSharp
+    name:
+      CSharp: InventoryManager
+      VB: InventoryManager
+    nameWithType:
+      CSharp: InventoryManager
+      VB: InventoryManager
+    qualifiedName:
+      CSharp: MyProject.InventoryManager
+      VB: MyProject.InventoryManager
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: InventoryManager
+      path: ''
+      startLine: 792
+    syntax:
+      content:
+        CSharp: public class InventoryManager
+        VB: Public Class InventoryManager
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.InventoryManager.OnItemListChanged
+      commentId: E:MyProject.InventoryManager.OnItemListChanged
+      language: CSharp
+      name:
+        CSharp: OnItemListChanged
+        VB: OnItemListChanged
+      nameWithType:
+        CSharp: InventoryManager.OnItemListChanged
+        VB: InventoryManager.OnItemListChanged
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.OnItemListChanged
+        VB: MyProject.InventoryManager.OnItemListChanged
+      type: Event
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: OnItemListChanged
+        path: ''
+        startLine: 794
+      syntax:
+        content:
+          CSharp: public event EventHandler OnItemListChanged
+          VB: Public Event OnItemListChanged As EventHandler
+        return:
+          type: EventHandler
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.itemList
+      commentId: F:MyProject.InventoryManager.itemList
+      language: CSharp
+      name:
+        CSharp: itemList
+        VB: itemList
+      nameWithType:
+        CSharp: InventoryManager.itemList
+        VB: InventoryManager.itemList
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.itemList
+        VB: MyProject.InventoryManager.itemList
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: itemList
+        path: ''
+        startLine: 795
+      syntax:
+        content:
+          CSharp: public List<Item> itemList
+          VB: Public itemList As List(Of Item)
+        return:
+          type: System.Collections.Generic.List{MyProject.Item}
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.#ctor(Action{MyProject.Item})
+      commentId: M:MyProject.InventoryManager.#ctor(Action{MyProject.Item})
+      language: CSharp
+      name:
+        CSharp: InventoryManager(Action<Item>)
+        VB: InventoryManager(Action(Of Item))
+      nameWithType:
+        CSharp: InventoryManager.InventoryManager(Action<Item>)
+        VB: InventoryManager.InventoryManager(Action(Of Item))
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.InventoryManager(Action<MyProject.Item>)
+        VB: MyProject.InventoryManager.InventoryManager(Action(Of MyProject.Item))
+      type: Constructor
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: .ctor
+        path: ''
+        startLine: 800
+      syntax:
+        content:
+          CSharp: public InventoryManager(Action<Item> useItemAction)
+          VB: Public Sub New(useItemAction As Action(Of Item))
+        parameters:
+        - id: useItemAction
+          type: Action{MyProject.Item}
+      overload: MyProject.InventoryManager.#ctor*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.SetPlayer(MyProject.Player)
+      commentId: M:MyProject.InventoryManager.SetPlayer(MyProject.Player)
+      language: CSharp
+      name:
+        CSharp: SetPlayer(Player)
+        VB: SetPlayer(Player)
+      nameWithType:
+        CSharp: InventoryManager.SetPlayer(Player)
+        VB: InventoryManager.SetPlayer(Player)
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.SetPlayer(MyProject.Player)
+        VB: MyProject.InventoryManager.SetPlayer(MyProject.Player)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetPlayer
+        path: ''
+        startLine: 809
+      syntax:
+        content:
+          CSharp: public void SetPlayer(Player player)
+          VB: Public Sub SetPlayer(player As Player)
+        parameters:
+        - id: player
+          type: MyProject.Player
+      overload: MyProject.InventoryManager.SetPlayer*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.AddItem(MyProject.Item)
+      commentId: M:MyProject.InventoryManager.AddItem(MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: AddItem(Item)
+        VB: AddItem(Item)
+      nameWithType:
+        CSharp: InventoryManager.AddItem(Item)
+        VB: InventoryManager.AddItem(Item)
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.AddItem(MyProject.Item)
+        VB: MyProject.InventoryManager.AddItem(MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: AddItem
+        path: ''
+        startLine: 813
+      syntax:
+        content:
+          CSharp: public void AddItem(Item item)
+          VB: Public Sub AddItem(item As Item)
+        parameters:
+        - id: item
+          type: MyProject.Item
+      overload: MyProject.InventoryManager.AddItem*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.RemoveItem(MyProject.Item)
+      commentId: M:MyProject.InventoryManager.RemoveItem(MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: RemoveItem(Item)
+        VB: RemoveItem(Item)
+      nameWithType:
+        CSharp: InventoryManager.RemoveItem(Item)
+        VB: InventoryManager.RemoveItem(Item)
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.RemoveItem(MyProject.Item)
+        VB: MyProject.InventoryManager.RemoveItem(MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: RemoveItem
+        path: ''
+        startLine: 839
+      syntax:
+        content:
+          CSharp: public void RemoveItem(Item item)
+          VB: Public Sub RemoveItem(item As Item)
+        parameters:
+        - id: item
+          type: MyProject.Item
+      overload: MyProject.InventoryManager.RemoveItem*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.UseItem(MyProject.Item)
+      commentId: M:MyProject.InventoryManager.UseItem(MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: UseItem(Item)
+        VB: UseItem(Item)
+      nameWithType:
+        CSharp: InventoryManager.UseItem(Item)
+        VB: InventoryManager.UseItem(Item)
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.UseItem(MyProject.Item)
+        VB: MyProject.InventoryManager.UseItem(MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: UseItem
+        path: ''
+        startLine: 864
+      syntax:
+        content:
+          CSharp: public void UseItem(Item item)
+          VB: Public Sub UseItem(item As Item)
+        parameters:
+        - id: item
+          type: MyProject.Item
+      overload: MyProject.InventoryManager.UseItem*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.GetItemList
+      commentId: M:MyProject.InventoryManager.GetItemList
+      language: CSharp
+      name:
+        CSharp: GetItemList()
+        VB: GetItemList()
+      nameWithType:
+        CSharp: InventoryManager.GetItemList()
+        VB: InventoryManager.GetItemList()
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.GetItemList()
+        VB: MyProject.InventoryManager.GetItemList()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: GetItemList
+        path: ''
+        startLine: 868
+      syntax:
+        content:
+          CSharp: public List<Item> GetItemList()
+          VB: Public Function GetItemList As List(Of Item)
+        return:
+          type: System.Collections.Generic.List{MyProject.Item}
+      overload: MyProject.InventoryManager.GetItemList*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.AddEquipment(MyProject.Item)
+      commentId: M:MyProject.InventoryManager.AddEquipment(MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: AddEquipment(Item)
+        VB: AddEquipment(Item)
+      nameWithType:
+        CSharp: InventoryManager.AddEquipment(Item)
+        VB: InventoryManager.AddEquipment(Item)
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.AddEquipment(MyProject.Item)
+        VB: MyProject.InventoryManager.AddEquipment(MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: AddEquipment
+        path: ''
+        startLine: 872
+      syntax:
+        content:
+          CSharp: public void AddEquipment(Item item)
+          VB: Public Sub AddEquipment(item As Item)
+        parameters:
+        - id: item
+          type: MyProject.Item
+      overload: MyProject.InventoryManager.AddEquipment*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.RemoveEquipment(MyProject.Item)
+      commentId: M:MyProject.InventoryManager.RemoveEquipment(MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: RemoveEquipment(Item)
+        VB: RemoveEquipment(Item)
+      nameWithType:
+        CSharp: InventoryManager.RemoveEquipment(Item)
+        VB: InventoryManager.RemoveEquipment(Item)
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.RemoveEquipment(MyProject.Item)
+        VB: MyProject.InventoryManager.RemoveEquipment(MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: RemoveEquipment
+        path: ''
+        startLine: 889
+      syntax:
+        content:
+          CSharp: public void RemoveEquipment(Item item)
+          VB: Public Sub RemoveEquipment(item As Item)
+        parameters:
+        - id: item
+          type: MyProject.Item
+      overload: MyProject.InventoryManager.RemoveEquipment*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.FindHealthPotion
+      commentId: M:MyProject.InventoryManager.FindHealthPotion
+      language: CSharp
+      name:
+        CSharp: FindHealthPotion()
+        VB: FindHealthPotion()
+      nameWithType:
+        CSharp: InventoryManager.FindHealthPotion()
+        VB: InventoryManager.FindHealthPotion()
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.FindHealthPotion()
+        VB: MyProject.InventoryManager.FindHealthPotion()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: FindHealthPotion
+        path: ''
+        startLine: 895
+      syntax:
+        content:
+          CSharp: public int FindHealthPotion()
+          VB: Public Function FindHealthPotion As Integer
+        return:
+          type: System.Int32
+      overload: MyProject.InventoryManager.FindHealthPotion*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.InventoryManager.GetEquipment
+      commentId: M:MyProject.InventoryManager.GetEquipment
+      language: CSharp
+      name:
+        CSharp: GetEquipment()
+        VB: GetEquipment()
+      nameWithType:
+        CSharp: InventoryManager.GetEquipment()
+        VB: InventoryManager.GetEquipment()
+      qualifiedName:
+        CSharp: MyProject.InventoryManager.GetEquipment()
+        VB: MyProject.InventoryManager.GetEquipment()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: GetEquipment
+        path: ''
+        startLine: 912
+      syntax:
+        content:
+          CSharp: public Dictionary<string, Item> GetEquipment()
+          VB: Public Function GetEquipment As Dictionary(Of String, Item)
+        return:
+          type: System.Collections.Generic.Dictionary{System.String,MyProject.Item}
+      overload: MyProject.InventoryManager.GetEquipment*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.Item
+    commentId: T:MyProject.Item
+    language: CSharp
+    name:
+      CSharp: Item
+      VB: Item
+    nameWithType:
+      CSharp: Item
+      VB: Item
+    qualifiedName:
+      CSharp: MyProject.Item
+      VB: MyProject.Item
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: Item
+      path: ''
+      startLine: 925
+    syntax:
+      content:
+        CSharp: public class Item
+        VB: Public Class Item
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.Item.itemType
+      commentId: F:MyProject.Item.itemType
+      language: CSharp
+      name:
+        CSharp: itemType
+        VB: itemType
+      nameWithType:
+        CSharp: Item.itemType
+        VB: Item.itemType
+      qualifiedName:
+        CSharp: MyProject.Item.itemType
+        VB: MyProject.Item.itemType
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: itemType
+        path: ''
+        startLine: 941
+      syntax:
+        content:
+          CSharp: public Item.ItemType itemType
+          VB: Public itemType As Item.ItemType
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Item.amount
+      commentId: F:MyProject.Item.amount
+      language: CSharp
+      name:
+        CSharp: amount
+        VB: amount
+      nameWithType:
+        CSharp: Item.amount
+        VB: Item.amount
+      qualifiedName:
+        CSharp: MyProject.Item.amount
+        VB: MyProject.Item.amount
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: amount
+        path: ''
+        startLine: 942
+      syntax:
+        content:
+          CSharp: public int amount
+          VB: Public amount As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Item.slot
+      commentId: F:MyProject.Item.slot
+      language: CSharp
+      name:
+        CSharp: slot
+        VB: slot
+      nameWithType:
+        CSharp: Item.slot
+        VB: Item.slot
+      qualifiedName:
+        CSharp: MyProject.Item.slot
+        VB: MyProject.Item.slot
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: slot
+        path: ''
+        startLine: 943
+      syntax:
+        content:
+          CSharp: public string slot
+          VB: Public slot As String
+        return:
+          type: System.String
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Item.cost
+      commentId: F:MyProject.Item.cost
+      language: CSharp
+      name:
+        CSharp: cost
+        VB: cost
+      nameWithType:
+        CSharp: Item.cost
+        VB: Item.cost
+      qualifiedName:
+        CSharp: MyProject.Item.cost
+        VB: MyProject.Item.cost
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: cost
+        path: ''
+        startLine: 944
+      syntax:
+        content:
+          CSharp: public int cost
+          VB: Public cost As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Item.damage
+      commentId: F:MyProject.Item.damage
+      language: CSharp
+      name:
+        CSharp: damage
+        VB: damage
+      nameWithType:
+        CSharp: Item.damage
+        VB: Item.damage
+      qualifiedName:
+        CSharp: MyProject.Item.damage
+        VB: MyProject.Item.damage
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: damage
+        path: ''
+        startLine: 945
+      syntax:
+        content:
+          CSharp: public int damage
+          VB: Public damage As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Item.defense
+      commentId: F:MyProject.Item.defense
+      language: CSharp
+      name:
+        CSharp: defense
+        VB: defense
+      nameWithType:
+        CSharp: Item.defense
+        VB: Item.defense
+      qualifiedName:
+        CSharp: MyProject.Item.defense
+        VB: MyProject.Item.defense
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: defense
+        path: ''
+        startLine: 946
+      syntax:
+        content:
+          CSharp: public int defense
+          VB: Public defense As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Item.GetSprite
+      commentId: M:MyProject.Item.GetSprite
+      language: CSharp
+      name:
+        CSharp: GetSprite()
+        VB: GetSprite()
+      nameWithType:
+        CSharp: Item.GetSprite()
+        VB: Item.GetSprite()
+      qualifiedName:
+        CSharp: MyProject.Item.GetSprite()
+        VB: MyProject.Item.GetSprite()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: GetSprite
+        path: ''
+        startLine: 947
+      syntax:
+        content:
+          CSharp: public Sprite GetSprite()
+          VB: Public Function GetSprite As Sprite
+        return:
+          type: Sprite
+      overload: MyProject.Item.GetSprite*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Item.IsStackable
+      commentId: M:MyProject.Item.IsStackable
+      language: CSharp
+      name:
+        CSharp: IsStackable()
+        VB: IsStackable()
+      nameWithType:
+        CSharp: Item.IsStackable()
+        VB: Item.IsStackable()
+      qualifiedName:
+        CSharp: MyProject.Item.IsStackable()
+        VB: MyProject.Item.IsStackable()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: IsStackable
+        path: ''
+        startLine: 974
+      syntax:
+        content:
+          CSharp: public bool IsStackable()
+          VB: Public Function IsStackable As Boolean
+        return:
+          type: System.Boolean
+      overload: MyProject.Item.IsStackable*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.Item.ToString
+      commentId: M:MyProject.Item.ToString
+      language: CSharp
+      name:
+        CSharp: ToString()
+        VB: ToString()
+      nameWithType:
+        CSharp: Item.ToString()
+        VB: Item.ToString()
+      qualifiedName:
+        CSharp: MyProject.Item.ToString()
+        VB: MyProject.Item.ToString()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: ToString
+        path: ''
+        startLine: 992
+      syntax:
+        content:
+          CSharp: public override string ToString()
+          VB: Public Overrides Function ToString As String
+        return:
+          type: System.String
+      overload: MyProject.Item.ToString*
+      overridden: System.Object.ToString
+      modifiers:
+        CSharp:
+        - public
+        - override
+        VB:
+        - Public
+        - Overrides
+  - id: MyProject.Item.ItemType
+    commentId: T:MyProject.Item.ItemType
+    language: CSharp
+    name:
+      CSharp: Item.ItemType
+      VB: Item.ItemType
+    nameWithType:
+      CSharp: Item.ItemType
+      VB: Item.ItemType
+    qualifiedName:
+      CSharp: MyProject.Item.ItemType
+      VB: MyProject.Item.ItemType
+    type: Enum
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: ItemType
+      path: ''
+      startLine: 928
+    syntax:
+      content:
+        CSharp: public enum ItemType
+        VB: Public Enum ItemType
+    modifiers:
+      CSharp:
+      - public
+      - enum
+      VB:
+      - Public
+      - Enum
+    items:
+    - id: MyProject.Item.ItemType.Sword
+      commentId: F:MyProject.Item.ItemType.Sword
+      language: CSharp
+      name:
+        CSharp: Sword
+        VB: Sword
+      nameWithType:
+        CSharp: Item.ItemType.Sword
+        VB: Item.ItemType.Sword
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Sword
+        VB: MyProject.Item.ItemType.Sword
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Sword
+        path: ''
+        startLine: 930
+      syntax:
+        content:
+          CSharp: Sword = 0
+          VB: Sword = 0
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.HealthPotion
+      commentId: F:MyProject.Item.ItemType.HealthPotion
+      language: CSharp
+      name:
+        CSharp: HealthPotion
+        VB: HealthPotion
+      nameWithType:
+        CSharp: Item.ItemType.HealthPotion
+        VB: Item.ItemType.HealthPotion
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.HealthPotion
+        VB: MyProject.Item.ItemType.HealthPotion
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: HealthPotion
+        path: ''
+        startLine: 931
+      syntax:
+        content:
+          CSharp: HealthPotion = 1
+          VB: HealthPotion = 1
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.Medkit
+      commentId: F:MyProject.Item.ItemType.Medkit
+      language: CSharp
+      name:
+        CSharp: Medkit
+        VB: Medkit
+      nameWithType:
+        CSharp: Item.ItemType.Medkit
+        VB: Item.ItemType.Medkit
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Medkit
+        VB: MyProject.Item.ItemType.Medkit
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Medkit
+        path: ''
+        startLine: 932
+      syntax:
+        content:
+          CSharp: Medkit = 2
+          VB: Medkit = 2
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.Shield
+      commentId: F:MyProject.Item.ItemType.Shield
+      language: CSharp
+      name:
+        CSharp: Shield
+        VB: Shield
+      nameWithType:
+        CSharp: Item.ItemType.Shield
+        VB: Item.ItemType.Shield
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Shield
+        VB: MyProject.Item.ItemType.Shield
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Shield
+        path: ''
+        startLine: 933
+      syntax:
+        content:
+          CSharp: Shield = 3
+          VB: Shield = 3
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.Ring
+      commentId: F:MyProject.Item.ItemType.Ring
+      language: CSharp
+      name:
+        CSharp: Ring
+        VB: Ring
+      nameWithType:
+        CSharp: Item.ItemType.Ring
+        VB: Item.ItemType.Ring
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Ring
+        VB: MyProject.Item.ItemType.Ring
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Ring
+        path: ''
+        startLine: 934
+      syntax:
+        content:
+          CSharp: Ring = 4
+          VB: Ring = 4
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.Necklace
+      commentId: F:MyProject.Item.ItemType.Necklace
+      language: CSharp
+      name:
+        CSharp: Necklace
+        VB: Necklace
+      nameWithType:
+        CSharp: Item.ItemType.Necklace
+        VB: Item.ItemType.Necklace
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Necklace
+        VB: MyProject.Item.ItemType.Necklace
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Necklace
+        path: ''
+        startLine: 935
+      syntax:
+        content:
+          CSharp: Necklace = 5
+          VB: Necklace = 5
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.Bib
+      commentId: F:MyProject.Item.ItemType.Bib
+      language: CSharp
+      name:
+        CSharp: Bib
+        VB: Bib
+      nameWithType:
+        CSharp: Item.ItemType.Bib
+        VB: Item.ItemType.Bib
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Bib
+        VB: MyProject.Item.ItemType.Bib
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Bib
+        path: ''
+        startLine: 936
+      syntax:
+        content:
+          CSharp: Bib = 6
+          VB: Bib = 6
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.Helmet
+      commentId: F:MyProject.Item.ItemType.Helmet
+      language: CSharp
+      name:
+        CSharp: Helmet
+        VB: Helmet
+      nameWithType:
+        CSharp: Item.ItemType.Helmet
+        VB: Item.ItemType.Helmet
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Helmet
+        VB: MyProject.Item.ItemType.Helmet
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Helmet
+        path: ''
+        startLine: 937
+      syntax:
+        content:
+          CSharp: Helmet = 7
+          VB: Helmet = 7
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.Boots
+      commentId: F:MyProject.Item.ItemType.Boots
+      language: CSharp
+      name:
+        CSharp: Boots
+        VB: Boots
+      nameWithType:
+        CSharp: Item.ItemType.Boots
+        VB: Item.ItemType.Boots
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Boots
+        VB: MyProject.Item.ItemType.Boots
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Boots
+        path: ''
+        startLine: 938
+      syntax:
+        content:
+          CSharp: Boots = 8
+          VB: Boots = 8
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.Item.ItemType.Gold
+      commentId: F:MyProject.Item.ItemType.Gold
+      language: CSharp
+      name:
+        CSharp: Gold
+        VB: Gold
+      nameWithType:
+        CSharp: Item.ItemType.Gold
+        VB: Item.ItemType.Gold
+      qualifiedName:
+        CSharp: MyProject.Item.ItemType.Gold
+        VB: MyProject.Item.ItemType.Gold
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Gold
+        path: ''
+        startLine: 939
+      syntax:
+        content:
+          CSharp: Gold = 9
+          VB: Gold = 9
+        return:
+          type: MyProject.Item.ItemType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+  - id: MyProject.ItemAssets
+    commentId: T:MyProject.ItemAssets
+    language: CSharp
+    name:
+      CSharp: ItemAssets
+      VB: ItemAssets
+    nameWithType:
+      CSharp: ItemAssets
+      VB: ItemAssets
+    qualifiedName:
+      CSharp: MyProject.ItemAssets
+      VB: MyProject.ItemAssets
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: ItemAssets
+      path: ''
+      startLine: 1006
+    summary: "\nClass for assigning sprites\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public class ItemAssets : MonoBehaviour'
+        VB: >-
+          Public Class ItemAssets
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.ItemAssets.Instance
+      commentId: P:MyProject.ItemAssets.Instance
+      language: CSharp
+      name:
+        CSharp: Instance
+        VB: Instance
+      nameWithType:
+        CSharp: ItemAssets.Instance
+        VB: ItemAssets.Instance
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.Instance
+        VB: MyProject.ItemAssets.Instance
+      type: Property
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Instance
+        path: ''
+        startLine: 1008
+      syntax:
+        content:
+          CSharp: public static ItemAssets Instance { get; }
+          VB: Public Shared ReadOnly Property Instance As ItemAssets
+        parameters: []
+        return:
+          type: MyProject.ItemAssets
+      overload: MyProject.ItemAssets.Instance*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        - get
+        VB:
+        - Public
+        - Shared
+        - ReadOnly
+    - id: MyProject.ItemAssets.ItemWorld
+      commentId: F:MyProject.ItemAssets.ItemWorld
+      language: CSharp
+      name:
+        CSharp: ItemWorld
+        VB: ItemWorld
+      nameWithType:
+        CSharp: ItemAssets.ItemWorld
+        VB: ItemAssets.ItemWorld
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.ItemWorld
+        VB: MyProject.ItemAssets.ItemWorld
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: ItemWorld
+        path: ''
+        startLine: 1013
+      syntax:
+        content:
+          CSharp: public Transform ItemWorld
+          VB: Public ItemWorld As Transform
+        return:
+          type: Transform
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.swordSprite
+      commentId: F:MyProject.ItemAssets.swordSprite
+      language: CSharp
+      name:
+        CSharp: swordSprite
+        VB: swordSprite
+      nameWithType:
+        CSharp: ItemAssets.swordSprite
+        VB: ItemAssets.swordSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.swordSprite
+        VB: MyProject.ItemAssets.swordSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: swordSprite
+        path: ''
+        startLine: 1014
+      syntax:
+        content:
+          CSharp: public Sprite swordSprite
+          VB: Public swordSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.healthPotionSprite
+      commentId: F:MyProject.ItemAssets.healthPotionSprite
+      language: CSharp
+      name:
+        CSharp: healthPotionSprite
+        VB: healthPotionSprite
+      nameWithType:
+        CSharp: ItemAssets.healthPotionSprite
+        VB: ItemAssets.healthPotionSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.healthPotionSprite
+        VB: MyProject.ItemAssets.healthPotionSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: healthPotionSprite
+        path: ''
+        startLine: 1015
+      syntax:
+        content:
+          CSharp: public Sprite healthPotionSprite
+          VB: Public healthPotionSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.medkitSprite
+      commentId: F:MyProject.ItemAssets.medkitSprite
+      language: CSharp
+      name:
+        CSharp: medkitSprite
+        VB: medkitSprite
+      nameWithType:
+        CSharp: ItemAssets.medkitSprite
+        VB: ItemAssets.medkitSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.medkitSprite
+        VB: MyProject.ItemAssets.medkitSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: medkitSprite
+        path: ''
+        startLine: 1016
+      syntax:
+        content:
+          CSharp: public Sprite medkitSprite
+          VB: Public medkitSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.shildSprite
+      commentId: F:MyProject.ItemAssets.shildSprite
+      language: CSharp
+      name:
+        CSharp: shildSprite
+        VB: shildSprite
+      nameWithType:
+        CSharp: ItemAssets.shildSprite
+        VB: ItemAssets.shildSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.shildSprite
+        VB: MyProject.ItemAssets.shildSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: shildSprite
+        path: ''
+        startLine: 1017
+      syntax:
+        content:
+          CSharp: public Sprite shildSprite
+          VB: Public shildSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.ringSprite
+      commentId: F:MyProject.ItemAssets.ringSprite
+      language: CSharp
+      name:
+        CSharp: ringSprite
+        VB: ringSprite
+      nameWithType:
+        CSharp: ItemAssets.ringSprite
+        VB: ItemAssets.ringSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.ringSprite
+        VB: MyProject.ItemAssets.ringSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: ringSprite
+        path: ''
+        startLine: 1018
+      syntax:
+        content:
+          CSharp: public Sprite ringSprite
+          VB: Public ringSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.necklaceSprite
+      commentId: F:MyProject.ItemAssets.necklaceSprite
+      language: CSharp
+      name:
+        CSharp: necklaceSprite
+        VB: necklaceSprite
+      nameWithType:
+        CSharp: ItemAssets.necklaceSprite
+        VB: ItemAssets.necklaceSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.necklaceSprite
+        VB: MyProject.ItemAssets.necklaceSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: necklaceSprite
+        path: ''
+        startLine: 1019
+      syntax:
+        content:
+          CSharp: public Sprite necklaceSprite
+          VB: Public necklaceSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.bibSprite
+      commentId: F:MyProject.ItemAssets.bibSprite
+      language: CSharp
+      name:
+        CSharp: bibSprite
+        VB: bibSprite
+      nameWithType:
+        CSharp: ItemAssets.bibSprite
+        VB: ItemAssets.bibSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.bibSprite
+        VB: MyProject.ItemAssets.bibSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: bibSprite
+        path: ''
+        startLine: 1020
+      syntax:
+        content:
+          CSharp: public Sprite bibSprite
+          VB: Public bibSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.helmetSprite
+      commentId: F:MyProject.ItemAssets.helmetSprite
+      language: CSharp
+      name:
+        CSharp: helmetSprite
+        VB: helmetSprite
+      nameWithType:
+        CSharp: ItemAssets.helmetSprite
+        VB: ItemAssets.helmetSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.helmetSprite
+        VB: MyProject.ItemAssets.helmetSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: helmetSprite
+        path: ''
+        startLine: 1021
+      syntax:
+        content:
+          CSharp: public Sprite helmetSprite
+          VB: Public helmetSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.bootsSprite
+      commentId: F:MyProject.ItemAssets.bootsSprite
+      language: CSharp
+      name:
+        CSharp: bootsSprite
+        VB: bootsSprite
+      nameWithType:
+        CSharp: ItemAssets.bootsSprite
+        VB: ItemAssets.bootsSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.bootsSprite
+        VB: MyProject.ItemAssets.bootsSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: bootsSprite
+        path: ''
+        startLine: 1022
+      syntax:
+        content:
+          CSharp: public Sprite bootsSprite
+          VB: Public bootsSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemAssets.goldSprite
+      commentId: F:MyProject.ItemAssets.goldSprite
+      language: CSharp
+      name:
+        CSharp: goldSprite
+        VB: goldSprite
+      nameWithType:
+        CSharp: ItemAssets.goldSprite
+        VB: ItemAssets.goldSprite
+      qualifiedName:
+        CSharp: MyProject.ItemAssets.goldSprite
+        VB: MyProject.ItemAssets.goldSprite
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: goldSprite
+        path: ''
+        startLine: 1023
+      syntax:
+        content:
+          CSharp: public Sprite goldSprite
+          VB: Public goldSprite As Sprite
+        return:
+          type: Sprite
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.ItemWorld
+    commentId: T:MyProject.ItemWorld
+    language: CSharp
+    name:
+      CSharp: ItemWorld
+      VB: ItemWorld
+    nameWithType:
+      CSharp: ItemWorld
+      VB: ItemWorld
+    qualifiedName:
+      CSharp: MyProject.ItemWorld
+      VB: MyProject.ItemWorld
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: ItemWorld
+      path: ''
+      startLine: 1032
+    syntax:
+      content:
+        CSharp: 'public class ItemWorld : MonoBehaviour'
+        VB: >-
+          Public Class ItemWorld
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.ItemWorld.cam
+      commentId: F:MyProject.ItemWorld.cam
+      language: CSharp
+      name:
+        CSharp: cam
+        VB: cam
+      nameWithType:
+        CSharp: ItemWorld.cam
+        VB: ItemWorld.cam
+      qualifiedName:
+        CSharp: MyProject.ItemWorld.cam
+        VB: MyProject.ItemWorld.cam
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: cam
+        path: ''
+        startLine: 1034
+      syntax:
+        content:
+          CSharp: public Transform cam
+          VB: Public cam As Transform
+        return:
+          type: Transform
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemWorld.SpawnItemWorld(Vector3,MyProject.Item)
+      commentId: M:MyProject.ItemWorld.SpawnItemWorld(Vector3,MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: SpawnItemWorld(Vector3, Item)
+        VB: SpawnItemWorld(Vector3, Item)
+      nameWithType:
+        CSharp: ItemWorld.SpawnItemWorld(Vector3, Item)
+        VB: ItemWorld.SpawnItemWorld(Vector3, Item)
+      qualifiedName:
+        CSharp: MyProject.ItemWorld.SpawnItemWorld(Vector3, MyProject.Item)
+        VB: MyProject.ItemWorld.SpawnItemWorld(Vector3, MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SpawnItemWorld
+        path: ''
+        startLine: 1037
+      syntax:
+        content:
+          CSharp: public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
+          VB: Public Shared Function SpawnItemWorld(position As Vector3, item As Item) As ItemWorld
+        parameters:
+        - id: position
+          type: Vector3
+        - id: item
+          type: MyProject.Item
+        return:
+          type: MyProject.ItemWorld
+      overload: MyProject.ItemWorld.SpawnItemWorld*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+    - id: MyProject.ItemWorld.SetItem(MyProject.Item)
+      commentId: M:MyProject.ItemWorld.SetItem(MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: SetItem(Item)
+        VB: SetItem(Item)
+      nameWithType:
+        CSharp: ItemWorld.SetItem(Item)
+        VB: ItemWorld.SetItem(Item)
+      qualifiedName:
+        CSharp: MyProject.ItemWorld.SetItem(MyProject.Item)
+        VB: MyProject.ItemWorld.SetItem(MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetItem
+        path: ''
+        startLine: 1059
+      syntax:
+        content:
+          CSharp: public void SetItem(Item item)
+          VB: Public Sub SetItem(item As Item)
+        parameters:
+        - id: item
+          type: MyProject.Item
+      overload: MyProject.ItemWorld.SetItem*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemWorld.GetItem
+      commentId: M:MyProject.ItemWorld.GetItem
+      language: CSharp
+      name:
+        CSharp: GetItem()
+        VB: GetItem()
+      nameWithType:
+        CSharp: ItemWorld.GetItem()
+        VB: ItemWorld.GetItem()
+      qualifiedName:
+        CSharp: MyProject.ItemWorld.GetItem()
+        VB: MyProject.ItemWorld.GetItem()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: GetItem
+        path: ''
+        startLine: 1064
+      syntax:
+        content:
+          CSharp: public Item GetItem()
+          VB: Public Function GetItem As Item
+        return:
+          type: MyProject.Item
+      overload: MyProject.ItemWorld.GetItem*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemWorld.DropItem(Vector3,MyProject.Item)
+      commentId: M:MyProject.ItemWorld.DropItem(Vector3,MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: DropItem(Vector3, Item)
+        VB: DropItem(Vector3, Item)
+      nameWithType:
+        CSharp: ItemWorld.DropItem(Vector3, Item)
+        VB: ItemWorld.DropItem(Vector3, Item)
+      qualifiedName:
+        CSharp: MyProject.ItemWorld.DropItem(Vector3, MyProject.Item)
+        VB: MyProject.ItemWorld.DropItem(Vector3, MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: DropItem
+        path: ''
+        startLine: 1068
+      syntax:
+        content:
+          CSharp: public static ItemWorld DropItem(Vector3 dropPosition, Item item)
+          VB: Public Shared Function DropItem(dropPosition As Vector3, item As Item) As ItemWorld
+        parameters:
+        - id: dropPosition
+          type: Vector3
+        - id: item
+          type: MyProject.Item
+        return:
+          type: MyProject.ItemWorld
+      overload: MyProject.ItemWorld.DropItem*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+    - id: MyProject.ItemWorld.DestroySelf
+      commentId: M:MyProject.ItemWorld.DestroySelf
+      language: CSharp
+      name:
+        CSharp: DestroySelf()
+        VB: DestroySelf()
+      nameWithType:
+        CSharp: ItemWorld.DestroySelf()
+        VB: ItemWorld.DestroySelf()
+      qualifiedName:
+        CSharp: MyProject.ItemWorld.DestroySelf()
+        VB: MyProject.ItemWorld.DestroySelf()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: DestroySelf
+        path: ''
+        startLine: 1075
+      syntax:
+        content:
+          CSharp: public void DestroySelf()
+          VB: Public Sub DestroySelf
+      overload: MyProject.ItemWorld.DestroySelf*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.ItemWorldSpawner
+    commentId: T:MyProject.ItemWorldSpawner
+    language: CSharp
+    name:
+      CSharp: ItemWorldSpawner
+      VB: ItemWorldSpawner
+    nameWithType:
+      CSharp: ItemWorldSpawner
+      VB: ItemWorldSpawner
+    qualifiedName:
+      CSharp: MyProject.ItemWorldSpawner
+      VB: MyProject.ItemWorldSpawner
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: ItemWorldSpawner
+      path: ''
+      startLine: 1089
+    summary: "\nClass for descriptions behavior the appearance of loot in the game world\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public class ItemWorldSpawner : MonoBehaviour'
+        VB: >-
+          Public Class ItemWorldSpawner
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.ItemWorldSpawner.item
+      commentId: F:MyProject.ItemWorldSpawner.item
+      language: CSharp
+      name:
+        CSharp: item
+        VB: item
+      nameWithType:
+        CSharp: ItemWorldSpawner.item
+        VB: ItemWorldSpawner.item
+      qualifiedName:
+        CSharp: MyProject.ItemWorldSpawner.item
+        VB: MyProject.ItemWorldSpawner.item
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: item
+        path: ''
+        startLine: 1091
+      syntax:
+        content:
+          CSharp: public Item item
+          VB: Public item As Item
+        return:
+          type: MyProject.Item
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.ItemWorldSpawner.GenerateGold
+      commentId: M:MyProject.ItemWorldSpawner.GenerateGold
+      language: CSharp
+      name:
+        CSharp: GenerateGold()
+        VB: GenerateGold()
+      nameWithType:
+        CSharp: ItemWorldSpawner.GenerateGold()
+        VB: ItemWorldSpawner.GenerateGold()
+      qualifiedName:
+        CSharp: MyProject.ItemWorldSpawner.GenerateGold()
+        VB: MyProject.ItemWorldSpawner.GenerateGold()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: GenerateGold
+        path: ''
+        startLine: 1100
+      syntax:
+        content:
+          CSharp: public static Item GenerateGold()
+          VB: Public Shared Function GenerateGold As Item
+        return:
+          type: MyProject.Item
+      overload: MyProject.ItemWorldSpawner.GenerateGold*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+  - id: MyProject.UI_inventory
+    commentId: T:MyProject.UI_inventory
+    language: CSharp
+    name:
+      CSharp: UI_inventory
+      VB: UI_inventory
+    nameWithType:
+      CSharp: UI_inventory
+      VB: UI_inventory
+    qualifiedName:
+      CSharp: MyProject.UI_inventory
+      VB: MyProject.UI_inventory
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject
+    source:
+      id: UI_inventory
+      path: ''
+      startLine: 1118
+    summary: "\nClass that describes the behavior of the inventory interface\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public class UI_inventory : MonoBehaviour'
+        VB: >-
+          Public Class UI_inventory
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.UI_inventory.hp
+      commentId: F:MyProject.UI_inventory.hp
+      language: CSharp
+      name:
+        CSharp: hp
+        VB: hp
+      nameWithType:
+        CSharp: UI_inventory.hp
+        VB: UI_inventory.hp
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.hp
+        VB: MyProject.UI_inventory.hp
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: hp
+        path: ''
+        startLine: 1121
+      syntax:
+        content:
+          CSharp: public Text hp
+          VB: Public hp As Text
+        return:
+          type: Text
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.damagePoints
+      commentId: F:MyProject.UI_inventory.damagePoints
+      language: CSharp
+      name:
+        CSharp: damagePoints
+        VB: damagePoints
+      nameWithType:
+        CSharp: UI_inventory.damagePoints
+        VB: UI_inventory.damagePoints
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.damagePoints
+        VB: MyProject.UI_inventory.damagePoints
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: damagePoints
+        path: ''
+        startLine: 1122
+      syntax:
+        content:
+          CSharp: public Text damagePoints
+          VB: Public damagePoints As Text
+        return:
+          type: Text
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.defencePoints
+      commentId: F:MyProject.UI_inventory.defencePoints
+      language: CSharp
+      name:
+        CSharp: defencePoints
+        VB: defencePoints
+      nameWithType:
+        CSharp: UI_inventory.defencePoints
+        VB: UI_inventory.defencePoints
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.defencePoints
+        VB: MyProject.UI_inventory.defencePoints
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: defencePoints
+        path: ''
+        startLine: 1123
+      syntax:
+        content:
+          CSharp: public Text defencePoints
+          VB: Public defencePoints As Text
+        return:
+          type: Text
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.goldCount
+      commentId: F:MyProject.UI_inventory.goldCount
+      language: CSharp
+      name:
+        CSharp: goldCount
+        VB: goldCount
+      nameWithType:
+        CSharp: UI_inventory.goldCount
+        VB: UI_inventory.goldCount
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.goldCount
+        VB: MyProject.UI_inventory.goldCount
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: goldCount
+        path: ''
+        startLine: 1124
+      syntax:
+        content:
+          CSharp: public Text goldCount
+          VB: Public goldCount As Text
+        return:
+          type: Text
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.Awake
+      commentId: M:MyProject.UI_inventory.Awake
+      language: CSharp
+      name:
+        CSharp: Awake()
+        VB: Awake()
+      nameWithType:
+        CSharp: UI_inventory.Awake()
+        VB: UI_inventory.Awake()
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.Awake()
+        VB: MyProject.UI_inventory.Awake()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: Awake
+        path: ''
+        startLine: 1137
+      syntax:
+        content:
+          CSharp: public void Awake()
+          VB: Public Sub Awake
+      overload: MyProject.UI_inventory.Awake*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.SetPlayer(MyProject.Player)
+      commentId: M:MyProject.UI_inventory.SetPlayer(MyProject.Player)
+      language: CSharp
+      name:
+        CSharp: SetPlayer(Player)
+        VB: SetPlayer(Player)
+      nameWithType:
+        CSharp: UI_inventory.SetPlayer(Player)
+        VB: UI_inventory.SetPlayer(Player)
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.SetPlayer(MyProject.Player)
+        VB: MyProject.UI_inventory.SetPlayer(MyProject.Player)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetPlayer
+        path: ''
+        startLine: 1151
+      syntax:
+        content:
+          CSharp: public void SetPlayer(Player player)
+          VB: Public Sub SetPlayer(player As Player)
+        parameters:
+        - id: player
+          type: MyProject.Player
+      overload: MyProject.UI_inventory.SetPlayer*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.SetInventory(MyProject.InventoryManager)
+      commentId: M:MyProject.UI_inventory.SetInventory(MyProject.InventoryManager)
+      language: CSharp
+      name:
+        CSharp: SetInventory(InventoryManager)
+        VB: SetInventory(InventoryManager)
+      nameWithType:
+        CSharp: UI_inventory.SetInventory(InventoryManager)
+        VB: UI_inventory.SetInventory(InventoryManager)
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.SetInventory(MyProject.InventoryManager)
+        VB: MyProject.UI_inventory.SetInventory(MyProject.InventoryManager)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetInventory
+        path: ''
+        startLine: 1155
+      syntax:
+        content:
+          CSharp: public void SetInventory(InventoryManager inventory)
+          VB: Public Sub SetInventory(inventory As InventoryManager)
+        parameters:
+        - id: inventory
+          type: MyProject.InventoryManager
+      overload: MyProject.UI_inventory.SetInventory*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.SetEquipment(MyProject.Item)
+      commentId: M:MyProject.UI_inventory.SetEquipment(MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: SetEquipment(Item)
+        VB: SetEquipment(Item)
+      nameWithType:
+        CSharp: UI_inventory.SetEquipment(Item)
+        VB: UI_inventory.SetEquipment(Item)
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.SetEquipment(MyProject.Item)
+        VB: MyProject.UI_inventory.SetEquipment(MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SetEquipment
+        path: ''
+        startLine: 1165
+      syntax:
+        content:
+          CSharp: public void SetEquipment(Item item)
+          VB: Public Sub SetEquipment(item As Item)
+        parameters:
+        - id: item
+          type: MyProject.Item
+      overload: MyProject.UI_inventory.SetEquipment*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.ToInventory(System.String)
+      commentId: M:MyProject.UI_inventory.ToInventory(System.String)
+      language: CSharp
+      name:
+        CSharp: ToInventory(String)
+        VB: ToInventory(String)
+      nameWithType:
+        CSharp: UI_inventory.ToInventory(String)
+        VB: UI_inventory.ToInventory(String)
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.ToInventory(System.String)
+        VB: MyProject.UI_inventory.ToInventory(System.String)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: ToInventory
+        path: ''
+        startLine: 1268
+      syntax:
+        content:
+          CSharp: public void ToInventory(string name)
+          VB: Public Sub ToInventory(name As String)
+        parameters:
+        - id: name
+          type: System.String
+      overload: MyProject.UI_inventory.ToInventory*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.RemoveEquipmentItem(System.String)
+      commentId: M:MyProject.UI_inventory.RemoveEquipmentItem(System.String)
+      language: CSharp
+      name:
+        CSharp: RemoveEquipmentItem(String)
+        VB: RemoveEquipmentItem(String)
+      nameWithType:
+        CSharp: UI_inventory.RemoveEquipmentItem(String)
+        VB: UI_inventory.RemoveEquipmentItem(String)
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.RemoveEquipmentItem(System.String)
+        VB: MyProject.UI_inventory.RemoveEquipmentItem(System.String)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: RemoveEquipmentItem
+        path: ''
+        startLine: 1278
+      syntax:
+        content:
+          CSharp: public void RemoveEquipmentItem(string name)
+          VB: Public Sub RemoveEquipmentItem(name As String)
+        parameters:
+        - id: name
+          type: System.String
+      overload: MyProject.UI_inventory.RemoveEquipmentItem*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.UI_inventory.SellItem(MyProject.Item)
+      commentId: M:MyProject.UI_inventory.SellItem(MyProject.Item)
+      language: CSharp
+      name:
+        CSharp: SellItem(Item)
+        VB: SellItem(Item)
+      nameWithType:
+        CSharp: UI_inventory.SellItem(Item)
+        VB: UI_inventory.SellItem(Item)
+      qualifiedName:
+        CSharp: MyProject.UI_inventory.SellItem(MyProject.Item)
+        VB: MyProject.UI_inventory.SellItem(MyProject.Item)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject
+      source:
+        id: SellItem
+        path: ''
+        startLine: 1288
+      syntax:
+        content:
+          CSharp: public void SellItem(Item item)
+          VB: Public Sub SellItem(item As Item)
+        parameters:
+        - id: item
+          type: MyProject.Item
+      overload: MyProject.UI_inventory.SellItem*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+- id: MyProject.MyProject
+  commentId: N:MyProject.MyProject
+  language: CSharp
+  name:
+    CSharp: MyProject.MyProject
+    VB: MyProject.MyProject
+  nameWithType:
+    CSharp: MyProject.MyProject
+    VB: MyProject.MyProject
+  qualifiedName:
+    CSharp: MyProject.MyProject
+    VB: MyProject.MyProject
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+  modifiers: {}
+  items:
+  - id: MyProject.MyProject.PlayerController
+    commentId: T:MyProject.MyProject.PlayerController
+    language: CSharp
+    name:
+      CSharp: PlayerController
+      VB: PlayerController
+    nameWithType:
+      CSharp: PlayerController
+      VB: PlayerController
+    qualifiedName:
+      CSharp: MyProject.MyProject.PlayerController
+      VB: MyProject.MyProject.PlayerController
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject.MyProject
+    source:
+      id: PlayerController
+      path: ''
+      startLine: 401
+    syntax:
+      content:
+        CSharp: 'public class PlayerController : MonoBehaviour'
+        VB: >-
+          Public Class PlayerController
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: MyProject.MyProject.PlayerController.mode
+      commentId: F:MyProject.MyProject.PlayerController.mode
+      language: CSharp
+      name:
+        CSharp: mode
+        VB: mode
+      nameWithType:
+        CSharp: PlayerController.mode
+        VB: PlayerController.mode
+      qualifiedName:
+        CSharp: MyProject.MyProject.PlayerController.mode
+        VB: MyProject.MyProject.PlayerController.mode
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject.MyProject
+      source:
+        id: mode
+        path: ''
+        startLine: 411
+      syntax:
+        content:
+          CSharp: public PlayerController.ProjectMode mode
+          VB: Public mode As PlayerController.ProjectMode
+        return:
+          type: MyProject.MyProject.PlayerController.ProjectMode
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.MyProject.PlayerController.cursorNormal
+      commentId: F:MyProject.MyProject.PlayerController.cursorNormal
+      language: CSharp
+      name:
+        CSharp: cursorNormal
+        VB: cursorNormal
+      nameWithType:
+        CSharp: PlayerController.cursorNormal
+        VB: PlayerController.cursorNormal
+      qualifiedName:
+        CSharp: MyProject.MyProject.PlayerController.cursorNormal
+        VB: MyProject.MyProject.PlayerController.cursorNormal
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject.MyProject
+      source:
+        id: cursorNormal
+        path: ''
+        startLine: 413
+      syntax:
+        content:
+          CSharp: public Texture2D cursorNormal
+          VB: Public cursorNormal As Texture2D
+        return:
+          type: Texture2D
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.MyProject.PlayerController.cursorEnemy
+      commentId: F:MyProject.MyProject.PlayerController.cursorEnemy
+      language: CSharp
+      name:
+        CSharp: cursorEnemy
+        VB: cursorEnemy
+      nameWithType:
+        CSharp: PlayerController.cursorEnemy
+        VB: PlayerController.cursorEnemy
+      qualifiedName:
+        CSharp: MyProject.MyProject.PlayerController.cursorEnemy
+        VB: MyProject.MyProject.PlayerController.cursorEnemy
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject.MyProject
+      source:
+        id: cursorEnemy
+        path: ''
+        startLine: 414
+      syntax:
+        content:
+          CSharp: public Texture2D cursorEnemy
+          VB: Public cursorEnemy As Texture2D
+        return:
+          type: Texture2D
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.MyProject.PlayerController.cursorInfo
+      commentId: F:MyProject.MyProject.PlayerController.cursorInfo
+      language: CSharp
+      name:
+        CSharp: cursorInfo
+        VB: cursorInfo
+      nameWithType:
+        CSharp: PlayerController.cursorInfo
+        VB: PlayerController.cursorInfo
+      qualifiedName:
+        CSharp: MyProject.MyProject.PlayerController.cursorInfo
+        VB: MyProject.MyProject.PlayerController.cursorInfo
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject.MyProject
+      source:
+        id: cursorInfo
+        path: ''
+        startLine: 415
+      syntax:
+        content:
+          CSharp: public Texture2D cursorInfo
+          VB: Public cursorInfo As Texture2D
+        return:
+          type: Texture2D
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: MyProject.MyProject.PlayerController.size
+      commentId: F:MyProject.MyProject.PlayerController.size
+      language: CSharp
+      name:
+        CSharp: size
+        VB: size
+      nameWithType:
+        CSharp: PlayerController.size
+        VB: PlayerController.size
+      qualifiedName:
+        CSharp: MyProject.MyProject.PlayerController.size
+        VB: MyProject.MyProject.PlayerController.size
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject.MyProject
+      source:
+        id: size
+        path: ''
+        startLine: 417
+      syntax:
+        content:
+          CSharp: public int size
+          VB: Public size As Integer
+        return:
+          type: System.Int32
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: MyProject.MyProject.PlayerController.ProjectMode
+    commentId: T:MyProject.MyProject.PlayerController.ProjectMode
+    language: CSharp
+    name:
+      CSharp: PlayerController.ProjectMode
+      VB: PlayerController.ProjectMode
+    nameWithType:
+      CSharp: PlayerController.ProjectMode
+      VB: PlayerController.ProjectMode
+    qualifiedName:
+      CSharp: MyProject.MyProject.PlayerController.ProjectMode
+      VB: MyProject.MyProject.PlayerController.ProjectMode
+    type: Enum
+    assemblies:
+    - cs.temp.dll
+    namespace: MyProject.MyProject
+    source:
+      id: ProjectMode
+      path: ''
+      startLine: 410
+    syntax:
+      content:
+        CSharp: public enum ProjectMode
+        VB: Public Enum ProjectMode
+    modifiers:
+      CSharp:
+      - public
+      - enum
+      VB:
+      - Public
+      - Enum
+    items:
+    - id: MyProject.MyProject.PlayerController.ProjectMode.Project3D
+      commentId: F:MyProject.MyProject.PlayerController.ProjectMode.Project3D
+      language: CSharp
+      name:
+        CSharp: Project3D
+        VB: Project3D
+      nameWithType:
+        CSharp: PlayerController.ProjectMode.Project3D
+        VB: PlayerController.ProjectMode.Project3D
+      qualifiedName:
+        CSharp: MyProject.MyProject.PlayerController.ProjectMode.Project3D
+        VB: MyProject.MyProject.PlayerController.ProjectMode.Project3D
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject.MyProject
+      source:
+        id: Project3D
+        path: ''
+        startLine: 410
+      syntax:
+        content:
+          CSharp: Project3D = 0
+          VB: Project3D = 0
+        return:
+          type: MyProject.MyProject.PlayerController.ProjectMode
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: MyProject.MyProject.PlayerController.ProjectMode.Project2D
+      commentId: F:MyProject.MyProject.PlayerController.ProjectMode.Project2D
+      language: CSharp
+      name:
+        CSharp: Project2D
+        VB: Project2D
+      nameWithType:
+        CSharp: PlayerController.ProjectMode.Project2D
+        VB: PlayerController.ProjectMode.Project2D
+      qualifiedName:
+        CSharp: MyProject.MyProject.PlayerController.ProjectMode.Project2D
+        VB: MyProject.MyProject.PlayerController.ProjectMode.Project2D
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: MyProject.MyProject
+      source:
+        id: Project2D
+        path: ''
+        startLine: 410
+      syntax:
+        content:
+          CSharp: Project2D = 1
+          VB: Project2D = 1
+        return:
+          type: MyProject.MyProject.PlayerController.ProjectMode
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+references:
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.String:
+    name:
+      CSharp:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.String
+  System.Int32:
+    name:
+      CSharp:
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      VB:
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Int32
+  System.Single:
+    name:
+      CSharp:
+      - id: System.Single
+        name: Single
+        nameWithType: Single
+        qualifiedName: System.Single
+        isExternal: true
+      VB:
+      - id: System.Single
+        name: Single
+        nameWithType: Single
+        qualifiedName: System.Single
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Single
+  Vector3:
+    name:
+      CSharp:
+      - id: Vector3
+        name: Vector3
+        nameWithType: Vector3
+        qualifiedName: Vector3
+        isExternal: true
+      VB:
+      - id: Vector3
+        name: Vector3
+        nameWithType: Vector3
+        qualifiedName: Vector3
+        isExternal: true
+    isDefinition: true
+  MyProject.EnemyAI.TakeDamage*:
+    name:
+      CSharp:
+      - id: MyProject.EnemyAI.TakeDamage*
+        name: TakeDamage
+        nameWithType: EnemyAI.TakeDamage
+        qualifiedName: MyProject.EnemyAI.TakeDamage
+      VB:
+      - id: MyProject.EnemyAI.TakeDamage*
+        name: TakeDamage
+        nameWithType: EnemyAI.TakeDamage
+        qualifiedName: MyProject.EnemyAI.TakeDamage
+    isDefinition: true
+    commentId: Overload:MyProject.EnemyAI.TakeDamage
+  MyProject.EnemyAI:
+    name:
+      CSharp:
+      - id: MyProject.EnemyAI
+        name: EnemyAI
+        nameWithType: EnemyAI
+        qualifiedName: MyProject.EnemyAI
+      VB:
+      - id: MyProject.EnemyAI
+        name: EnemyAI
+        nameWithType: EnemyAI
+        qualifiedName: MyProject.EnemyAI
+    isDefinition: true
+    commentId: T:MyProject.EnemyAI
+  Slider:
+    name:
+      CSharp:
+      - id: Slider
+        name: Slider
+        nameWithType: Slider
+        qualifiedName: Slider
+        isExternal: true
+      VB:
+      - id: Slider
+        name: Slider
+        nameWithType: Slider
+        qualifiedName: Slider
+        isExternal: true
+    isDefinition: true
+  Text:
+    name:
+      CSharp:
+      - id: Text
+        name: Text
+        nameWithType: Text
+        qualifiedName: Text
+        isExternal: true
+      VB:
+      - id: Text
+        name: Text
+        nameWithType: Text
+        qualifiedName: Text
+        isExternal: true
+    isDefinition: true
+  MyProject.ExpBar.SetExp*:
+    name:
+      CSharp:
+      - id: MyProject.ExpBar.SetExp*
+        name: SetExp
+        nameWithType: ExpBar.SetExp
+        qualifiedName: MyProject.ExpBar.SetExp
+      VB:
+      - id: MyProject.ExpBar.SetExp*
+        name: SetExp
+        nameWithType: ExpBar.SetExp
+        qualifiedName: MyProject.ExpBar.SetExp
+    isDefinition: true
+    commentId: Overload:MyProject.ExpBar.SetExp
+  MyProject.ExpBar.SetLevel*:
+    name:
+      CSharp:
+      - id: MyProject.ExpBar.SetLevel*
+        name: SetLevel
+        nameWithType: ExpBar.SetLevel
+        qualifiedName: MyProject.ExpBar.SetLevel
+      VB:
+      - id: MyProject.ExpBar.SetLevel*
+        name: SetLevel
+        nameWithType: ExpBar.SetLevel
+        qualifiedName: MyProject.ExpBar.SetLevel
+    isDefinition: true
+    commentId: Overload:MyProject.ExpBar.SetLevel
+  MyProject.ExpBar:
+    name:
+      CSharp:
+      - id: MyProject.ExpBar
+        name: ExpBar
+        nameWithType: ExpBar
+        qualifiedName: MyProject.ExpBar
+      VB:
+      - id: MyProject.ExpBar
+        name: ExpBar
+        nameWithType: ExpBar
+        qualifiedName: MyProject.ExpBar
+    isDefinition: true
+    commentId: T:MyProject.ExpBar
+  Gradient:
+    name:
+      CSharp:
+      - id: Gradient
+        name: Gradient
+        nameWithType: Gradient
+        qualifiedName: Gradient
+        isExternal: true
+      VB:
+      - id: Gradient
+        name: Gradient
+        nameWithType: Gradient
+        qualifiedName: Gradient
+        isExternal: true
+    isDefinition: true
+    commentId: '!:Gradient'
+  Image:
+    name:
+      CSharp:
+      - id: Image
+        name: Image
+        nameWithType: Image
+        qualifiedName: Image
+        isExternal: true
+      VB:
+      - id: Image
+        name: Image
+        nameWithType: Image
+        qualifiedName: Image
+        isExternal: true
+    isDefinition: true
+    commentId: '!:Image'
+  MyProject.HealthBar.SetMaxHealth*:
+    name:
+      CSharp:
+      - id: MyProject.HealthBar.SetMaxHealth*
+        name: SetMaxHealth
+        nameWithType: HealthBar.SetMaxHealth
+        qualifiedName: MyProject.HealthBar.SetMaxHealth
+      VB:
+      - id: MyProject.HealthBar.SetMaxHealth*
+        name: SetMaxHealth
+        nameWithType: HealthBar.SetMaxHealth
+        qualifiedName: MyProject.HealthBar.SetMaxHealth
+    isDefinition: true
+    commentId: Overload:MyProject.HealthBar.SetMaxHealth
+  MyProject.HealthBar.SetHealth*:
+    name:
+      CSharp:
+      - id: MyProject.HealthBar.SetHealth*
+        name: SetHealth
+        nameWithType: HealthBar.SetHealth
+        qualifiedName: MyProject.HealthBar.SetHealth
+      VB:
+      - id: MyProject.HealthBar.SetHealth*
+        name: SetHealth
+        nameWithType: HealthBar.SetHealth
+        qualifiedName: MyProject.HealthBar.SetHealth
+    isDefinition: true
+    commentId: Overload:MyProject.HealthBar.SetHealth
+  MyProject.HealthBar:
+    name:
+      CSharp:
+      - id: MyProject.HealthBar
+        name: HealthBar
+        nameWithType: HealthBar
+        qualifiedName: MyProject.HealthBar
+      VB:
+      - id: MyProject.HealthBar
+        name: HealthBar
+        nameWithType: HealthBar
+        qualifiedName: MyProject.HealthBar
+    isDefinition: true
+    commentId: T:MyProject.HealthBar
+  System.Boolean:
+    name:
+      CSharp:
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+      VB:
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Boolean
+  MyProject.Player.TakeDamage*:
+    name:
+      CSharp:
+      - id: MyProject.Player.TakeDamage*
+        name: TakeDamage
+        nameWithType: Player.TakeDamage
+        qualifiedName: MyProject.Player.TakeDamage
+      VB:
+      - id: MyProject.Player.TakeDamage*
+        name: TakeDamage
+        nameWithType: Player.TakeDamage
+        qualifiedName: MyProject.Player.TakeDamage
+    isDefinition: true
+    commentId: Overload:MyProject.Player.TakeDamage
+  MyProject.Player.AddExp*:
+    name:
+      CSharp:
+      - id: MyProject.Player.AddExp*
+        name: AddExp
+        nameWithType: Player.AddExp
+        qualifiedName: MyProject.Player.AddExp
+      VB:
+      - id: MyProject.Player.AddExp*
+        name: AddExp
+        nameWithType: Player.AddExp
+        qualifiedName: MyProject.Player.AddExp
+    isDefinition: true
+    commentId: Overload:MyProject.Player.AddExp
+  MyProject.Player.Resume*:
+    name:
+      CSharp:
+      - id: MyProject.Player.Resume*
+        name: Resume
+        nameWithType: Player.Resume
+        qualifiedName: MyProject.Player.Resume
+      VB:
+      - id: MyProject.Player.Resume*
+        name: Resume
+        nameWithType: Player.Resume
+        qualifiedName: MyProject.Player.Resume
+    isDefinition: true
+    commentId: Overload:MyProject.Player.Resume
+  MyProject.Player.OpenInventoryForSell*:
+    name:
+      CSharp:
+      - id: MyProject.Player.OpenInventoryForSell*
+        name: OpenInventoryForSell
+        nameWithType: Player.OpenInventoryForSell
+        qualifiedName: MyProject.Player.OpenInventoryForSell
+      VB:
+      - id: MyProject.Player.OpenInventoryForSell*
+        name: OpenInventoryForSell
+        nameWithType: Player.OpenInventoryForSell
+        qualifiedName: MyProject.Player.OpenInventoryForSell
+    isDefinition: true
+    commentId: Overload:MyProject.Player.OpenInventoryForSell
+  MyProject.Player.GetDamage*:
+    name:
+      CSharp:
+      - id: MyProject.Player.GetDamage*
+        name: GetDamage
+        nameWithType: Player.GetDamage
+        qualifiedName: MyProject.Player.GetDamage
+      VB:
+      - id: MyProject.Player.GetDamage*
+        name: GetDamage
+        nameWithType: Player.GetDamage
+        qualifiedName: MyProject.Player.GetDamage
+    isDefinition: true
+    commentId: Overload:MyProject.Player.GetDamage
+  MyProject.Player:
+    name:
+      CSharp:
+      - id: MyProject.Player
+        name: Player
+        nameWithType: Player
+        qualifiedName: MyProject.Player
+      VB:
+      - id: MyProject.Player
+        name: Player
+        nameWithType: Player
+        qualifiedName: MyProject.Player
+    isDefinition: true
+    parent: MyProject
+    commentId: T:MyProject.Player
+  MyProject:
+    name:
+      CSharp:
+      - name: MyProject
+        nameWithType: MyProject
+        qualifiedName: MyProject
+      VB:
+      - name: MyProject
+        nameWithType: MyProject
+        qualifiedName: MyProject
+    isDefinition: true
+    commentId: N:MyProject
+  MyProject.InventoryManager:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager
+        name: InventoryManager
+        nameWithType: InventoryManager
+        qualifiedName: MyProject.InventoryManager
+      VB:
+      - id: MyProject.InventoryManager
+        name: InventoryManager
+        nameWithType: InventoryManager
+        qualifiedName: MyProject.InventoryManager
+    isDefinition: true
+    parent: MyProject
+    commentId: T:MyProject.InventoryManager
+  MyProject.StoreItem.SetInventory*:
+    name:
+      CSharp:
+      - id: MyProject.StoreItem.SetInventory*
+        name: SetInventory
+        nameWithType: StoreItem.SetInventory
+        qualifiedName: MyProject.StoreItem.SetInventory
+      VB:
+      - id: MyProject.StoreItem.SetInventory*
+        name: SetInventory
+        nameWithType: StoreItem.SetInventory
+        qualifiedName: MyProject.StoreItem.SetInventory
+    isDefinition: true
+    commentId: Overload:MyProject.StoreItem.SetInventory
+  MyProject.StoreItem.RefreshInventroyItems*:
+    name:
+      CSharp:
+      - id: MyProject.StoreItem.RefreshInventroyItems*
+        name: RefreshInventroyItems
+        nameWithType: StoreItem.RefreshInventroyItems
+        qualifiedName: MyProject.StoreItem.RefreshInventroyItems
+      VB:
+      - id: MyProject.StoreItem.RefreshInventroyItems*
+        name: RefreshInventroyItems
+        nameWithType: StoreItem.RefreshInventroyItems
+        qualifiedName: MyProject.StoreItem.RefreshInventroyItems
+    isDefinition: true
+    commentId: Overload:MyProject.StoreItem.RefreshInventroyItems
+  MyProject.StoreItem.Update*:
+    name:
+      CSharp:
+      - id: MyProject.StoreItem.Update*
+        name: Update
+        nameWithType: StoreItem.Update
+        qualifiedName: MyProject.StoreItem.Update
+      VB:
+      - id: MyProject.StoreItem.Update*
+        name: Update
+        nameWithType: StoreItem.Update
+        qualifiedName: MyProject.StoreItem.Update
+    isDefinition: true
+    commentId: Overload:MyProject.StoreItem.Update
+  MyProject.StoreItem.SetPlayer*:
+    name:
+      CSharp:
+      - id: MyProject.StoreItem.SetPlayer*
+        name: SetPlayer
+        nameWithType: StoreItem.SetPlayer
+        qualifiedName: MyProject.StoreItem.SetPlayer
+      VB:
+      - id: MyProject.StoreItem.SetPlayer*
+        name: SetPlayer
+        nameWithType: StoreItem.SetPlayer
+        qualifiedName: MyProject.StoreItem.SetPlayer
+    isDefinition: true
+    commentId: Overload:MyProject.StoreItem.SetPlayer
+  MyProject.Item:
+    name:
+      CSharp:
+      - id: MyProject.Item
+        name: Item
+        nameWithType: Item
+        qualifiedName: MyProject.Item
+      VB:
+      - id: MyProject.Item
+        name: Item
+        nameWithType: Item
+        qualifiedName: MyProject.Item
+    isDefinition: true
+    parent: MyProject
+    commentId: T:MyProject.Item
+  MyProject.StoreItem.BuyItem*:
+    name:
+      CSharp:
+      - id: MyProject.StoreItem.BuyItem*
+        name: BuyItem
+        nameWithType: StoreItem.BuyItem
+        qualifiedName: MyProject.StoreItem.BuyItem
+      VB:
+      - id: MyProject.StoreItem.BuyItem*
+        name: BuyItem
+        nameWithType: StoreItem.BuyItem
+        qualifiedName: MyProject.StoreItem.BuyItem
+    isDefinition: true
+    commentId: Overload:MyProject.StoreItem.BuyItem
+  MyProject.StoreItem:
+    name:
+      CSharp:
+      - id: MyProject.StoreItem
+        name: StoreItem
+        nameWithType: StoreItem
+        qualifiedName: MyProject.StoreItem
+      VB:
+      - id: MyProject.StoreItem
+        name: StoreItem
+        nameWithType: StoreItem
+        qualifiedName: MyProject.StoreItem
+    isDefinition: true
+    commentId: T:MyProject.StoreItem
+  MyProject.Tooltip.ShowTooltip*:
+    name:
+      CSharp:
+      - id: MyProject.Tooltip.ShowTooltip*
+        name: ShowTooltip
+        nameWithType: Tooltip.ShowTooltip
+        qualifiedName: MyProject.Tooltip.ShowTooltip
+      VB:
+      - id: MyProject.Tooltip.ShowTooltip*
+        name: ShowTooltip
+        nameWithType: Tooltip.ShowTooltip
+        qualifiedName: MyProject.Tooltip.ShowTooltip
+    isDefinition: true
+    commentId: Overload:MyProject.Tooltip.ShowTooltip
+  MyProject.Tooltip.HideTooltip*:
+    name:
+      CSharp:
+      - id: MyProject.Tooltip.HideTooltip*
+        name: HideTooltip
+        nameWithType: Tooltip.HideTooltip
+        qualifiedName: MyProject.Tooltip.HideTooltip
+      VB:
+      - id: MyProject.Tooltip.HideTooltip*
+        name: HideTooltip
+        nameWithType: Tooltip.HideTooltip
+        qualifiedName: MyProject.Tooltip.HideTooltip
+    isDefinition: true
+    commentId: Overload:MyProject.Tooltip.HideTooltip
+  MyProject.Tooltip:
+    name:
+      CSharp:
+      - id: MyProject.Tooltip
+        name: Tooltip
+        nameWithType: Tooltip
+        qualifiedName: MyProject.Tooltip
+      VB:
+      - id: MyProject.Tooltip
+        name: Tooltip
+        nameWithType: Tooltip
+        qualifiedName: MyProject.Tooltip
+    isDefinition: true
+    commentId: T:MyProject.Tooltip
+  Transform:
+    name:
+      CSharp:
+      - id: Transform
+        name: Transform
+        nameWithType: Transform
+        qualifiedName: Transform
+        isExternal: true
+      VB:
+      - id: Transform
+        name: Transform
+        nameWithType: Transform
+        qualifiedName: Transform
+        isExternal: true
+    isDefinition: true
+  MyProject.CameraController:
+    name:
+      CSharp:
+      - id: MyProject.CameraController
+        name: CameraController
+        nameWithType: CameraController
+        qualifiedName: MyProject.CameraController
+      VB:
+      - id: MyProject.CameraController
+        name: CameraController
+        nameWithType: CameraController
+        qualifiedName: MyProject.CameraController
+    isDefinition: true
+    commentId: T:MyProject.CameraController
+  MyProject.EquipmentItem.Update*:
+    name:
+      CSharp:
+      - id: MyProject.EquipmentItem.Update*
+        name: Update
+        nameWithType: EquipmentItem.Update
+        qualifiedName: MyProject.EquipmentItem.Update
+      VB:
+      - id: MyProject.EquipmentItem.Update*
+        name: Update
+        nameWithType: EquipmentItem.Update
+        qualifiedName: MyProject.EquipmentItem.Update
+    isDefinition: true
+    commentId: Overload:MyProject.EquipmentItem.Update
+  MyProject.EquipmentItem:
+    name:
+      CSharp:
+      - id: MyProject.EquipmentItem
+        name: EquipmentItem
+        nameWithType: EquipmentItem
+        qualifiedName: MyProject.EquipmentItem
+      VB:
+      - id: MyProject.EquipmentItem
+        name: EquipmentItem
+        nameWithType: EquipmentItem
+        qualifiedName: MyProject.EquipmentItem
+    isDefinition: true
+    commentId: T:MyProject.EquipmentItem
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  EventHandler:
+    name:
+      CSharp:
+      - id: EventHandler
+        name: EventHandler
+        nameWithType: EventHandler
+        qualifiedName: EventHandler
+        isExternal: true
+      VB:
+      - id: EventHandler
+        name: EventHandler
+        nameWithType: EventHandler
+        qualifiedName: EventHandler
+        isExternal: true
+    isDefinition: true
+    commentId: '!:EventHandler'
+  System.Collections.Generic.List`1:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Collections.Generic.List`1
+  System.Collections.Generic:
+    name:
+      CSharp:
+      - name: System.Collections.Generic
+        nameWithType: System.Collections.Generic
+        qualifiedName: System.Collections.Generic
+        isExternal: true
+      VB:
+      - name: System.Collections.Generic
+        nameWithType: System.Collections.Generic
+        qualifiedName: System.Collections.Generic
+    isDefinition: true
+    commentId: N:System.Collections.Generic
+  System.Collections.Generic.List{MyProject.Item}:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: MyProject.Item
+        name: Item
+        nameWithType: Item
+        qualifiedName: MyProject.Item
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: MyProject.Item
+        name: Item
+        nameWithType: Item
+        qualifiedName: MyProject.Item
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Generic.List`1
+    parent: System.Collections.Generic
+    commentId: T:System.Collections.Generic.List{MyProject.Item}
+  Action`1:
+    name:
+      CSharp:
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: '!:Action`1'
+  Action{MyProject.Item}:
+    name:
+      CSharp:
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: MyProject.Item
+        name: Item
+        nameWithType: Item
+        qualifiedName: MyProject.Item
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: MyProject.Item
+        name: Item
+        nameWithType: Item
+        qualifiedName: MyProject.Item
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: Action`1
+    commentId: '!:Action{MyProject.Item}'
+  MyProject.InventoryManager.#ctor*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.#ctor*
+        name: InventoryManager
+        nameWithType: InventoryManager.InventoryManager
+        qualifiedName: MyProject.InventoryManager.InventoryManager
+      VB:
+      - id: MyProject.InventoryManager.#ctor*
+        name: InventoryManager
+        nameWithType: InventoryManager.InventoryManager
+        qualifiedName: MyProject.InventoryManager.InventoryManager
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.#ctor
+  MyProject.InventoryManager.SetPlayer*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.SetPlayer*
+        name: SetPlayer
+        nameWithType: InventoryManager.SetPlayer
+        qualifiedName: MyProject.InventoryManager.SetPlayer
+      VB:
+      - id: MyProject.InventoryManager.SetPlayer*
+        name: SetPlayer
+        nameWithType: InventoryManager.SetPlayer
+        qualifiedName: MyProject.InventoryManager.SetPlayer
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.SetPlayer
+  MyProject.InventoryManager.AddItem*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.AddItem*
+        name: AddItem
+        nameWithType: InventoryManager.AddItem
+        qualifiedName: MyProject.InventoryManager.AddItem
+      VB:
+      - id: MyProject.InventoryManager.AddItem*
+        name: AddItem
+        nameWithType: InventoryManager.AddItem
+        qualifiedName: MyProject.InventoryManager.AddItem
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.AddItem
+  MyProject.InventoryManager.RemoveItem*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.RemoveItem*
+        name: RemoveItem
+        nameWithType: InventoryManager.RemoveItem
+        qualifiedName: MyProject.InventoryManager.RemoveItem
+      VB:
+      - id: MyProject.InventoryManager.RemoveItem*
+        name: RemoveItem
+        nameWithType: InventoryManager.RemoveItem
+        qualifiedName: MyProject.InventoryManager.RemoveItem
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.RemoveItem
+  MyProject.InventoryManager.UseItem*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.UseItem*
+        name: UseItem
+        nameWithType: InventoryManager.UseItem
+        qualifiedName: MyProject.InventoryManager.UseItem
+      VB:
+      - id: MyProject.InventoryManager.UseItem*
+        name: UseItem
+        nameWithType: InventoryManager.UseItem
+        qualifiedName: MyProject.InventoryManager.UseItem
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.UseItem
+  MyProject.InventoryManager.GetItemList*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.GetItemList*
+        name: GetItemList
+        nameWithType: InventoryManager.GetItemList
+        qualifiedName: MyProject.InventoryManager.GetItemList
+      VB:
+      - id: MyProject.InventoryManager.GetItemList*
+        name: GetItemList
+        nameWithType: InventoryManager.GetItemList
+        qualifiedName: MyProject.InventoryManager.GetItemList
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.GetItemList
+  MyProject.InventoryManager.AddEquipment*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.AddEquipment*
+        name: AddEquipment
+        nameWithType: InventoryManager.AddEquipment
+        qualifiedName: MyProject.InventoryManager.AddEquipment
+      VB:
+      - id: MyProject.InventoryManager.AddEquipment*
+        name: AddEquipment
+        nameWithType: InventoryManager.AddEquipment
+        qualifiedName: MyProject.InventoryManager.AddEquipment
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.AddEquipment
+  MyProject.InventoryManager.RemoveEquipment*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.RemoveEquipment*
+        name: RemoveEquipment
+        nameWithType: InventoryManager.RemoveEquipment
+        qualifiedName: MyProject.InventoryManager.RemoveEquipment
+      VB:
+      - id: MyProject.InventoryManager.RemoveEquipment*
+        name: RemoveEquipment
+        nameWithType: InventoryManager.RemoveEquipment
+        qualifiedName: MyProject.InventoryManager.RemoveEquipment
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.RemoveEquipment
+  MyProject.InventoryManager.FindHealthPotion*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.FindHealthPotion*
+        name: FindHealthPotion
+        nameWithType: InventoryManager.FindHealthPotion
+        qualifiedName: MyProject.InventoryManager.FindHealthPotion
+      VB:
+      - id: MyProject.InventoryManager.FindHealthPotion*
+        name: FindHealthPotion
+        nameWithType: InventoryManager.FindHealthPotion
+        qualifiedName: MyProject.InventoryManager.FindHealthPotion
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.FindHealthPotion
+  System.Collections.Generic.Dictionary`2:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: TKey
+        nameWithType: TKey
+        qualifiedName: TKey
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: TValue
+        nameWithType: TValue
+        qualifiedName: TValue
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: TKey
+        nameWithType: TKey
+        qualifiedName: TKey
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: TValue
+        nameWithType: TValue
+        qualifiedName: TValue
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Collections.Generic.Dictionary`2
+  System.Collections.Generic.Dictionary{System.String,MyProject.Item}:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: MyProject.Item
+        name: Item
+        nameWithType: Item
+        qualifiedName: MyProject.Item
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: MyProject.Item
+        name: Item
+        nameWithType: Item
+        qualifiedName: MyProject.Item
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Generic.Dictionary`2
+    parent: System.Collections.Generic
+    commentId: T:System.Collections.Generic.Dictionary{System.String,MyProject.Item}
+  MyProject.InventoryManager.GetEquipment*:
+    name:
+      CSharp:
+      - id: MyProject.InventoryManager.GetEquipment*
+        name: GetEquipment
+        nameWithType: InventoryManager.GetEquipment
+        qualifiedName: MyProject.InventoryManager.GetEquipment
+      VB:
+      - id: MyProject.InventoryManager.GetEquipment*
+        name: GetEquipment
+        nameWithType: InventoryManager.GetEquipment
+        qualifiedName: MyProject.InventoryManager.GetEquipment
+    isDefinition: true
+    commentId: Overload:MyProject.InventoryManager.GetEquipment
+  MyProject.Item.ItemType:
+    name:
+      CSharp:
+      - id: MyProject.Item.ItemType
+        name: Item.ItemType
+        nameWithType: Item.ItemType
+        qualifiedName: MyProject.Item.ItemType
+      VB:
+      - id: MyProject.Item.ItemType
+        name: Item.ItemType
+        nameWithType: Item.ItemType
+        qualifiedName: MyProject.Item.ItemType
+    isDefinition: true
+    parent: MyProject
+    commentId: T:MyProject.Item.ItemType
+  Sprite:
+    name:
+      CSharp:
+      - id: Sprite
+        name: Sprite
+        nameWithType: Sprite
+        qualifiedName: Sprite
+        isExternal: true
+      VB:
+      - id: Sprite
+        name: Sprite
+        nameWithType: Sprite
+        qualifiedName: Sprite
+        isExternal: true
+    isDefinition: true
+  MyProject.Item.GetSprite*:
+    name:
+      CSharp:
+      - id: MyProject.Item.GetSprite*
+        name: GetSprite
+        nameWithType: Item.GetSprite
+        qualifiedName: MyProject.Item.GetSprite
+      VB:
+      - id: MyProject.Item.GetSprite*
+        name: GetSprite
+        nameWithType: Item.GetSprite
+        qualifiedName: MyProject.Item.GetSprite
+    isDefinition: true
+    commentId: Overload:MyProject.Item.GetSprite
+  MyProject.Item.IsStackable*:
+    name:
+      CSharp:
+      - id: MyProject.Item.IsStackable*
+        name: IsStackable
+        nameWithType: Item.IsStackable
+        qualifiedName: MyProject.Item.IsStackable
+      VB:
+      - id: MyProject.Item.IsStackable*
+        name: IsStackable
+        nameWithType: Item.IsStackable
+        qualifiedName: MyProject.Item.IsStackable
+    isDefinition: true
+    commentId: Overload:MyProject.Item.IsStackable
+  MyProject.Item.ToString*:
+    name:
+      CSharp:
+      - id: MyProject.Item.ToString*
+        name: ToString
+        nameWithType: Item.ToString
+        qualifiedName: MyProject.Item.ToString
+      VB:
+      - id: MyProject.Item.ToString*
+        name: ToString
+        nameWithType: Item.ToString
+        qualifiedName: MyProject.Item.ToString
+    isDefinition: true
+    commentId: Overload:MyProject.Item.ToString
+  MyProject.ItemAssets:
+    name:
+      CSharp:
+      - id: MyProject.ItemAssets
+        name: ItemAssets
+        nameWithType: ItemAssets
+        qualifiedName: MyProject.ItemAssets
+      VB:
+      - id: MyProject.ItemAssets
+        name: ItemAssets
+        nameWithType: ItemAssets
+        qualifiedName: MyProject.ItemAssets
+    isDefinition: true
+    parent: MyProject
+    commentId: T:MyProject.ItemAssets
+  MyProject.ItemAssets.Instance*:
+    name:
+      CSharp:
+      - id: MyProject.ItemAssets.Instance*
+        name: Instance
+        nameWithType: ItemAssets.Instance
+        qualifiedName: MyProject.ItemAssets.Instance
+      VB:
+      - id: MyProject.ItemAssets.Instance*
+        name: Instance
+        nameWithType: ItemAssets.Instance
+        qualifiedName: MyProject.ItemAssets.Instance
+    isDefinition: true
+    commentId: Overload:MyProject.ItemAssets.Instance
+  MyProject.ItemWorld:
+    name:
+      CSharp:
+      - id: MyProject.ItemWorld
+        name: ItemWorld
+        nameWithType: ItemWorld
+        qualifiedName: MyProject.ItemWorld
+      VB:
+      - id: MyProject.ItemWorld
+        name: ItemWorld
+        nameWithType: ItemWorld
+        qualifiedName: MyProject.ItemWorld
+    isDefinition: true
+    parent: MyProject
+    commentId: T:MyProject.ItemWorld
+  MyProject.ItemWorld.SpawnItemWorld*:
+    name:
+      CSharp:
+      - id: MyProject.ItemWorld.SpawnItemWorld*
+        name: SpawnItemWorld
+        nameWithType: ItemWorld.SpawnItemWorld
+        qualifiedName: MyProject.ItemWorld.SpawnItemWorld
+      VB:
+      - id: MyProject.ItemWorld.SpawnItemWorld*
+        name: SpawnItemWorld
+        nameWithType: ItemWorld.SpawnItemWorld
+        qualifiedName: MyProject.ItemWorld.SpawnItemWorld
+    isDefinition: true
+    commentId: Overload:MyProject.ItemWorld.SpawnItemWorld
+  MyProject.ItemWorld.SetItem*:
+    name:
+      CSharp:
+      - id: MyProject.ItemWorld.SetItem*
+        name: SetItem
+        nameWithType: ItemWorld.SetItem
+        qualifiedName: MyProject.ItemWorld.SetItem
+      VB:
+      - id: MyProject.ItemWorld.SetItem*
+        name: SetItem
+        nameWithType: ItemWorld.SetItem
+        qualifiedName: MyProject.ItemWorld.SetItem
+    isDefinition: true
+    commentId: Overload:MyProject.ItemWorld.SetItem
+  MyProject.ItemWorld.GetItem*:
+    name:
+      CSharp:
+      - id: MyProject.ItemWorld.GetItem*
+        name: GetItem
+        nameWithType: ItemWorld.GetItem
+        qualifiedName: MyProject.ItemWorld.GetItem
+      VB:
+      - id: MyProject.ItemWorld.GetItem*
+        name: GetItem
+        nameWithType: ItemWorld.GetItem
+        qualifiedName: MyProject.ItemWorld.GetItem
+    isDefinition: true
+    commentId: Overload:MyProject.ItemWorld.GetItem
+  MyProject.ItemWorld.DropItem*:
+    name:
+      CSharp:
+      - id: MyProject.ItemWorld.DropItem*
+        name: DropItem
+        nameWithType: ItemWorld.DropItem
+        qualifiedName: MyProject.ItemWorld.DropItem
+      VB:
+      - id: MyProject.ItemWorld.DropItem*
+        name: DropItem
+        nameWithType: ItemWorld.DropItem
+        qualifiedName: MyProject.ItemWorld.DropItem
+    isDefinition: true
+    commentId: Overload:MyProject.ItemWorld.DropItem
+  MyProject.ItemWorld.DestroySelf*:
+    name:
+      CSharp:
+      - id: MyProject.ItemWorld.DestroySelf*
+        name: DestroySelf
+        nameWithType: ItemWorld.DestroySelf
+        qualifiedName: MyProject.ItemWorld.DestroySelf
+      VB:
+      - id: MyProject.ItemWorld.DestroySelf*
+        name: DestroySelf
+        nameWithType: ItemWorld.DestroySelf
+        qualifiedName: MyProject.ItemWorld.DestroySelf
+    isDefinition: true
+    commentId: Overload:MyProject.ItemWorld.DestroySelf
+  MyProject.ItemWorldSpawner.GenerateGold*:
+    name:
+      CSharp:
+      - id: MyProject.ItemWorldSpawner.GenerateGold*
+        name: GenerateGold
+        nameWithType: ItemWorldSpawner.GenerateGold
+        qualifiedName: MyProject.ItemWorldSpawner.GenerateGold
+      VB:
+      - id: MyProject.ItemWorldSpawner.GenerateGold*
+        name: GenerateGold
+        nameWithType: ItemWorldSpawner.GenerateGold
+        qualifiedName: MyProject.ItemWorldSpawner.GenerateGold
+    isDefinition: true
+    commentId: Overload:MyProject.ItemWorldSpawner.GenerateGold
+  MyProject.ItemWorldSpawner:
+    name:
+      CSharp:
+      - id: MyProject.ItemWorldSpawner
+        name: ItemWorldSpawner
+        nameWithType: ItemWorldSpawner
+        qualifiedName: MyProject.ItemWorldSpawner
+      VB:
+      - id: MyProject.ItemWorldSpawner
+        name: ItemWorldSpawner
+        nameWithType: ItemWorldSpawner
+        qualifiedName: MyProject.ItemWorldSpawner
+    isDefinition: true
+    commentId: T:MyProject.ItemWorldSpawner
+  MyProject.UI_inventory.Awake*:
+    name:
+      CSharp:
+      - id: MyProject.UI_inventory.Awake*
+        name: Awake
+        nameWithType: UI_inventory.Awake
+        qualifiedName: MyProject.UI_inventory.Awake
+      VB:
+      - id: MyProject.UI_inventory.Awake*
+        name: Awake
+        nameWithType: UI_inventory.Awake
+        qualifiedName: MyProject.UI_inventory.Awake
+    isDefinition: true
+    commentId: Overload:MyProject.UI_inventory.Awake
+  MyProject.UI_inventory.SetPlayer*:
+    name:
+      CSharp:
+      - id: MyProject.UI_inventory.SetPlayer*
+        name: SetPlayer
+        nameWithType: UI_inventory.SetPlayer
+        qualifiedName: MyProject.UI_inventory.SetPlayer
+      VB:
+      - id: MyProject.UI_inventory.SetPlayer*
+        name: SetPlayer
+        nameWithType: UI_inventory.SetPlayer
+        qualifiedName: MyProject.UI_inventory.SetPlayer
+    isDefinition: true
+    commentId: Overload:MyProject.UI_inventory.SetPlayer
+  MyProject.UI_inventory.SetInventory*:
+    name:
+      CSharp:
+      - id: MyProject.UI_inventory.SetInventory*
+        name: SetInventory
+        nameWithType: UI_inventory.SetInventory
+        qualifiedName: MyProject.UI_inventory.SetInventory
+      VB:
+      - id: MyProject.UI_inventory.SetInventory*
+        name: SetInventory
+        nameWithType: UI_inventory.SetInventory
+        qualifiedName: MyProject.UI_inventory.SetInventory
+    isDefinition: true
+    commentId: Overload:MyProject.UI_inventory.SetInventory
+  MyProject.UI_inventory.SetEquipment*:
+    name:
+      CSharp:
+      - id: MyProject.UI_inventory.SetEquipment*
+        name: SetEquipment
+        nameWithType: UI_inventory.SetEquipment
+        qualifiedName: MyProject.UI_inventory.SetEquipment
+      VB:
+      - id: MyProject.UI_inventory.SetEquipment*
+        name: SetEquipment
+        nameWithType: UI_inventory.SetEquipment
+        qualifiedName: MyProject.UI_inventory.SetEquipment
+    isDefinition: true
+    commentId: Overload:MyProject.UI_inventory.SetEquipment
+  MyProject.UI_inventory.ToInventory*:
+    name:
+      CSharp:
+      - id: MyProject.UI_inventory.ToInventory*
+        name: ToInventory
+        nameWithType: UI_inventory.ToInventory
+        qualifiedName: MyProject.UI_inventory.ToInventory
+      VB:
+      - id: MyProject.UI_inventory.ToInventory*
+        name: ToInventory
+        nameWithType: UI_inventory.ToInventory
+        qualifiedName: MyProject.UI_inventory.ToInventory
+    isDefinition: true
+    commentId: Overload:MyProject.UI_inventory.ToInventory
+  MyProject.UI_inventory.RemoveEquipmentItem*:
+    name:
+      CSharp:
+      - id: MyProject.UI_inventory.RemoveEquipmentItem*
+        name: RemoveEquipmentItem
+        nameWithType: UI_inventory.RemoveEquipmentItem
+        qualifiedName: MyProject.UI_inventory.RemoveEquipmentItem
+      VB:
+      - id: MyProject.UI_inventory.RemoveEquipmentItem*
+        name: RemoveEquipmentItem
+        nameWithType: UI_inventory.RemoveEquipmentItem
+        qualifiedName: MyProject.UI_inventory.RemoveEquipmentItem
+    isDefinition: true
+    commentId: Overload:MyProject.UI_inventory.RemoveEquipmentItem
+  MyProject.UI_inventory.SellItem*:
+    name:
+      CSharp:
+      - id: MyProject.UI_inventory.SellItem*
+        name: SellItem
+        nameWithType: UI_inventory.SellItem
+        qualifiedName: MyProject.UI_inventory.SellItem
+      VB:
+      - id: MyProject.UI_inventory.SellItem*
+        name: SellItem
+        nameWithType: UI_inventory.SellItem
+        qualifiedName: MyProject.UI_inventory.SellItem
+    isDefinition: true
+    commentId: Overload:MyProject.UI_inventory.SellItem
+  MyProject.UI_inventory:
+    name:
+      CSharp:
+      - id: MyProject.UI_inventory
+        name: UI_inventory
+        nameWithType: UI_inventory
+        qualifiedName: MyProject.UI_inventory
+      VB:
+      - id: MyProject.UI_inventory
+        name: UI_inventory
+        nameWithType: UI_inventory
+        qualifiedName: MyProject.UI_inventory
+    isDefinition: true
+    commentId: T:MyProject.UI_inventory
+  MyProject.MyProject:
+    name:
+      CSharp:
+      - name: MyProject.MyProject
+        nameWithType: MyProject.MyProject
+        qualifiedName: MyProject.MyProject
+      VB:
+      - name: MyProject.MyProject
+        nameWithType: MyProject.MyProject
+        qualifiedName: MyProject.MyProject
+    isDefinition: true
+    commentId: N:MyProject.MyProject
+  MyProject.MyProject.PlayerController.ProjectMode:
+    name:
+      CSharp:
+      - id: MyProject.MyProject.PlayerController.ProjectMode
+        name: PlayerController.ProjectMode
+        nameWithType: PlayerController.ProjectMode
+        qualifiedName: MyProject.MyProject.PlayerController.ProjectMode
+      VB:
+      - id: MyProject.MyProject.PlayerController.ProjectMode
+        name: PlayerController.ProjectMode
+        nameWithType: PlayerController.ProjectMode
+        qualifiedName: MyProject.MyProject.PlayerController.ProjectMode
+    isDefinition: true
+    parent: MyProject.MyProject
+    commentId: T:MyProject.MyProject.PlayerController.ProjectMode
+  Texture2D:
+    name:
+      CSharp:
+      - id: Texture2D
+        name: Texture2D
+        nameWithType: Texture2D
+        qualifiedName: Texture2D
+        isExternal: true
+      VB:
+      - id: Texture2D
+        name: Texture2D
+        nameWithType: Texture2D
+        qualifiedName: Texture2D
+        isExternal: true
+    isDefinition: true
+  MyProject.MyProject.PlayerController:
+    name:
+      CSharp:
+      - id: MyProject.MyProject.PlayerController
+        name: PlayerController
+        nameWithType: PlayerController
+        qualifiedName: MyProject.MyProject.PlayerController
+      VB:
+      - id: MyProject.MyProject.PlayerController
+        name: PlayerController
+        nameWithType: PlayerController
+        qualifiedName: MyProject.MyProject.PlayerController
+    isDefinition: true
+    commentId: T:MyProject.MyProject.PlayerController

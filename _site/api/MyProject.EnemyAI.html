@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EnemyAI
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EnemyAI
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MyProject.EnemyAI">
+  
+  
+  <h1 id="MyProject_EnemyAI" data-uid="MyProject.EnemyAI" class="text-break">Class EnemyAI
+  </h1>
+  <div class="markdown level0 summary"><p>This class describes the behavior of the artificial intelligence of the enemy</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EnemyAI</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MyProject.html">MyProject</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="MyProject_EnemyAI_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EnemyAI : MonoBehaviour</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MyProject_EnemyAI_angle" data-uid="MyProject.EnemyAI.angle">angle</h4>
+  <div class="markdown level1 summary"><p>Scatter radius of rays around a class object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float angle</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MyProject_EnemyAI_distance" data-uid="MyProject.EnemyAI.distance">distance</h4>
+  <div class="markdown level1 summary"><p>Ray length</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int distance</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MyProject_EnemyAI_health" data-uid="MyProject.EnemyAI.health">health</h4>
+  <div class="markdown level1 summary"><p>Enemy Health</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int health</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MyProject_EnemyAI_offset" data-uid="MyProject.EnemyAI.offset">offset</h4>
+  <div class="markdown level1 summary"><p>Offset beam position from the previous one</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 offset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MyProject_EnemyAI_rays" data-uid="MyProject.EnemyAI.rays">rays</h4>
+  <div class="markdown level1 summary"><p>The number of rays that an object of the class emits to search for a target</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int rays</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MyProject_EnemyAI_targetTag" data-uid="MyProject.EnemyAI.targetTag">targetTag</h4>
+  <div class="markdown level1 summary"><p>The tag of the target that the enemy will react to</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string targetTag</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MyProject_EnemyAI_DeathCoroutine_" data-uid="MyProject.EnemyAI.DeathCoroutine*"></a>
+  <h4 id="MyProject_EnemyAI_DeathCoroutine" data-uid="MyProject.EnemyAI.DeathCoroutine">DeathCoroutine()</h4>
+  <div class="markdown level1 summary"><p>Coroutine to run functions over time.
+Here, the death animation is activated,
+the amount of experience and gold that will drop out after his death is calculated,
+and the object is removed from the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator DeathCoroutine()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_EnemyAI_FixedUpdate_" data-uid="MyProject.EnemyAI.FixedUpdate*"></a>
+  <h4 id="MyProject_EnemyAI_FixedUpdate" data-uid="MyProject.EnemyAI.FixedUpdate">FixedUpdate()</h4>
+  <div class="markdown level1 summary"><p>A method that is executed every second of real time.
+It monitors the health of this object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FixedUpdate()</code></pre>
+  </div>
+  
+  
+  <a id="MyProject_EnemyAI_GetRaycast_" data-uid="MyProject.EnemyAI.GetRaycast*"></a>
+  <h4 id="MyProject_EnemyAI_GetRaycast_Vector3_" data-uid="MyProject.EnemyAI.GetRaycast(Vector3)">GetRaycast(Vector3)</h4>
+  <div class="markdown level1 summary"><p>Drawing rays and checking if the object with the player tag is in their range.
+Depending on the status of the beam, they change the color in the debug view</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetRaycast(Vector3 dir)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">dir</span></td>
+        <td><p>Rays position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Reys status. Is the player found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_EnemyAI_OnTriggerEnter_" data-uid="MyProject.EnemyAI.OnTriggerEnter*"></a>
+  <h4 id="MyProject_EnemyAI_OnTriggerEnter_Collider_" data-uid="MyProject.EnemyAI.OnTriggerEnter(Collider)">OnTriggerEnter(Collider)</h4>
+  <div class="markdown level1 summary"><p>Reacting to the object that got into the trigger and checking it for the presence of the required tag. If the tag is defined as a player,
+then the enemy starts to attack the player and deal damage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTriggerEnter(Collider other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Collider</span></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The object that hit the trigger</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_EnemyAI_OnTriggerStay_" data-uid="MyProject.EnemyAI.OnTriggerStay*"></a>
+  <h4 id="MyProject_EnemyAI_OnTriggerStay_Collider_" data-uid="MyProject.EnemyAI.OnTriggerStay(Collider)">OnTriggerStay(Collider)</h4>
+  <div class="markdown level1 summary"><p>If the item is in the trigger and has a player tag,
+then damage is dealt to the player with an interval of 3 seconds of real time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTriggerStay(Collider other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Collider</span></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The object that is in the trigger</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_EnemyAI_RayToScan_" data-uid="MyProject.EnemyAI.RayToScan*"></a>
+  <h4 id="MyProject_EnemyAI_RayToScan" data-uid="MyProject.EnemyAI.RayToScan">RayToScan()</h4>
+  <div class="markdown level1 summary"><p>Creating Rays</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RayToScan()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Rays generation process status</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_EnemyAI_Start_" data-uid="MyProject.EnemyAI.Start*"></a>
+  <h4 id="MyProject_EnemyAI_Start" data-uid="MyProject.EnemyAI.Start">Start()</h4>
+  <div class="markdown level1 summary"><p>The method is called when the application starts,
+the enemy&apos;s health is assigned, which depends on the player&apos;s level.
+And class objects are initialized</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+  
+  
+  <a id="MyProject_EnemyAI_TakeDamage_" data-uid="MyProject.EnemyAI.TakeDamage*"></a>
+  <h4 id="MyProject_EnemyAI_TakeDamage_System_Int32_" data-uid="MyProject.EnemyAI.TakeDamage(System.Int32)">TakeDamage(Int32)</h4>
+  <div class="markdown level1 summary"><p>Method for receiving damage from the player.
+The amount of health from the object is taken away</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TakeDamage(int points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MyProject_EnemyAI_Update_" data-uid="MyProject.EnemyAI.Update*"></a>
+  <h4 id="MyProject_EnemyAI_Update" data-uid="MyProject.EnemyAI.Update">Update()</h4>
+  <div class="markdown level1 summary"><p>A method that is executed on every FPS frame.
+This method conducts beams and scans the objects hit by the beams.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

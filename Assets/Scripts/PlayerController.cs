@@ -2,9 +2,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
 using System.Collections;
-
 namespace MyProject
 {
+    /// <summary>
+    /// Main character control class
+    /// </summary>
     [RequireComponent(typeof(NavMeshAgent))]
     public class PlayerController : MonoBehaviour
     {
@@ -13,14 +15,28 @@ namespace MyProject
         private NavMeshAgent agent = null;
         private Animator animator;
         private Camera cam = null;
-
         public enum ProjectMode { Project3D = 0, Project2D = 1 };
+        /// <summary>
+        /// Game display type
+        /// </summary>
         public ProjectMode mode = ProjectMode.Project3D;
         private Texture2D cursor;
+        /// <summary>
+        /// Cursor sprite in normal state
+        /// </summary>
         public Texture2D cursorNormal;
+        /// <summary>
+        /// Cursor sprite when cursor is on enemy
+        /// </summary>
         public Texture2D cursorEnemy;
+        /// <summary>
+        /// Cursor sprite when looted
+        /// </summary>
         public Texture2D cursorInfo;
         private Vector2 offset;
+        /// <summary>
+        /// Cursor size
+        /// </summary>
         public int size = 30;
 
         private float timeAttack = 0f;
@@ -109,7 +125,7 @@ namespace MyProject
         }
         private void OnTriggerStay(Collider other)
         {
-            if (Mouse.current.leftButton.isPressed && other.CompareTag("Enemy") && timeAttack==0f)
+            if (Mouse.current.leftButton.isPressed && other.CompareTag("Enemy") && timeAttack == 0f)
             {
                 animator.SetTrigger("attack");
                 other.GetComponent<EnemyAI>().TakeDamage(GetComponent<Player>().GetDamage());
