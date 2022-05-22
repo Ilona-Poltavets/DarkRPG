@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "CYnRf6SA38AEI70DK/uST98BYjZqTCXFI9127KUyD/Y="
+          "hash": "fmKkDCZvk/5Nm9g+q52DcMV6z/sjWj5aVY4c5ckz51g="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "dP0VKvbeCUKtWeu1pedmLfgxQTaKviubg26ITv/cIZ8="
+          "hash": "iyo7mDFY0/HIwPBph0Rrsy89t8rDYyNqM+vYdmEA0ZM="
         }
       },
       "is_incremental": false,
@@ -317,7 +317,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 4,
-          "skipped_file_count": 3
+          "skipped_file_count": 2
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
