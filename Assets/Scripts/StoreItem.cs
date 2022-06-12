@@ -85,34 +85,34 @@ public class StoreItem : MonoBehaviour
         rangeItems.Clear();
         rangeItems.Add(new Item { itemType = Item.ItemType.HealthPotion, amount = 1, cost = cost });
 
-        damage = (equip.ContainsKey("Sword") ? equip["Sword"].damage : 10) + (player.lvl * 5);
+        damage = (equip.ContainsKey("Sword") ? equip["Sword"].damage : 10) + (player.characteristics.lvl * 5);
         cost = (damage + 0) * 2;
         rangeItems.Add(new Item { itemType = Item.ItemType.Sword, amount = 1, cost = cost, damage=damage });
 
-        defence = (equip.ContainsKey("Shield") ? equip["Shield"].defense : 10) + (player.lvl * 2);
+        defence = (equip.ContainsKey("Shield") ? equip["Shield"].defense : 10) + (player.characteristics.lvl * 2);
         cost = (0 + defence) * 2 + 10;
         rangeItems.Add(new Item { itemType = Item.ItemType.Shield, amount = 1, cost = cost, defense=defence });
 
-        defence = (equip.ContainsKey("Bib") ? equip["Bib"].defense : 10) + (player.lvl * 2);
+        defence = (equip.ContainsKey("Bib") ? equip["Bib"].defense : 10) + (player.characteristics.lvl * 2);
         cost = (0 + defence) * 2 + 10;
         rangeItems.Add(new Item { itemType = Item.ItemType.Bib, amount = 1, cost = cost, defense = defence });
 
         cost = 30;
         rangeItems.Add(new Item { itemType = Item.ItemType.Medkit, amount = 1, cost = cost, damage = damage });
 
-        damage = (equip.ContainsKey("Necklace") ? equip["Necklace"].damage : 10) + (player.lvl * 5); ;
+        damage = (equip.ContainsKey("Necklace") ? equip["Necklace"].damage : 10) + (player.characteristics.lvl * 5); ;
         cost = (damage + 0) * 2;
         rangeItems.Add(new Item { itemType = Item.ItemType.Necklace, amount = 1, cost = cost, damage = damage });
 
-        defence = (equip.ContainsKey("Boots") ? equip["Boots"].defense : 10) + (player.lvl * 2);
+        defence = (equip.ContainsKey("Boots") ? equip["Boots"].defense : 10) + (player.characteristics.lvl * 2);
         cost = (0 + defence) * 2 + 10;
         rangeItems.Add(new Item { itemType = Item.ItemType.Boots, amount = 1, cost = cost, defense = defence });
 
-        damage = (equip.ContainsKey("Ring") ? equip["Ring"].damage : 10) + (player.lvl * 5); ;
+        damage = (equip.ContainsKey("Ring") ? equip["Ring"].damage : 10) + (player.characteristics.lvl * 5); ;
         cost = (damage + 0) * 2;
         rangeItems.Add(new Item { itemType = Item.ItemType.Ring, amount = 1, cost = cost, damage = damage });
 
-        defence = (equip.ContainsKey("Helmet") ? equip["Helmet"].defense : 10) + (player.lvl * 2);
+        defence = (equip.ContainsKey("Helmet") ? equip["Helmet"].defense : 10) + (player.characteristics.lvl * 2);
         cost = (0 + defence) * 2 + 10;
         rangeItems.Add(new Item { itemType = Item.ItemType.Helmet, amount = 1, cost = cost, defense = defence });
     }
@@ -120,7 +120,7 @@ public class StoreItem : MonoBehaviour
     {
         if (item != null)
         {
-            player.gold -= item.cost;
+            player.characteristics.gold -= item.cost;
             inventory.AddItem(item);
         }
     }

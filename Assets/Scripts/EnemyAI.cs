@@ -17,10 +17,10 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent agent;
 	[SerializeField] private Player player;
 
-	int health;
+	[SerializeField] int health;
     void Start()
     {
-		health = player.lvl * 100;
+		health = player.characteristics.lvl * 100;
 		target = GameObject.FindGameObjectWithTag(targetTag).transform;
 		anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
@@ -43,8 +43,8 @@ public class EnemyAI : MonoBehaviour
 	{
 		anim.SetTrigger("death");
 		yield return new WaitForSecondsRealtime(2f);
-		GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().AddExp(Mathf.RoundToInt(Random.Range(GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().lvl * 100, GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().lvl * 200)));
-		int count = Mathf.RoundToInt(Random.Range(GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().lvl * 5, GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().lvl * 10));
+		GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().AddExp(Mathf.RoundToInt(Random.Range(GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().characteristics.lvl * 100, GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().characteristics.lvl * 200)));
+		int count = Mathf.RoundToInt(Random.Range(GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().characteristics.lvl * 5, GameObject.FindGameObjectWithTag(targetTag).GetComponent<Player>().characteristics.lvl * 10));
 		ItemWorld.DropItem(transform.position, new Item { itemType = Item.ItemType.Gold, amount = count });
 		Destroy(this.gameObject);
 	}

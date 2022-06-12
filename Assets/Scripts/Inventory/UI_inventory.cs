@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using Utils;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 /// <summary>
 /// Class that describes the behavior of the inventory interface
 /// </summary>
@@ -14,7 +15,7 @@ public class UI_inventory : MonoBehaviour
     public Text defencePoints;
     public Text goldCount;
 
-    private InventoryManager inventory;
+    public InventoryManager inventory;
     [SerializeField] private Tooltip tooltip;
 
     private Player player;
@@ -35,9 +36,9 @@ public class UI_inventory : MonoBehaviour
     private void LateUpdate()
     {
         hp.text = player.currentHealth.ToString();
-        defencePoints.text = player.defense.ToString();
-        damagePoints.text = player.damage.ToString();
-        goldCount.text = player.gold.ToString();
+        defencePoints.text = player.characteristics.defense.ToString();
+        damagePoints.text = player.characteristics.damage.ToString();
+        goldCount.text = player.characteristics.gold.ToString();
     }
     public void SetPlayer(Player player)
     {
@@ -47,7 +48,66 @@ public class UI_inventory : MonoBehaviour
     {
         this.inventory = inventory;
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
+        if (inventory.GetEquipment().Count != 0)
+        {
+            SerializableDictionary<string, Item> dict = inventory.GetEquipment();
+            string[] keys = dict.Keys.ToArray();
+            for (int i = 0; i < dict.Keys.Count; i++)
+            {
+                var key = keys[i];
+                var value = dict[key];
+                SetEquipmentFromXML(value);
+            }
+        }
         RefreshInventroyItems();
+    }
+    public void SetEquipmentFromXML(Item item)
+    {
+        EquipmantContainer = transform.Find("Equipment");
+        Image image;
+        switch (item.itemType)
+        {
+            case Item.ItemType.Ring:
+                item.slot = "Ring";
+                EquipmantSlot = EquipmantContainer.Find("Ring");
+                inventory.AddEquipment(item);
+                break;
+            case Item.ItemType.Bib:
+                item.slot = "Bib";
+                EquipmantSlot = EquipmantContainer.Find("Bib");
+                inventory.AddEquipment(item);
+                break;
+            case Item.ItemType.Helmet:
+                item.slot = "Helmet";
+                EquipmantSlot = EquipmantContainer.Find("Helmet");
+                inventory.AddEquipment(item);
+                break;
+            case Item.ItemType.Sword:
+                item.slot = "Sword";
+                EquipmantSlot = EquipmantContainer.Find("Sword");
+                inventory.AddEquipment(item);
+                break;
+            case Item.ItemType.Necklace:
+                item.slot = "Necklace";
+                EquipmantSlot = EquipmantContainer.Find("Necklace");
+                inventory.AddEquipment(item);
+                break;
+            case Item.ItemType.Shield:
+                item.slot = "Shield";
+                EquipmantSlot = EquipmantContainer.Find("Shield");
+                inventory.AddEquipment(item);
+                break;
+            case Item.ItemType.Boots:
+                item.slot = "Boots";
+                EquipmantSlot = EquipmantContainer.Find("Boots");
+                inventory.AddEquipment(item);
+                break;
+
+        }
+        //itemSlotRectTransform = Instantiate(EquipmantSlot, EquipmantContainer).GetComponent<RectTransform>();
+        //image = itemSlotRectTransform.GetComponent<Image>();
+        image = EquipmantSlot.GetComponent<Image>();
+        image.sprite = item.GetSprite();
     }
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {
@@ -179,6 +239,10 @@ public class UI_inventory : MonoBehaviour
     public void SellItem(Item item)
     {
         inventory.RemoveItem(item);
-        player.gold += item.cost / 2;
+        player.characteristics.gold += item.cost / 2;
+    }
+    public InventoryManager GetInventrory()
+    {
+        return this.inventory;
     }
 }

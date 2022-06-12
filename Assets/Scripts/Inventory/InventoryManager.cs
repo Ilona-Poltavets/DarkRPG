@@ -1,20 +1,25 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
-
+using System.Xml.Serialization;
+using System;
+using System.IO;
+[XmlRoot("Inventory")]
 public class InventoryManager
 {
     public event EventHandler OnItemListChanged;
-    public List<Item> itemList;
-    private Action<Item> useItemAction;
+    [XmlElement("Items")]
+    public List<Item> itemList { get; set; }
+    [XmlIgnore]
+    public Action<Item> useItemAction { get; set; }
     private Player player;
-
-    private Dictionary<string, Item> equipment;
+    [XmlElement("Equipment")]
+    public SerializableDictionary<string, Item> equipment { get; set; }
+    public InventoryManager() { }
     public InventoryManager(Action<Item> useItemAction)
     {
         this.useItemAction = useItemAction;
         itemList = new List<Item>();
-        equipment = new Dictionary<string, Item>();
+        equipment = new SerializableDictionary<string, Item>();
         AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount=1 });
         AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1,damage=50 });
         AddItem(new Item { itemType = Item.ItemType.Shield, amount = 1,defense=30 });
@@ -87,8 +92,8 @@ public class InventoryManager
         if (equipment.ContainsKey(item.slot))
         {
             Item oldItem = equipment[item.slot];
-            player.damage -= oldItem.damage;
-            player.defense -= oldItem.defense;
+            player.characteristics.damage -= oldItem.damage;
+            player.characteristics.defense -= oldItem.defense;
             AddItem(equipment[item.slot]);
             equipment[item.slot] = item;
         }
@@ -96,13 +101,13 @@ public class InventoryManager
         {
             equipment.Add(item.slot, item);
         }
-        player.damage += item.damage;
-        player.defense += item.defense;
+        player.characteristics.damage += item.damage;
+        player.characteristics.defense += item.defense;
     }
     public void RemoveEquipment(Item item)
     {
-        player.damage -= item.damage;
-        player.defense -= item.defense;
+        player.characteristics.damage -= item.damage;
+        player.characteristics.defense -= item.defense;
         equipment.Remove(item.slot);
     }
     public int FindHealthPotion()
@@ -112,17 +117,17 @@ public class InventoryManager
             if(item.itemType == Item.ItemType.HealthPotion)
             {
                 RemoveItem(item);
-                return (player.maxHealth*25)/100;
+                return (player.characteristics.maxHealth *25)/100;
             }
             else if (item.itemType == Item.ItemType.Medkit)
             {
                 RemoveItem(item);
-                return (player.maxHealth * 50) / 100;
+                return (player.characteristics.maxHealth * 50) / 100;
             }
         }
         return 0;
     }
-    public Dictionary<string,Item> GetEquipment()
+    public SerializableDictionary<string,Item> GetEquipment()
     {
         return equipment;
     }

@@ -1,14 +1,16 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+
 public class MenuPause : MonoBehaviour
 {
     [SerializeField] private InputAction action = new InputAction();
+    [SerializeField] private Player player;
     public GameObject pauseMenuUI;
     public GameObject inventoryUI;
     public static bool GameIsPaused = false;
     public static bool inventoryShow = false;
+    //[SerializeField] private UI_inventory uiInventory;
     // Update is called once per frame
 
     private void OnEnable()
@@ -62,7 +64,17 @@ public class MenuPause : MonoBehaviour
     public void goMainMenu()
     {
         pauseMenuUI.SetActive(false);
+        Serializator.SaveXml(player.characteristics, Application.dataPath + "/player.xml");
+        Serializator.SaveInventory(inventoryUI.GetComponent<UI_inventory>().GetInventrory()/*.GetItemList()*/, Application.dataPath + "/inventory.xml");
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+    public void savegame()
+    {
+        Serializator.SaveXml(player.characteristics, Application.dataPath + "/player.xml");
+        Serializator.SaveInventory(inventoryUI.GetComponent<UI_inventory>().GetInventrory()/*.GetItemList()*/, Application.dataPath + "/inventory.xml");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Shop");
     }
     public void Resume()
     {

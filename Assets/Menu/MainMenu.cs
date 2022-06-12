@@ -61,11 +61,13 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
+        System.IO.File.Delete(Application.dataPath + "/player.xml");
+        System.IO.File.Delete(Application.dataPath + "/inventory.xml");
         SceneManager.LoadScene("Demo Blue");
     }
     public void Continue()
     {
-        SceneManager.LoadScene("Shop");
+        SceneManager.LoadScene("Demo Blue");
     }
     public void OnOffMusic()
     {
