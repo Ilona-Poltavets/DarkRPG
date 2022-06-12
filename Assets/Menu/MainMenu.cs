@@ -22,6 +22,7 @@ public class MainMenu : MonoBehaviour
     public static string filename = "Config.txt";
     public void Start()
     {
+        Cursor.visible = true;
         Load();
         musicToggle.isOn = isMusicPlay;
         version.text = "Verion: "+Application.version;
@@ -60,11 +61,13 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
-        SceneManager.LoadScene("Level1");
+        System.IO.File.Delete(Application.dataPath + "/player.xml");
+        System.IO.File.Delete(Application.dataPath + "/inventory.xml");
+        SceneManager.LoadScene("Demo Blue");
     }
     public void Continue()
     {
-        Debug.Log("Continue");
+        SceneManager.LoadScene("Demo Blue");
     }
     public void OnOffMusic()
     {

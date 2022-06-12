@@ -6,6 +6,8 @@ TagManager:
   tags:
   - heal
   - Shop
+  - Enemy
+  - Info
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Terraria
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 

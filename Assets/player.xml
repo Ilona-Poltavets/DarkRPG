@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Characteristics xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <maxHealth>100</maxHealth>
+  <lvl>1</lvl>
+  <exp>10</exp>
+  <defense>40</defense>
+  <damage>60</damage>
+  <gold>1000</gold>
+</Characteristics>
