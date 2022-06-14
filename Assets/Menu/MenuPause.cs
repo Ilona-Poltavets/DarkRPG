@@ -65,14 +65,16 @@ public class MenuPause : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Serializator.SaveXml(player.characteristics, Application.dataPath + "/player.xml");
-        Serializator.SaveInventory(inventoryUI.GetComponent<UI_inventory>().GetInventrory()/*.GetItemList()*/, Application.dataPath + "/inventory.xml");
+        Serializator.SaveInventory(inventoryUI.GetComponent<UI_inventory>().GetInventrory().GetItemList(), Application.dataPath + "/inventory.xml");
+        Serializator.SaveEquipment(inventoryUI.GetComponent<UI_inventory>().GetInventrory().GetEquipment(), Application.dataPath + "/equip.xml");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
     public void savegame()
     {
         Serializator.SaveXml(player.characteristics, Application.dataPath + "/player.xml");
-        Serializator.SaveInventory(inventoryUI.GetComponent<UI_inventory>().GetInventrory()/*.GetItemList()*/, Application.dataPath + "/inventory.xml");
+        Serializator.SaveInventory(inventoryUI.GetComponent<UI_inventory>().GetInventrory().GetItemList(), Application.dataPath + "/inventory.xml");
+        Serializator.SaveEquipment(inventoryUI.GetComponent<UI_inventory>().GetInventrory().GetEquipment(), Application.dataPath + "/equip.xml");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Shop");
     }

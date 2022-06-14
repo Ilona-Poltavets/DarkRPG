@@ -31,10 +31,12 @@ public class Player : MonoBehaviour
 			characteristics = Serializator.DeXml(datapath);
 		else
 			setDefault();
-		if (System.IO.File.Exists(Application.dataPath + "/inventory.xml"))
+		if (System.IO.File.Exists(Application.dataPath + "/inventory.xml")&& System.IO.File.Exists(Application.dataPath + "/equip.xml"))
 		{
 			Debug.Log("File is founded");
-			inventory = Serializator.GetInventory(Application.dataPath + "/inventory.xml");
+			inventory = new InventoryManager();
+			inventory.itemList = Serializator.GetInventory(Application.dataPath + "/inventory.xml");
+			inventory.equipment = Serializator.GetEquipment(Application.dataPath + "/equip.xml");
 			inventory.useItemAction = UseItem;
 		}
 		else

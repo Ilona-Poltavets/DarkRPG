@@ -56,58 +56,10 @@ public class UI_inventory : MonoBehaviour
             {
                 var key = keys[i];
                 var value = dict[key];
-                SetEquipmentFromXML(value);
+                SetEquipment(value);
             }
         }
         RefreshInventroyItems();
-    }
-    public void SetEquipmentFromXML(Item item)
-    {
-        EquipmantContainer = transform.Find("Equipment");
-        Image image;
-        switch (item.itemType)
-        {
-            case Item.ItemType.Ring:
-                item.slot = "Ring";
-                EquipmantSlot = EquipmantContainer.Find("Ring");
-                inventory.AddEquipment(item);
-                break;
-            case Item.ItemType.Bib:
-                item.slot = "Bib";
-                EquipmantSlot = EquipmantContainer.Find("Bib");
-                inventory.AddEquipment(item);
-                break;
-            case Item.ItemType.Helmet:
-                item.slot = "Helmet";
-                EquipmantSlot = EquipmantContainer.Find("Helmet");
-                inventory.AddEquipment(item);
-                break;
-            case Item.ItemType.Sword:
-                item.slot = "Sword";
-                EquipmantSlot = EquipmantContainer.Find("Sword");
-                inventory.AddEquipment(item);
-                break;
-            case Item.ItemType.Necklace:
-                item.slot = "Necklace";
-                EquipmantSlot = EquipmantContainer.Find("Necklace");
-                inventory.AddEquipment(item);
-                break;
-            case Item.ItemType.Shield:
-                item.slot = "Shield";
-                EquipmantSlot = EquipmantContainer.Find("Shield");
-                inventory.AddEquipment(item);
-                break;
-            case Item.ItemType.Boots:
-                item.slot = "Boots";
-                EquipmantSlot = EquipmantContainer.Find("Boots");
-                inventory.AddEquipment(item);
-                break;
-
-        }
-        //itemSlotRectTransform = Instantiate(EquipmantSlot, EquipmantContainer).GetComponent<RectTransform>();
-        //image = itemSlotRectTransform.GetComponent<Image>();
-        image = EquipmantSlot.GetComponent<Image>();
-        image.sprite = item.GetSprite();
     }
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {
