@@ -24,6 +24,9 @@ namespace MyProject
         public int size = 30;
 
         private float timeAttack = 0f;
+
+        [SerializeField] private AudioSource attack;
+        //[SerializeField] private AudioSource steps;
         private void Start()
         {
             animator = GetComponent<Animator>();
@@ -47,6 +50,10 @@ namespace MyProject
                 }
             }
             animator.SetFloat("speed", agent.velocity.magnitude);
+            //if (agent.velocity.magnitude > 0 && steps.enabled==false)
+            //{
+            //    steps.Play();
+            //}
             HandleInput();
         }
         private void FixedUpdate()
@@ -112,6 +119,7 @@ namespace MyProject
             if (Mouse.current.leftButton.isPressed && other.CompareTag("Enemy") && timeAttack==0f)
             {
                 animator.SetTrigger("attack");
+                attack.Play();
                 other.GetComponent<EnemyAI>().TakeDamage(GetComponent<Player>().GetDamage());
                 timeAttack = 3f;
             }

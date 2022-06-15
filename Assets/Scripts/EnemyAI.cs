@@ -49,11 +49,11 @@ public class EnemyAI : MonoBehaviour
 		Destroy(this.gameObject);
 	}
 	private void OnTriggerEnter(Collider other)
-    {
+	{
 		if (other.CompareTag(targetTag))
 		{
 			anim.SetTrigger("attack");
-			player.TakeDamage(30);
+			player.TakeDamage(30 * player.characteristics.lvl + player.characteristics.defense);
 		}
 	}
     private void OnTriggerStay(Collider other)
@@ -66,7 +66,7 @@ public class EnemyAI : MonoBehaviour
 			{
 				Debug.Log("Attack");
 				anim.SetTrigger("attack");
-				player.TakeDamage(30);
+				player.TakeDamage(30 * player.characteristics.lvl + player.characteristics.defense);
 			}
 		}
     }

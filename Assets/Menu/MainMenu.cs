@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
             Debug.Log(settings.musicVolume);
             Debug.Log(settings.soundVolume);
             musicMixer.SetFloat("musicVolume", settings.musicVolume);
-            musicMixer.SetFloat("musicVolume", settings.soundVolume);
+            musicMixer.SetFloat("soundVolume", settings.soundVolume);
             musicVolume.value = settings.musicVolume;
             soundVolume.value = settings.soundVolume;
         }

@@ -4,15 +4,19 @@ using Utils;
 using UnityEngine.UI;
 using System.Timers;
 using System.Collections;
+using UnityEngine.Audio;
+
 public class Player : MonoBehaviour
 {
 	[SerializeField] private HealthBar healthBar;
 	[SerializeField] private ExpBar expBar;
 	private Rigidbody rb;
 	private Animator animator;
+	private Settings settings;
+	public AudioMixer musicMixer;
 
 	//Characteristics
-	public Characteristics characteristics;    // отражающий класс
+	public Characteristics characteristics;
 	public int currentHealth;
 	private string datapath;
 
@@ -21,7 +25,13 @@ public class Player : MonoBehaviour
 	[SerializeField] private StoreItem uiStore;
 	[SerializeField] private Text textLvlUp;
 	[SerializeField] private GameObject dieText;
+	[SerializeField] private Text levelText;
 	public static bool onShop = false;
+
+	[SerializeField] private AudioSource levelUp;
+	[SerializeField] private AudioSource heal;
+	[SerializeField] private AudioSource death;
+	[SerializeField] private AudioSource soundtrack;
 	private void Awake()
 	{
 		Cursor.visible = false;
@@ -33,7 +43,6 @@ public class Player : MonoBehaviour
 			setDefault();
 		if (System.IO.File.Exists(Application.dataPath + "/inventory.xml")&& System.IO.File.Exists(Application.dataPath + "/equip.xml"))
 		{
-			Debug.Log("File is founded");
 			inventory = new InventoryManager();
 			inventory.itemList = Serializator.GetInventory(Application.dataPath + "/inventory.xml");
 			inventory.equipment = Serializator.GetEquipment(Application.dataPath + "/equip.xml");
@@ -41,8 +50,24 @@ public class Player : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("File isn't founded");
 			inventory = new InventoryManager(UseItem);
+		}
+		levelText.text = characteristics.lvl.ToString();
+	}
+	void Load()
+    {
+		if (System.IO.File.Exists(Application.dataPath + "/settings.xml"))
+		{
+			Debug.Log("File is founded");
+			settings = Serializator.GetSettings(Application.dataPath + "/settings.xml");
+			Debug.Log(settings.musicVolume);
+			Debug.Log(settings.soundVolume);
+			musicMixer.SetFloat("musicVolume", settings.musicVolume);
+			musicMixer.SetFloat("soundVolume", settings.soundVolume);
+		}
+		else
+		{
+			settings = new Settings();
 		}
 	}
 	void setDefault()
@@ -51,10 +76,10 @@ public class Player : MonoBehaviour
 	}
 	void Start()
 	{
+		Load();
 		rb = GetComponent<Rigidbody>();
 		animator = GetComponent<Animator>();
 		currentHealth = characteristics.maxHealth;
-		Debug.Log(currentHealth);
 		healthBar.SetMaxHealth(characteristics.maxHealth);
 
 		expBar.SetLevel(characteristics.lvl);
@@ -74,10 +99,12 @@ public class Player : MonoBehaviour
 		switch (item.itemType)
 		{
 			case Item.ItemType.HealthPotion:
+				heal.Play();
 				Healer(10);
 				inventory.RemoveItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
 				break;
 			case Item.ItemType.Medkit:
+				heal.Play();
 				Healer(30);
 				inventory.RemoveItem(new Item { itemType = Item.ItemType.Medkit, amount = 1 });
 				break;
@@ -112,7 +139,7 @@ public class Player : MonoBehaviour
 	}
 	public void TakeDamage(int damage)
 	{
-		currentHealth -= (damage - characteristics.defense);
+		currentHealth -= (damage - characteristics.defense) > 0 ? damage - characteristics.defense : 0;
 		healthBar.SetHealth(currentHealth);
 	}
 	void Healer(int points)
@@ -138,13 +165,17 @@ public class Player : MonoBehaviour
 	}
 	IEnumerator DeathCoroutine()
 	{
+		soundtrack.Pause();
+		death.Play();
 		animator.SetTrigger("death");
 		dieText.SetActive(true);
-		yield return new WaitForSecondsRealtime(3f);
+		yield return new WaitForSecondsRealtime(7f);
 		Application.LoadLevel(Application.loadedLevel);
 	}
 	private void LevelUp()
 	{
+		soundtrack.Pause();
+		levelUp.Play();
 		StartCoroutine(TextCoroutine("★★★ LEVEL UP ★★★"));
 		float rand = Random.RandomRange(0f, 5f);
 		if (animator)
@@ -170,6 +201,7 @@ public class Player : MonoBehaviour
 		healthBar.SetMaxHealth(characteristics.maxHealth);
 		expBar.SetExp(characteristics.exp);
 		expBar.SetLevel(characteristics.lvl);
+		levelText.text = characteristics.lvl.ToString();
 	}
 	private void OnTriggerEnter(Collider other)
 	{
