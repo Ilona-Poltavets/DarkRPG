@@ -6,20 +6,19 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    [System.Serializable]
-    class Setting
-    {
-        //float sound;
-        public float music;
-    }
     public AudioMixer musicMixer;
+
     public Text version;
-    public static bool isMusicPlay = true;
+    private Settings settings;
+
     public Toggle musicToggle;
     public Slider musicVolume;
 
-    public static string directory = "/SaveData/";
-    public static string filename = "Config.txt";
+    public Toggle soundToggle;
+    public Slider soundVolume;
+
+    public static bool isMusicPlay = true;
+    public static string datapath = "/settings.xml";
     public void Start()
     {
         Cursor.visible = true;
@@ -29,40 +28,44 @@ public class MainMenu : MonoBehaviour
     }
     public void Load()
     {
-        string fullPath = Application.persistentDataPath + directory + filename;
-        Setting s = new Setting();
-        if (File.Exists(fullPath))
+        if (File.Exists(Application.dataPath + datapath))
         {
-            string json = File.ReadAllText(fullPath);
-            s = JsonUtility.FromJson<Setting>(json);
-            if (s.music == 0f)
-                isMusicPlay = true;
-            else
-                isMusicPlay = false;
-            musicMixer.SetFloat("musicVolume", s.music);
-            musicVolume.value = s.music;
+            Debug.Log("File is found");
+            settings = Serializator.GetSettings(Application.dataPath + datapath);
+            Debug.Log(settings.musicVolume);
+            Debug.Log(settings.soundVolume);
+            musicMixer.SetFloat("musicVolume", settings.musicVolume);
+            musicMixer.SetFloat("soundVolume", settings.soundVolume);
+            musicVolume.value = settings.musicVolume;
+            soundVolume.value = settings.soundVolume;
         }
         else
         {
-            Debug.Log("Save file does not exist");
+            settings = new Settings();
+        }
+        
+        musicVolume.value = settings.musicVolume;
+        soundVolume.value = settings.soundVolume;
+    }
+    void Update()
+    {
+        if (settings.musicVolume == -80f)
+        {
+            musicToggle.isOn = false;
+        }
+        if (settings.soundVolume == -80f)
+        {
+            soundToggle.isOn = false;
         }
     }
     public void OnSave()
     {
-        musicMixer.GetFloat("musicVolume", out float music);
-        Setting s = new Setting();
-        s.music = music;
-        string dir = Application.persistentDataPath + directory;
-        if (!Directory.Exists(dir))
-            Directory.CreateDirectory(dir);
-        string json = JsonUtility.ToJson(s);
-        File.WriteAllText(dir + filename, json);
-        Debug.Log(json);
+        Serializator.SaveSettings(settings, Application.dataPath + datapath);
     }
     public void NewGame()
     {
-        System.IO.File.Delete(Application.dataPath + "/player.xml");
-        System.IO.File.Delete(Application.dataPath + "/inventory.xml");
+        File.Delete(Application.dataPath + "/player.xml");
+        File.Delete(Application.dataPath + "/inventory.xml");
         SceneManager.LoadScene("Demo Blue");
     }
     public void Continue()
@@ -73,22 +76,49 @@ public class MainMenu : MonoBehaviour
     {
         isMusicPlay = !isMusicPlay;
         if (!isMusicPlay)
+        {
             musicMixer.SetFloat("musicVolume", -80f);
+            settings.musicVolume = -80f;
+        }
         else
+        {
             musicMixer.SetFloat("musicVolume", 0f);
+            settings.musicVolume = 0f;
+        }
+    }
+    public void OnOffSound()
+    {
+        isMusicPlay = !isMusicPlay;
+        if (!isMusicPlay)
+        {
+            musicMixer.SetFloat("soundVolume", -80f);
+            settings.soundVolume = -80f;
+        }
+        else
+        {
+            musicMixer.SetFloat("soundVolume", 0f);
+            settings.soundVolume = 0f;
+        }
     }
     void OnEnable()
     {
-        musicVolume.onValueChanged.AddListener(delegate { changeVolume(musicVolume.value); });
+        musicVolume.onValueChanged.AddListener(delegate { changeMusicVolume(musicVolume.value); });
+        soundVolume.onValueChanged.AddListener(delegate { changeSoundVolume(soundVolume.value); });
     }
-    void changeVolume(float sliderValue)
+    void changeMusicVolume(float sliderValue)
     {
         musicMixer.SetFloat("musicVolume", sliderValue);
+        settings.musicVolume = sliderValue;
     }
-
+    void changeSoundVolume(float sliderValue)
+    {
+        musicMixer.SetFloat("soundVolume", sliderValue);
+        settings.soundVolume = sliderValue;
+    }
     void OnDisable()
     {
         musicVolume.onValueChanged.RemoveAllListeners();
+        soundVolume.onValueChanged.RemoveAllListeners();
     }
     public void Exit()
     {

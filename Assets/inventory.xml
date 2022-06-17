@@ -1,35 +1,19 @@
 <?xml version="1.0"?>
-<Inventory xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Equipment>
-    <item>
-      <key>
-        <string>Shield</string>
-      </key>
-      <value>
-        <Item>
-          <itemType>Shield</itemType>
-          <amount>1</amount>
-          <slot>Shield</slot>
-          <cost>70</cost>
-          <damage>0</damage>
-          <defense>30</defense>
-        </Item>
-      </value>
-    </item>
-    <item>
-      <key>
-        <string>Sword</string>
-      </key>
-      <value>
-        <Item>
-          <itemType>Sword</itemType>
-          <amount>1</amount>
-          <slot>Sword</slot>
-          <cost>110</cost>
-          <damage>50</damage>
-          <defense>0</defense>
-        </Item>
-      </value>
-    </item>
-  </Equipment>
-</Inventory>
+<ArrayOfItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Item>
+    <itemType>HealthPotion</itemType>
+    <amount>4</amount>
+    <slot />
+    <cost>10</cost>
+    <damage>0</damage>
+    <defense>0</defense>
+  </Item>
+  <Item>
+    <itemType>Medkit</itemType>
+    <amount>1</amount>
+    <slot />
+    <cost>120</cost>
+    <damage>55</damage>
+    <defense>0</defense>
+  </Item>
+</ArrayOfItem>

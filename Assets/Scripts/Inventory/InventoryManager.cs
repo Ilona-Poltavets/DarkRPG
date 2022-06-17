@@ -20,9 +20,9 @@ public class InventoryManager
         this.useItemAction = useItemAction;
         itemList = new List<Item>();
         equipment = new SerializableDictionary<string, Item>();
-        AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount=1 });
-        AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1,damage=50 });
-        AddItem(new Item { itemType = Item.ItemType.Shield, amount = 1,defense=30 });
+        AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
+        AddItem(new Item { itemType = Item.ItemType.Sword, amount = 1, damage = 50 });
+        AddItem(new Item { itemType = Item.ItemType.Shield, amount = 1, defense = 30 });
     }
     public void SetPlayer(Player player)
     {
