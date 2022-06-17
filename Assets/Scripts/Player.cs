@@ -58,10 +58,7 @@ public class Player : MonoBehaviour
     {
 		if (System.IO.File.Exists(Application.dataPath + "/settings.xml"))
 		{
-			Debug.Log("File is founded");
 			settings = Serializator.GetSettings(Application.dataPath + "/settings.xml");
-			Debug.Log(settings.musicVolume);
-			Debug.Log(settings.soundVolume);
 			musicMixer.SetFloat("musicVolume", settings.musicVolume);
 			musicMixer.SetFloat("soundVolume", settings.soundVolume);
 		}
@@ -125,19 +122,13 @@ public class Player : MonoBehaviour
 		{
 			StartCoroutine(DeathCoroutine());
 		}
-		if (Keyboard.current[Key.E].wasPressedThisFrame)
-		{
-			if (onShop)
-			{
-				Resume();
-			}
-		}
 		if (Keyboard.current[Key.Q].wasPressedThisFrame && (inventory.FindHealthPotion() != 0))
 		{
 			Healer(inventory.FindHealthPotion());
 		}
 	}
-	public void TakeDamage(int damage)
+
+    public void TakeDamage(int damage)
 	{
 		currentHealth -= (damage - characteristics.defense) > 0 ? damage - characteristics.defense : 0;
 		healthBar.SetHealth(currentHealth);
@@ -219,31 +210,6 @@ public class Player : MonoBehaviour
 				itemWorld.DestroySelf();
 			}
 		}
-	}
-	private void OnTriggerStay(Collider other)
-	{
-		if (other.tag == "Shop")
-		{
-			if (Keyboard.current[Key.E].wasPressedThisFrame)
-			{
-				if (!onShop)
-				{
-					Pause();
-				}
-			}
-		}
-	}
-	public void Resume()
-	{
-		uiStore.gameObject.SetActive(false);
-		Time.timeScale = 1f;
-		onShop = false;
-	}
-	void Pause()
-	{
-		uiStore.gameObject.SetActive(true);
-		Time.timeScale = 0f;
-		onShop = true;
 	}
 	public void OpenInventoryForSell()
 	{

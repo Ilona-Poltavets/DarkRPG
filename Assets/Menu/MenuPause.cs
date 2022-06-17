@@ -9,7 +9,8 @@ public class MenuPause : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject inventoryUI;
     public static bool GameIsPaused = false;
-    public static bool inventoryShow = false;
+    //public static bool inventoryShow = false;
+    [SerializeField] private GameObject shopUI;
     //[SerializeField] private UI_inventory uiInventory;
     // Update is called once per frame
 
@@ -31,22 +32,20 @@ public class MenuPause : MonoBehaviour
             {
                 Resume();
             }
-            else
+            else if (!Player.onShop)
             {
                 Pause();
             }
         }
         if (Keyboard.current[Key.I].wasPressedThisFrame)
         {
-            if (inventoryShow)
+            if (GameIsPaused)
             {
                 CloseInventory();
-                inventoryShow = false;
             }
             else
             {
                 ShowInventory();
-                inventoryShow = true;
             }
         }
     }
@@ -54,13 +53,18 @@ public class MenuPause : MonoBehaviour
     {
         inventoryUI.SetActive(false);
         Time.timeScale = 1f;
+        GameIsPaused = false;
     }
     public void ShowInventory()
     {
         inventoryUI.SetActive(true);
         Time.timeScale = 0f;
+        GameIsPaused = true;
     }
-
+    public static void GamePause()
+    {
+        GameIsPaused = !GameIsPaused;
+    }
     public void goMainMenu()
     {
         pauseMenuUI.SetActive(false);
@@ -80,7 +84,12 @@ public class MenuPause : MonoBehaviour
     }
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        if(pauseMenuUI.active)
+            pauseMenuUI.SetActive(false);
+        if(inventoryUI.active)
+            inventoryUI.SetActive(false);
+        if(shopUI.active)
+            shopUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
